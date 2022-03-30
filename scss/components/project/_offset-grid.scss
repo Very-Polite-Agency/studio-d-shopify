@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////
+////  Offset Grid | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Offset Grid | Styles
+//////////////////////////////////////////////////////////
+
+.offset-grid {
+
+  .heading {
+    &.heading--section {
+      border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+      padding-bottom: 13px;
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .offset-grid

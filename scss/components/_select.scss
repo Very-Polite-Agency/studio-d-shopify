@@ -1,0 +1,38 @@
+//////////////////////////////////////////////////////////
+////  Select | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Select | Styles
+//////////////////////////////////////////////////////////
+
+.select {
+
+  @include field-min-height();
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &[multiple] {
+    // min-height: auto;
+    // margin: 15px 0;
+    // padding: 10px 0;
+    option {
+      & + option {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .select

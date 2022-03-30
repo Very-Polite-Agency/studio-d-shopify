@@ -1,0 +1,66 @@
+//////////////////////////////////////////////////////////
+////  Testimonial | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Testimonial | Styles
+//////////////////////////////////////////////////////////
+
+.testimonial {
+
+  &__author,
+  &__quote {
+    display: block;
+  }
+
+  &__quote {
+    @include body-copy( 1.125, 1.15, 500 );
+  }
+
+  &__hr {
+    margin: 24px 0;
+  }
+
+  &__author {
+    font-family: var(--theme-font-family--sans-serif--neue-montreal);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    opacity: 0.3333;
+  }
+
+  &__quote {
+    & + .testimonial__author {
+      margin-top: 15px;
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    &__author {
+      font-size: 13px;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    &__author {
+      font-size: 14px;
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    &__author {
+      font-size: 15px;
+    }
+
+  } // min width xxl
+
+} // .testimonial

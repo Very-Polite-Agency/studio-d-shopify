@@ -1,0 +1,197 @@
+//////////////////////////////////////////////////////////
+////  Soul | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Soul | Styles
+//////////////////////////////////////////////////////////
+
+.soul {
+
+  .glide {
+    &__button {
+      transition: top var(--theme-transition-duration);
+      display: none;
+    }
+    &__bullets {
+      margin-top: calc( 1.5 * var(--bs-gutter-width) );
+    }
+  }
+
+  &__hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(var(--theme-colour-black), 1);
+    margin: auto;
+  }
+
+  &__item {
+
+    .cta {
+      margin-top: 24px;
+    }
+
+    .title {
+      font-family: var(--theme-font-family--serif--gt-alpina);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      & + .message {
+        margin-top: 12px;
+      }
+    }
+
+    .message {
+      font-size: 15px;
+    }
+
+    &-content {
+      padding-top: 20px;
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+    }
+
+  }
+
+  &__layout {
+    padding-top: var(--theme-section-margin);
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__main {
+    .heading {
+      font-family: var(--theme-font-family--serif--gt-alpina-fine);
+      font-size: 100px;
+      line-height: 1;
+      font-weight: 100;
+      & + .message {
+        margin-top: 10px;
+      }
+    }
+    & + .soul__slides {
+      margin-top: 50px;
+    }
+  }
+
+  &__slides {
+    position: relative;
+    width: calc( 100% + (2 * var(--bs-gutter-width)) );
+    left: calc( -1 * var(--bs-gutter-width) );
+  }
+
+  @include breakpoints(sm) {
+
+    &__layout {
+      padding-top: var(--theme-section-margin--sm);
+    }
+
+    &__slides {
+      width: 100%;
+      left: unset;
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    &__layout {
+      padding-top: var(--theme-section-margin--md);
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    .glide {
+      &__button {
+        display: block;
+        position: absolute;
+        height: 15px;
+        width: auto;
+        top: 50%;
+        span, svg {
+          display: block;
+          width: auto;
+          height: 100%;
+        }
+        &.prev {
+          transform: rotate(-180deg);
+          left: -20px;
+        }
+        &.next {
+          right: -20px;
+        }
+      }
+    }
+
+    &__item {
+
+      .cta {
+        margin-top: 10px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+
+      &-column {
+        &.left {
+          width: calc( (100% - var(--bs-gutter-width)) * 0.4 );
+        }
+        &.right {
+          width: calc( (100% - var(--bs-gutter-width)) * 0.6 );
+        }
+      }
+
+      &-content {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row nowrap;
+      }
+
+    }
+
+    &__layout {
+      padding-top: var(--theme-section-margin--lg);
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__main {
+      padding-right: calc( 3 * var(--bs-gutter-width) );
+      width: 40%;
+      & + .soul__slides {
+        margin-top: 0;
+      }
+    }
+
+    &__slides {
+      width: calc( (100% - var(--bs-gutter-width)) * 0.6 );
+      left: unset;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    &__layout {
+      padding-top: var(--theme-section-margin--xl);
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    &__layout {
+      padding-top: var(--theme-section-margin--xxl);
+    }
+
+  } // min width xxl
+
+} // .soul

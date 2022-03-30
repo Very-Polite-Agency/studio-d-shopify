@@ -1,0 +1,61 @@
+//////////////////////////////////////////////////////////
+////  Section | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Section | Styles
+//////////////////////////////////////////////////////////
+
+.section {
+
+  overflow: hidden;
+
+  &--mt {
+    @extend .section;
+    margin-top: var(--theme-section-margin);
+    &[data-index="0"] {
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &--mt {
+      margin-top: var(--theme-section-margin--sm);
+    }
+
+  } // min width sm
+
+  @include media-breakpoint-up(md) {
+
+    &--mt {
+      margin-top: var(--theme-section-margin--md);
+    }
+
+  } // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &--mt {
+      margin-top: var(--theme-section-margin--lg);
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {
+
+    &--mt {
+      margin-top: var(--theme-section-margin--xl);
+    }
+
+  } // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    &--mt {
+      margin-top: var(--theme-section-margin--xxl);
+    }
+
+  } // min width xxl
+
+} // .section

@@ -1,0 +1,100 @@
+//////////////////////////////////////////////////////////
+////  Hero | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Hero | Styles
+//////////////////////////////////////////////////////////
+
+.hero {
+
+  height: calc( var(--theme-viewport-height--total) - var(--theme-header-height--total) );
+  max-height: 915px;
+  background: rgba( var(--theme-colour-black), 0.05 );
+  color: rgba( var(--theme-colour-white), 1 );
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
+    width: 100%;
+    &__line {
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: -0.03em;
+      display: block;
+      line-height: 1;
+      font-size: 15vw;
+      &:nth-child(odd) {
+        font-family: var(--theme-font-family--serif--gt-alpina-fine);
+        text-align: left;
+        margin-left: -20px;
+      }
+      &:nth-child(even) {
+        font-family: var(--theme-font-family--sans-serif--neue-montreal);
+        text-align: right;
+        font-weight: 100;
+        margin-right: -2px;
+      }
+    }
+  }
+
+  &__image {
+    z-index: 0;
+  }
+
+  &__embedded-video,
+  &__video-file {
+    z-index: 1;
+  }
+
+  &__main {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    max-height: none;
+
+    .heading {
+      &__line {
+        font-size: 14vw;
+      }
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {
+
+    .heading {
+      &__line {
+        font-size: 13vw;
+      }
+    }
+
+  } // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    .heading {
+      &__line {
+        font-size: 12vw;
+      }
+    }
+
+  } // min width xxl
+
+} // .hero

@@ -1,0 +1,57 @@
+//////////////////////////////////////////////////////////
+////  Project | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Project | Styles
+//////////////////////////////////////////////////////////
+
+.project {
+
+  @import '../components/project/features.scss';
+  @import '../components/project/footer.scss';
+  @import '../components/project/hero.scss';
+  @import '../components/project/offset-grid.scss';
+  @import '../components/project/preview-grid.scss';
+  @import '../components/project/share-this.scss';
+  @import '../components/project/shop-room.scss';
+
+  .section {
+    &.section--mt {
+      margin-top: 0;
+      & > * {
+        margin-top: var(--theme-section-margin);
+      }
+      &.section--hero {
+        margin-top: 36px;
+        & > * {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    .section {
+      &.section--mt {
+        & > * {
+          margin-top: var(--theme-section-margin--lg);
+        }
+        &.section--hero {
+          margin-top: 72px;
+        }
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .project

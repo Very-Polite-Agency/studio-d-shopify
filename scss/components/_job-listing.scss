@@ -1,0 +1,100 @@
+//////////////////////////////////////////////////////////
+////  Job Listing | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Job Listing | Styles
+//////////////////////////////////////////////////////////
+
+.job-listing {
+
+  &__location,
+  &__role {
+    @include body-copy(1, 1, 300 );
+    font-family: var(--theme-font-family--serif--gt-alpina);
+    font-style: normal;
+  }
+
+  &__item,
+  &__no-jobs {
+    display: inline-flex;
+    padding: 20px 0;
+    width: 100%;
+    flex-flow: row wrap;
+  }
+
+  &__cta {
+    width: auto;
+    margin-left: auto;
+    .link.text-with-arrow {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__rows {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+  }
+
+  &__location {
+    width: 100%;
+    opacity: 0.3333;
+    margin-top: 8px;
+  }
+
+  &__main {
+    border-top: 1px solid rgba(var(--theme-colour-black), 1 );
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1 );
+  }
+
+  &__role {
+    width: 66.6666%;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    &__cta {
+      order: 3;
+      width: 18%;
+    }
+
+    &__item {
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    &__location {
+      order: 2;
+      margin: 0;
+      flex: 1;
+      opacity: 1;
+    }
+
+    &__role {
+      order: 1;
+      width: 50%;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .job-listing

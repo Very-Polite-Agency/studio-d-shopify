@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////
+////  Call to Action | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Call to Action | Styles
+//////////////////////////////////////////////////////////
+
+.cta {
+
+  display: inline-flex;
+  width: 100%;
+
+  &[data-justify="left"] {
+    justify-content: flex-start;
+  }
+
+  &[data-justify="center"] {
+    justify-content: center;
+  }
+
+  &[data-justify="right"] {
+    justify-content: flex-end;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+}

@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////
+////  Body | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Body | Styles
+//////////////////////////////////////////////////////////
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+
+  background: rgba(var(--theme-colour-white), 1);
+  color: rgba(var(--theme-colour-black), 1);
+  position: relative;
+
+  [role="main"] {
+    padding-top: var(--theme-header-height--total);
+    padding-bottom: 40px;
+  }
+
+  &.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    main {
+      flex: 1 0 auto;
+    }
+    footer {
+      flex-shrink: 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    [role="main"] {
+      padding-bottom: 60px;
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    [role="main"] {
+      padding-bottom: 80px;
+    }
+
+  } // min width xxl
+
+} // body

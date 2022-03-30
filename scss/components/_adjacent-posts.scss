@@ -1,0 +1,60 @@
+//////////////////////////////////////////////////////////
+////  Adjacent Posts | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Adjacent Posts | Styles
+//////////////////////////////////////////////////////////
+
+.adjacent-posts {
+
+  margin-top: 68px;
+
+  &__cta {
+    margin-top: 32px;
+  }
+
+  &__item {
+    width: calc( (100% - 14px) * 0.5 );
+    &.next {
+      margin-left: auto;
+      text-align: right;
+    }
+    &.previous {
+      margin-right: auto;
+      text-align: left;
+    }
+  }
+
+  &__label {
+    border-bottom: 1px solid rgba(var(--theme-colour-black),1);
+    padding: 0 0 15px 0;
+    display: block;
+    margin: 0 0 15px 0;
+  }
+
+  &__layout {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    &__cta {
+      margin-top: 52px;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .adjacent-posts

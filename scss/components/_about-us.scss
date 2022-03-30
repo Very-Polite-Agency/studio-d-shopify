@@ -1,0 +1,197 @@
+//////////////////////////////////////////////////////////
+////  About Us | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  About Us | Styles
+//////////////////////////////////////////////////////////
+
+.about-us {
+
+  .acronym {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 130px;
+    line-height: .8;
+    letter-spacing: -0.03em;
+    width: 30%;
+    position: relative;
+    text-transform: lowercase;
+  }
+
+  &__image {
+    width: 100%;
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__item {
+
+    width: calc(100% + 2*var(--bs-gutter-width));
+    left: calc(-1*var(--bs-gutter-width));
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    position: relative;
+
+    &.even {
+      .acronym {
+        width: auto;
+        margin-left: auto;
+        right: -12px;
+        margin-top: 20px;
+      }
+    }
+
+    &.odd {
+      .acronym {
+        width: calc(30% + var(--bs-gutter-width));
+        left: -18px;
+      }
+      .content {
+        width: calc(66.6666666667% - var(--bs-gutter-width));
+      }
+    }
+
+    & + .about-us__item {
+      margin-top: calc( 2 * var(--bs-gutter-width) );
+    }
+
+  }
+
+  &__layout {
+    padding-bottom: 20px;
+  }
+
+  @include breakpoints(sm) {
+
+    .acronym {
+      font-size: 145px;
+    }
+
+    &__item {
+      overflow: visible;
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    .acronym {
+      font-size: 175px;
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    .acronym {
+      font-size: 150px;
+    }
+
+    &__image {
+      width: 70%;
+      margin-right: auto;
+    }
+
+    &__item {
+
+      &.even {
+        width: calc( 11/12 * 100% );
+        margin-left: auto;
+        flex-flow: nowrap;
+        .acronym {
+          margin-top: 90px;
+          right: -64px;
+        }
+      }
+
+      &.odd {
+        .acronym {
+          width: calc(21% + var(--bs-gutter-width));
+          left: -24px;
+        }
+        .content {
+          width: calc(1/3 * 100% - var(--bs-gutter-width));
+        }
+      }
+
+      & + .about-us__item {
+        margin-top: calc( 2.5 * var(--bs-gutter-width) );
+      }
+
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    .acronym {
+      font-size: 185px;
+    }
+
+    &__item {
+
+      &.even {
+        .acronym {
+          margin-top: 110px;
+          right: -70px;
+        }
+      }
+
+      &.odd {
+        .acronym {
+          width: calc(21% + var(--bs-gutter-width));
+          left: -36px;
+        }
+        .content {
+          width: calc(1/3 * 100% - var(--bs-gutter-width));
+        }
+      }
+
+      & + .about-us__item {
+        margin-top: calc( 2.75 * var(--bs-gutter-width) );
+      }
+
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    .acronym {
+      font-size: 225px;
+    }
+
+    &__item {
+
+      &.even {
+        .acronym {
+          margin-top: 126px;
+          right: -76px;
+        }
+      }
+
+      &.odd {
+        .acronym {
+          width: calc(21% + var(--bs-gutter-width));
+          left: -36px;
+        }
+        .content {
+          width: calc(1/3 * 100% - var(--bs-gutter-width));
+        }
+      }
+
+      & + .about-us__item {
+        margin-top: calc( 3 * var(--bs-gutter-width) );
+      }
+
+    }
+
+  } // min width xxl
+
+} // .about-us

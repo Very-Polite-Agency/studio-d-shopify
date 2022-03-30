@@ -1,0 +1,41 @@
+//////////////////////////////////////////////////////////
+////  Gallery | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Gallery | Styles
+//////////////////////////////////////////////////////////
+
+.gallery {
+
+  &__content {
+    padding-top: 15px;
+  }
+
+  &__title {
+    @include body-copy( 1, 1.15, 100 );
+    font-family: var(--theme-font-family--serif--gt-alpina);
+    font-style: normal;
+  }
+
+  [data-glide-style="default"] {
+    .glide__slide {
+      transition: opacity calc( 2 * var(--theme-transition-duration) );
+      opacity: 0.25;
+      &.glide__slide--active {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+} // .gallery

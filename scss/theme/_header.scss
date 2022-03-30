@@ -1,0 +1,169 @@
+//////////////////////////////////////////////////////////
+////  Header | Variables
+//////////////////////////////////////////////////////////
+
+$header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period' );
+
+//////////////////////////////////////////////////////////
+////  Header | Styles
+//////////////////////////////////////////////////////////
+
+.header {
+
+  transition: border 280ms, height 280ms;
+
+  a {
+    &:active,
+    &:focus,
+    &:hover {
+      opacity: var(--theme-hover-opacity--heavy);
+      color: inherit;
+      overflow: visible;
+    }
+  }
+
+  .link {
+    &.active {
+      opacity: var(--theme-hover-opacity--heavy);
+    }
+  }
+
+  .logo-character {
+    opacity: 0;
+  }
+
+  &__brand {
+    transition: height 280ms;
+    height: 26px;
+    a, img, svg {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__hamburger {
+    display: inline-flex;
+  }
+
+  &__layout {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.fixed {
+    background: rgba(var(--theme-colour-white), 1);
+    border-bottom-width: var(--theme-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .mobile-menu--active &,
+  .scroll-position--scrolled & {
+    border-bottom-color: rgba(var(--theme-colour-black), 1);
+    .header {
+      &__brand {
+        height: 22px;
+      }
+    }
+  }
+
+  @include breakpoints(sm) {
+
+    &__brand {
+      height: 28px;
+    }
+
+    .scroll-position--scrolled & {
+      .header {
+        &__brand {
+          height: 24px;
+        }
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    &__brand {
+      height: 30px;
+    }
+
+    .scroll-position--scrolled & {
+      .header {
+        &__brand {
+          height: 26px;
+        }
+      }
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    .navigation {
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+      &__cta {
+        width: auto;
+      }
+      &__link {
+        font-family: var(--theme-font-family--sans-serif--neue-montreal);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: normal;
+      }
+      &__item {
+        & + .navigation__cta,
+        & + .navigation__item {
+          margin-left: 35px;
+        }
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    .navigation {
+      &__link {
+        font-size: 13px;
+      }
+      &__item {
+        & + .navigation__cta,
+        & + .navigation__item {
+          margin-left: 40px;
+        }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    .navigation {
+      &__link {
+        font-size: 14px;
+      }
+      &__item {
+        & + .navigation__cta,
+        & + .navigation__item {
+          margin-left: 45px;
+        }
+      }
+    }
+
+  } // min width xxl
+
+} // header

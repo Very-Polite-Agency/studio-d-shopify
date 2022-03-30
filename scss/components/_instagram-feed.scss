@@ -1,0 +1,74 @@
+//////////////////////////////////////////////////////////
+////  Instagram Feed | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Instagram Feed | Styles
+//////////////////////////////////////////////////////////
+
+.instagram-feed {
+
+  .cta {
+    .link {
+      display: inline-flex;
+      width: auto;
+    }
+  }
+
+  .link {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    img {
+      opacity: 0.15;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &:hover {
+      opacity: var(--theme-hover-opacity--heavy);
+    }
+  }
+
+  &__cta {
+    margin-top: 30px;
+  }
+
+  &__layout {
+    display: grid;
+    grid-gap: var(--bs-gutter-width);
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+  }
+
+  &__main {
+    border-top: 1px solid rgba(var(--theme-colour-black),1);
+    padding: var(--bs-gutter-width) 0;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    &__item {
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__layout {
+      grid-template-columns: unset;
+      grid-template-rows: auto;
+      grid-auto-flow: column;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .instagram-feed

@@ -1,0 +1,181 @@
+//////////////////////////////////////////////////////////
+////  Post Listing | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Post Listing | Styles
+//////////////////////////////////////////////////////////
+
+.post-listing {
+
+  section {
+    & + section {
+      margin-top: var(--theme-section-margin);
+    }
+  }
+
+  .intro {
+    padding-bottom: 0;
+  }
+
+  &__dynamic-grid,
+  &__featured-post-gallery {
+    .post {
+
+      &__cta,
+      &__date,
+      &__title {
+        display: block;
+      }
+
+      &__cta,
+      &__date {
+        line-height: 1;
+      }
+
+      &__cta {
+        margin-top: 12px;
+      }
+
+      &__content {
+        padding-top: 15px;
+      }
+
+      &__date {
+        @include post-subtitle();
+        margin-bottom: 8px;
+      }
+
+      &__featured-image {
+        width: 100%;
+        display: block;
+        a, img, svg {
+          width: 100%;
+          display: block;
+        }
+        a {
+          &:hover {
+            opacity: 0.3333;
+          }
+        }
+      }
+
+      &__title {
+        font-family: var(--theme-font-family--serif--gt-alpina);
+        font-style: normal;
+        font-weight: 100;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+    }
+  }
+
+  @include breakpoints(sm) {
+
+    section {
+      & + section {
+        margin-top: var(--theme-section-margin--sm);
+      }
+    }
+
+    &__featured-post-gallery {
+      .post {
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    section {
+      & + section {
+        margin-top: var(--theme-section-margin--md);
+      }
+    }
+
+    &__dynamic-grid {
+      .post {
+        &__title {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__featured-post-gallery {
+      .post {
+        &__title {
+          font-size: 28px;
+        }
+      }
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    section {
+      & + section {
+        margin-top: var(--theme-section-margin--lg);
+      }
+    }
+
+    &__dynamic-grid {
+      .post {
+        &__title {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__featured-post-gallery {
+      .post {
+        &__title {
+          font-size: 22px;
+        }
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    section {
+      & + section {
+        margin-top: var(--theme-section-margin--xl);
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    section {
+      & + section {
+        margin-top: var(--theme-section-margin--xxl);
+      }
+    }
+
+    &__dynamic-grid,
+    &__featured-post-gallery {
+      .post {
+        &__title {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__featured-post-gallery {
+      .post {
+        &__title {
+          font-size: 26px;
+        }
+      }
+    }
+
+  } // min width xxl
+
+} // .post-listing

@@ -1,0 +1,32 @@
+//////////////////////////////////////////////////////////
+////  Body | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Body | Styles
+//////////////////////////////////////////////////////////
+
+.body {
+
+  padding-top: 50px;
+
+  .title {
+    font-family: var(--theme-font-family--serif--gt-alpina);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+}

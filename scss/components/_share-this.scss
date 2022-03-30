@@ -1,0 +1,63 @@
+//////////////////////////////////////////////////////////
+////  Share This | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Share This | Styles
+//////////////////////////////////////////////////////////
+
+.share-this {
+
+  display: block;
+  width: 100%;
+
+  a, svg {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+
+  a {
+    color: rgba(var(--theme-colour-black),1);
+    &:hover {
+      color: rgba(var(--theme-colour-black),0.5);
+    }
+  }
+
+  &__icon {
+    height: 18px;
+    width: auto;
+  }
+
+  &__item {
+    & + .share-this__item {
+      margin-left: 18px;
+    }
+    &.label {
+      font-family: var(--theme-font-family--sans-serif--neue-montreal);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+
+} // .share-this

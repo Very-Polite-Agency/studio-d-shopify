@@ -1,0 +1,44 @@
+//////////////////////////////////////////////////////////
+////  Intro Para | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Intro Para | Styles
+//////////////////////////////////////////////////////////
+
+.intro-para {
+
+  font-family: var(--theme-font-family--serif--gt-alpina);
+  font-style: normal;
+  display: block;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 0 auto 32px;
+  line-height: 1.3;
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    font-size: 22px;
+    margin: 0 auto 38px;
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    font-size: 24px;
+    margin: 0 auto 30px;
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    font-size: 26px;
+    margin: 0 auto 32px;
+
+  } // min width xxl
+
+} // .intro-para

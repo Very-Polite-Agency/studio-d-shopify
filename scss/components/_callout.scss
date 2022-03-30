@@ -1,0 +1,52 @@
+//////////////////////////////////////////////////////////
+////  Callout | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Callout | Styles
+//////////////////////////////////////////////////////////
+
+.callout {
+
+  border-left: 1px solid rgba(var(--theme-colour-black), 1);
+  font-family: var(--theme-font-family--serif--gt-alpina);
+  display: block;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 20px;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 26px;
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    margin: 24px auto;
+    padding: 15px 20px;
+    font-size: 28px;
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    margin: 28px auto;
+    padding: 20px;
+    font-size: 32px;
+
+  } // min width xxl
+
+} // .callout

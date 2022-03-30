@@ -1,0 +1,36 @@
+.svg {
+
+  position: relative;
+  min-height: 100vh;
+
+  #custom-marker {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: green;
+  }
+
+  #custom-path {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    svg {
+      display: block;
+      height: 100%;
+      width: auto;
+      margin: auto;
+    }
+  }
+
+  &__graphic {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+}

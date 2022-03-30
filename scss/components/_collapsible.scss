@@ -1,0 +1,55 @@
+//////////////////////////////////////////////////////////
+////  Collapsible | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Collapsible | Styles
+//////////////////////////////////////////////////////////
+
+.collapsible {
+
+  .button {
+    &__icon {
+      margin-left: auto;
+      height: 10px;
+      img, svg {
+        display: block;
+        height: 100%;
+        width: auto;
+      }
+    }
+    &.collapsed {
+      .button__icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__content {
+    margin: 0;
+    padding: 15px 0 24px 0;
+  }
+
+  &__trigger {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .collapsible

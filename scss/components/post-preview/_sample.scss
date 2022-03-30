@@ -1,0 +1,43 @@
+//////////////////////////////////////////////////////////
+////  Team | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Team | Styles
+//////////////////////////////////////////////////////////
+
+.team {
+
+  // ---------------------------------------- Column
+  &[data-style^="column"] {
+    .team {}
+  }
+
+  // ---------------------------------------- Row
+  &[data-style^="row"] {
+    .team {}
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    // ---------------------------------------- Column
+    &[data-style^="column"] {
+      .team {}
+    }
+
+    // ---------------------------------------- Row
+    &[data-style^="row"] {
+      .team {}
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .team

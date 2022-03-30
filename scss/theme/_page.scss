@@ -1,0 +1,51 @@
+//////////////////////////////////////////////////////////
+////  Page | Variables
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Page | Styles
+//////////////////////////////////////////////////////////
+
+.default-page {
+
+  .intro {
+    .title {
+
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    .intro {
+      .title {
+        font-size: 80px;
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    .intro {
+      .title {
+        font-size: 90px;
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    .intro {
+      .title {
+        font-size: 100px;
+      }
+    }
+
+  } // min width xxl
+
+} // .default-page

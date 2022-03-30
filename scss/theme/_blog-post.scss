@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////
+////  Blog Post | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Blog Post | Styles
+//////////////////////////////////////////////////////////
+
+.blog-post {
+
+  @import '../components/blog-post/adjacent-posts.scss';
+  @import '../components/blog-post/body.scss';
+  @import '../components/blog-post/flexible-content.scss';
+  @import '../components/blog-post/footer.scss';
+  @import '../components/blog-post/hero.scss';
+
+  .share-this {
+    margin-top: 52px;
+    &__layout {
+      justify-content: flex-start;
+    }
+  }
+
+} // .blog-post

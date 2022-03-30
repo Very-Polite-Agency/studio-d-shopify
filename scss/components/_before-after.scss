@@ -1,0 +1,68 @@
+//////////////////////////////////////////////////////////
+////  Before & After | Vars
+//////////////////////////////////////////////////////////
+
+:root {
+  --theme-before-after-handle-width: 32px;
+}
+
+//////////////////////////////////////////////////////////
+////  Before & After  | Styles
+//////////////////////////////////////////////////////////
+
+.before-after {
+
+  @import 'no-ui.scss';
+
+  &__after-image {
+    background-position: unset !important;
+    background-size: auto 100% !important;
+    transition: width 300ms;
+  }
+
+  &__header {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    span {
+      display: block;
+    }
+  }
+
+  &__main {
+    position: relative;
+    width: calc( 100% + ( 2 * var(--bs-gutter-width)) );
+    left: calc( -1 * var(--bs-gutter-width));
+  }
+
+  &__slider {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &__main {
+      width: 100%;
+      left: 0;
+      margin-bottom: 18px; // specific to_beforeAfter.js variable 'sliderControlHeightOffset'
+    }
+
+  } // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+}

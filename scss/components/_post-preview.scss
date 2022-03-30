@@ -1,0 +1,53 @@
+//////////////////////////////////////////////////////////
+////  Post Preview | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Post Preview | Styles
+//////////////////////////////////////////////////////////
+
+.post-preview {
+
+  .cta {
+    margin-top: 12px;
+  }
+
+  .hr {
+    display: none;
+    background: rgba(var(--theme-colour-black), 1);
+    margin-top: var(--bs-gutter-width);
+    height: 1px;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    a, img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    & + .content {
+      margin-top: 15px;
+    }
+  }
+
+  .layout {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .post-preview

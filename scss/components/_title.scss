@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////
+////  Title | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Title | Styles
+//////////////////////////////////////////////////////////
+
+.title {
+
+  &--project {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &--project {
+      font-size: 26px;
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {
+
+    &--project {
+      font-size: 30px;
+    }
+
+  } // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    &--project {
+      font-size: 34px;
+    }
+
+  } // min width xxl
+
+} // .title

@@ -1,0 +1,20 @@
+.archive {
+
+  &__content {
+    &.no-results {
+      padding-top: var(--bs-gutter-width);
+      border-top: 1px solid black;
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+}
