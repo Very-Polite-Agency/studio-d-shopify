@@ -1,0 +1,305 @@
+//////////////////////////////////////////////////////////
+////  Dynamic Grid | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Dynamic Grid | Styles
+//////////////////////////////////////////////////////////
+
+.dynamic-grid {
+
+  border-top: 1px solid rgba(var(--theme-colour-black),1);
+  border-bottom: 1px solid rgba(var(--theme-colour-black),1);
+
+  &__cta,
+  &__pagination {
+    margin-top: 52px;
+  }
+
+  &__item,
+  &__item-sizer {
+    width: 100%;
+  }
+
+  &__container {
+    margin: calc( -1 * var(--bs-gutter-width) );
+  }
+
+  &__item {
+    padding: calc( 1 * var(--bs-gutter-width) );
+  }
+
+  &__main {
+    padding: var(--bs-gutter-width) 0;
+    position: relative;
+  }
+
+  &__vr {
+    background: rgba(var(--theme-colour-black), 1);
+    height: calc( 100% - ( 2 * var(--bs-gutter-width) ) );
+    top: var(--bs-gutter-width);
+    width: 1px;
+    position: absolute;
+    display: none;
+  }
+
+  &.with-pagination {
+    border-bottom: none !important;
+  }
+
+  //////////////////////////////////////////////////////////
+  ////  Layout
+  //////////////////////////////////////////////////////////
+
+  // ---------------------------------------- Standard Layout
+  &[data-grid-layout="standard"] {
+    .dynamic-grid {
+      &__container {
+        margin: calc( -0.5 * var(--bs-gutter-width) );
+      }
+      &__item {
+        padding: calc( 0.5 * var(--bs-gutter-width) );
+      }
+    }
+  }
+
+  // ---------------------------------------- Vertical Rules Layout
+  &[data-grid-layout="vertical-stroke"] {
+    .dynamic-grid {}
+  }
+
+  // ---------------------------------------- Horizontal & Vertical Rules Layout
+  &[data-grid-layout="horizontal-vertical-stroke"] {
+    border-bottom: none;
+    .dynamic-grid {}
+  }
+
+  //////////////////////////////////////////////////////////
+  ////  Columns
+  //////////////////////////////////////////////////////////
+
+  // ---------------------------------------- Three Column
+  &[data-grid-columns="three-column"] {
+    &[data-grid-layout="standard"] {
+      .dynamic-grid {}
+    }
+    &[data-grid-layout="vertical-stroke"] {
+      .dynamic-grid {
+        &__container {
+          margin: calc( -0.5 * var(--bs-gutter-width) ) calc( -1 * var(--bs-gutter-width) );
+        }
+        &__item {
+          padding: calc( 0.5 * var(--bs-gutter-width) ) calc( 1 * var(--bs-gutter-width) );
+        }
+      }
+    }
+    &[data-grid-layout="horizontal-vertical-stroke"] {
+      .dynamic-grid {}
+    }
+  }
+
+  // ---------------------------------------- Four Column
+  &[data-grid-columns="four-column"] {
+    .dynamic-grid {
+      &__item,
+      &__item-sizer {
+        width: 50%;
+      }
+      &__container {
+        margin: calc( -0.5 * var(--bs-gutter-width) );
+      }
+      &__item {
+        padding: calc( 0.5 * var(--bs-gutter-width) );
+      }
+    }
+    &[data-grid-layout="standard"] {}
+    &[data-grid-layout="vertical-stroke"] {
+      .dynamic-grid {
+        &__container {
+          margin: calc( -0.5 * var(--bs-gutter-width) ) calc( -1 * var(--bs-gutter-width) );
+        }
+        &__item {
+          padding: calc( 0.5 * var(--bs-gutter-width) ) calc( 1 * var(--bs-gutter-width) );
+        }
+        &__vr {
+          &:nth-child(1) {
+            display: block;
+            left: 50%;
+          }
+        }
+      }
+    }
+    &[data-grid-layout="horizontal-vertical-stroke"] {
+      .dynamic-grid {
+        &__container {
+          margin: calc( -1 * var(--bs-gutter-width) );
+        }
+        &__item {
+          padding: calc( 1 * var(--bs-gutter-width) );
+        }
+        &__vr {
+          &:nth-child(1) {
+            display: block;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    //////////////////////////////////////////////////////////
+    ////  Layout
+    //////////////////////////////////////////////////////////
+
+    // ---------------------------------------- Rules Layout
+    &[data-grid-layout="vertical-stroke"],
+    &[data-grid-layout="horizontal-vertical-stroke"] {
+      .dynamic-grid {
+        &__vr {
+          &:nth-child(n) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    // ---------------------------------------- Standard Layout
+    &[data-grid-layout="standard"] {
+      .dynamic-grid {}
+    }
+
+    // ---------------------------------------- Vertical Rules Layout
+    &[data-grid-layout="vertical-stroke"] {
+      .dynamic-grid {}
+    }
+
+    // ---------------------------------------- Horizontal & Vertical Rules Layout
+    &[data-grid-layout="horizontal-vertical-stroke"] {
+      border-bottom: 1px solid rgba(var(--theme-colour-black),1);
+      .dynamic-grid {
+        &__item {
+          &.last {
+            .hr {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    //////////////////////////////////////////////////////////
+    ////  Columns
+    //////////////////////////////////////////////////////////
+
+    // ---------------------------------------- Three Column
+    &[data-grid-columns="three-column"] {
+      .dynamic-grid {
+        &__item,
+        &__item-sizer {
+          width: 33.3333%;
+        }
+      }
+      &[data-grid-layout="vertical-stroke"],
+      &[data-grid-layout="horizontal-vertical-stroke"] {
+        .dynamic-grid {
+          &__vr {
+            &:nth-child(1) {
+              left: calc(33.3333% - (var(--bs-gutter-width)/3));
+            }
+            &:nth-child(2) {
+              left: calc(66.6666% + (var(--bs-gutter-width)/3));
+            }
+          }
+        }
+      }
+      &[data-grid-layout="vertical-stroke"] {
+        .dynamic-grid {
+          &__container {
+            margin: calc( -0.5 * var(--bs-gutter-width) ) calc( -1 * var(--bs-gutter-width) );
+          }
+          &__item {
+            padding: calc( 0.5 * var(--bs-gutter-width) ) calc( 1 * var(--bs-gutter-width) );
+          }
+        }
+      }
+    }
+
+    // ---------------------------------------- Four Column
+    &[data-grid-columns="four-column"] {
+      .dynamic-grid {
+        &__item,
+        &__item-sizer {
+          width: 25%;
+        }
+        &__container {
+          margin: calc( -0.5 * var(--bs-gutter-width) ) calc( -1 * var(--bs-gutter-width) );
+        }
+        &__item {
+          padding: calc( 0.5 * var(--bs-gutter-width) ) calc( 1 * var(--bs-gutter-width) );
+        }
+      }
+      &[data-grid-layout="vertical-stroke"],
+      &[data-grid-layout="horizontal-vertical-stroke"] {
+        .dynamic-grid {
+          &__vr {
+            &:nth-child(1) {
+              left: calc(25% - (var(--bs-gutter-width)/2));
+            }
+            &:nth-child(2) {
+              left: 50%;
+            }
+            &:nth-child(3) {
+              left: calc(75% + (var(--bs-gutter-width)/2));
+            }
+          }
+        }
+      }
+      &[data-grid-layout="standard"] {
+        .dynamic-grid {
+          &__container {
+            margin: calc( -0.5 * var(--bs-gutter-width) );
+          }
+          &__item {
+            padding: calc( 0.5 * var(--bs-gutter-width) );
+          }
+        }
+      }
+      &[data-grid-layout="vertical-stroke"] {
+        .dynamic-grid {
+          &__container {
+            margin: calc( -0.5 * var(--bs-gutter-width) ) calc( -1 * var(--bs-gutter-width) );
+          }
+          &__item {
+            padding: calc( 0.5 * var(--bs-gutter-width) ) calc( 1 * var(--bs-gutter-width) );
+          }
+        }
+      }
+      &[data-grid-layout="horizontal-vertical-stroke"] {
+        .dynamic-grid {
+          &__container {
+            margin: calc( -1 * var(--bs-gutter-width) );
+          }
+          &__item {
+            padding: calc( 1 * var(--bs-gutter-width) );
+          }
+        }
+      }
+    }
+
+    &.with-cta {
+      border-bottom: none;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .dynamic-grid

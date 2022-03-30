@@ -1,0 +1,30 @@
+//////////////////////////////////////////////////////////
+////  Team | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Team | Styles
+//////////////////////////////////////////////////////////
+
+.team {
+
+  &__name,
+  &__role {
+    display: block;
+  }
+
+  &__role {
+    opacity: 0.3;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .team

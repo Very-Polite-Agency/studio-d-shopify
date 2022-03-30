@@ -1,0 +1,129 @@
+//////////////////////////////////////////////////////////
+////  Error 404 | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Error 404 | Styles
+//////////////////////////////////////////////////////////
+
+.error-404 {
+
+  &__intro {}
+
+  &__cta {
+    margin-top: 24px;
+  }
+
+  &__heading {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-family: GT Alpina Fine;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.13333;
+    letter-spacing: -0.03em;
+    & + .error-404__message {
+      margin-top: 18px;
+    }
+  }
+
+  &__image {
+    & + .error-404__content {
+      margin-top: 22px;
+    }
+  }
+
+  &__layout {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+  }
+
+  @include breakpoints(sm) {
+
+    &__heading {
+      font-size: 36px;
+      & + .error-404__message {
+        margin-top: 20px;
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    &__heading {
+      font-size: 40px;
+      & + .error-404__message {
+        margin-top: 22px;
+      }
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    &__content {
+      padding-left: calc( 2.25 * var(--bs-gutter-width) );
+      padding-right: calc( 2.25 * var(--bs-gutter-width) );
+      flex: 1;
+      width: auto;
+    }
+
+    &__heading {
+      font-size: 36px;
+      & + .error-404__message {
+        margin-top: 20px;
+      }
+    }
+
+    &__image {
+      width: 40%;
+      & + .error-404__content {
+        margin-top: 0;
+      }
+    }
+
+    &__layout {
+      width: 100%;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    &__content {
+      padding-left: calc( 2.5 * var(--bs-gutter-width) );
+      padding-right: calc( 2.5 * var(--bs-gutter-width) );
+    }
+
+    &__heading {
+      font-size: 40px;
+      & + .error-404__message {
+        margin-top: 22px;
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    &__content {
+      padding-left: calc( 2.75 * var(--bs-gutter-width) );
+      padding-right: calc( 2.75 * var(--bs-gutter-width) );
+    }
+
+    &__heading {
+      font-size: 46px;
+      & + .error-404__message {
+        margin-top: 24px;
+      }
+    }
+
+  } // min width xxl
+
+} // .error-404 {

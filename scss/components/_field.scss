@@ -1,0 +1,41 @@
+//////////////////////////////////////////////////////////
+////  Field | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Field | Styles
+//////////////////////////////////////////////////////////
+
+.field {
+
+  transition:
+    border var(--theme-transition-duration),
+    height var(--theme-transition-duration);
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+
+  &--textarea {
+    @extend .field;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .field

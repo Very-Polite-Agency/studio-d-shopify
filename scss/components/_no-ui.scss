@@ -1,0 +1,58 @@
+//////////////////////////////////////////////////////////
+////  No UI | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  No UI | Styles
+//////////////////////////////////////////////////////////
+
+.noUi {
+
+  &-connect {
+    background: transparent;
+  }
+
+  &-handle {
+    width: var( --theme-before-after-handle-width );
+    right: calc( -0.5 * var(--theme-before-after-handle-width) );
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    box-shadow: none;
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  &-target {
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  &-touch-area {
+    background: rgba(var(--theme-colour-black), 1);
+    width: 1px;
+  }
+
+  &-origin {
+    transition: tranform 300ms;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+} // .noUi

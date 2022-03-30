@@ -1,0 +1,62 @@
+//////////////////////////////////////////////////////////
+////  Footer | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Footer | Styles
+//////////////////////////////////////////////////////////
+
+&__footer {
+
+  &-cta {
+    width: 100%;
+    margin-top: 42px;
+  }
+
+  &-heading {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    margin-bottom: 20px;
+  }
+
+  &-main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &-project-preview {
+    width: calc( (100% - 14px) * 0.5 );
+    &.next {
+      margin-left: auto;
+      text-align: right;
+    }
+    &.previous {
+      margin-right: auto;
+      text-align: left;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &-cta {
+      margin-top: 52px;
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    &-cta {
+      margin-top: 62px;
+    }
+
+  } // min width xxl
+
+}

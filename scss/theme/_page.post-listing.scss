@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////
+////  Post Listing | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Post Listing | Styles
+//////////////////////////////////////////////////////////
+
+.post-listing {
+
+  .glide {
+    &__bullets {
+      justify-content: flex-start;
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .post-listing

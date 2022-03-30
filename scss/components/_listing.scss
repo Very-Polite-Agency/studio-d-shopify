@@ -1,0 +1,72 @@
+//////////////////////////////////////////////////////////
+////  Listing | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Listing | Styles
+//////////////////////////////////////////////////////////
+
+.listing {
+
+  &.testimonials-listing {
+    .dynamic-grid {
+      border-bottom: none;
+      &__item,
+      &__item-sizer {
+        width: 100%;
+      }
+      &__vr {
+        &:nth-child(n) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    &.testimonials-listing {
+      .dynamic-grid {
+        border-bottom: none;
+        &__item,
+        &__item-sizer {
+          width: 25%;
+          &.last {
+            .card {
+              .hr {
+                display: none;
+              }
+            }
+          }
+        }
+        &__vr {
+          &:nth-child(n) {
+            display: block;
+          }
+          &:nth-child(1) {
+            left: calc(25% - (var(--bs-gutter-width)/2));
+          }
+          &:nth-child(2) {
+            left: 50%;
+          }
+          &:nth-child(3) {
+            left: calc(75% + (var(--bs-gutter-width)/2));
+          }
+        }
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .listing
+
+
+

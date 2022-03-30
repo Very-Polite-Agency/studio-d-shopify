@@ -1,0 +1,105 @@
+.testimonials {
+
+  .glide {
+    overflow-y: visible !important;
+    margin-bottom: 24px;
+    &__bullets {
+      position: absolute;
+      left: 0;
+      bottom: -24px;
+      width: 100%;
+    }
+  }
+
+  &__author {
+    @include post-subtitle(1.4);
+    display: block;
+    color: rgba(var(--theme-colour-black), 0.3);
+    .link {
+      color: inherit;
+      &:hover {
+        color: rgba(var(--theme-colour-black), 1);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 12px;
+  }
+
+  &__quote {
+    font-family: var(--theme-font-family--serif--gt-alpina);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+  }
+
+  &__quotemark {
+    display: none;
+  }
+
+  &__main {
+    border-left: 1px solid rgba(var(--theme-colour-black),1);
+    padding: 0px 22px;
+    position: relative;
+  }
+
+  &__organization {
+    margin-top: 10px;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &__quote {
+      font-size: 26px;
+    }
+
+    &__quotemark {
+      display: block;
+      width: 38px;
+      position: absolute;
+      img, svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      &.bottom-right {
+        transform: rotate(180deg);
+        bottom: 5px;
+        right: 32px;
+      }
+      &.top-left {
+        top: 0;
+        left: 32px;
+      }
+    }
+
+    &__main {
+      padding: 12px 82px 0;
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {
+
+    &__main {
+      padding: 14px 92px 0;
+    }
+
+  } // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    &__main {
+      padding: 16px 102px 0;
+    }
+
+  } // min width xxl
+
+}

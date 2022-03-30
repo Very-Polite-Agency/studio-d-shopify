@@ -1,0 +1,256 @@
+//////////////////////////////////////////////////////////
+////  Form | Vars
+//////////////////////////////////////////////////////////
+
+:root {
+  --theme-field-padding: 12px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//////////////////////////////////////////////////////////
+////  Form | Styles
+//////////////////////////////////////////////////////////
+
+.form {
+
+  position: relative;
+  overflow: hidden;
+
+  .checkbox {
+    width: 100%;
+    label {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &__content {
+      margin-left: 10px;
+    }
+    &__label {
+      width: 66.6666%;
+      margin-right: auto;
+    }
+    .input {
+      width: auto;
+    }
+  }
+
+  .error {
+    .error-message {
+      opacity: 1;
+      transform: translate3d( 0, 0, 0 );
+    }
+    .required-marker {
+      color: rgba(var(--theme-colour-red), 1);
+    }
+    .textarea {
+      margin-bottom: 4px;
+    }
+    &.field {
+      padding-bottom: 24px;
+    }
+  }
+
+  .error-message {
+    transition:
+      opacity var(--theme-transition-duration),
+      transform var(--theme-transition-duration);
+    color: rgba(var(--theme-colour-red),1);
+    opacity: 0;
+    bottom: 4px;
+    right: 0;
+    position: absolute;
+    font-size: 85%;
+    transform: translate3d( -10px, 0px, 0px );
+    font-style: italic;
+  }
+
+  .field {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    padding: var( --theme-field-padding) 0;
+    &--input {
+      padding-bottom: 0;
+    }
+    &--rude {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+  }
+
+  .heading {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    margin-bottom: 0;
+    padding-bottom: 16px;
+  }
+
+  .input {
+    padding: 0;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    &--input {
+      margin-bottom: 0px;
+    }
+  }
+
+  .required-marker {
+    display: inline-block;
+    margin-left: 2px;
+  }
+
+  .section {
+    border-top: 1px solid rgba(var(--theme-colour-black), 1);
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    overflow: visible;
+    display: flex;
+    flex-flow: column;
+    .button {
+      &[type="submit"] {
+        width: 100%;
+      }
+    }
+    .field {
+      &:last-child {
+        border: none;
+      }
+    }
+
+    & + .section {
+      border-top: none;
+      margin-top: 50px;
+    }
+    &.submit {
+      margin-top: var(--bs-gutter-width);
+      border: none;
+      justify-content: center;
+      flex-flow: row;
+    }
+  }
+
+  .select {}
+
+  .textarea {}
+
+  [disabled] {
+    cursor: no-drop;
+    pointer-events: none;
+  }
+
+  &__loading {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__main {
+    transition: opacity var(--theme-transition-duration);
+    opacity: 1;
+    position: relative;
+  }
+
+  &__spinner {
+    border: 2px solid rgba( var(--theme-colour-black), 0.5);
+    border-left-color: rgba( var(--theme-colour-black), 1);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &--contact-us {
+    .section {
+      border-bottom: none;
+    }
+  }
+
+  &--job-application {
+    .section {
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+
+  &.posting {
+    .form__main {
+      opacity: 0.15;
+    }
+    .form__loading {
+      z-index: 10;
+      display: flex;
+    }
+    .form__spinner {
+      animation: loading 1.0s infinite linear;
+    }
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {
+
+    .section {
+      .button {
+        &[type="submit"] {
+          width: auto;
+          min-width: 200px;
+        }
+      }
+    }
+
+    &--job-application {
+
+      .field {
+        &--select-multiple,
+        &--textarea {
+          align-items: flex-start;
+        }
+      }
+
+      .input {
+        &--text,
+        &--email,
+        &--tel,
+        &--file {
+          width: 50%;
+        }
+      }
+
+      .label {
+        margin-bottom: 0;
+        width: 50%;
+        padding-right: 10%;
+      }
+
+      .select,
+      .textarea {
+        width: 50%;
+      }
+
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .form

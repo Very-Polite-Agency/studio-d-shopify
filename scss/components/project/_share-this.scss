@@ -1,0 +1,38 @@
+//////////////////////////////////////////////////////////
+////  Share This | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Share This | Styles
+//////////////////////////////////////////////////////////
+
+.share-this {
+
+  &__item {
+    &.label {
+      width: 100%;
+      text-align: center;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+    &.account {
+      margin: 0 10px;
+    }
+  }
+
+  &__layout {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .share-this

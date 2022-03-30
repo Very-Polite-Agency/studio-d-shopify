@@ -1,0 +1,74 @@
+//////////////////////////////////////////////////////////
+////  Flexible Content | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Flexible Content | Styles
+//////////////////////////////////////////////////////////
+
+.flexible-content {
+
+  .section {
+    &[data-index="0"] {
+      margin-top: 0;
+    }
+    & + .section {
+      margin-top: calc( 0.65 * var(--theme-section-margin) );
+    }
+  }
+
+  .images__image {
+    border: 1px solid rgba(var(--theme-colour-black), 0.05 );
+  }
+
+  @include breakpoints(sm) {
+
+    .section {
+      & + .section {
+        margin-top: calc( 0.65 * var(--theme-section-margin--sm) );
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    .section {
+      & + .section {
+        margin-top: calc( 0.65 * var(--theme-section-margin--md) );
+      }
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    .section {
+      & + .section {
+        margin-top: calc( 0.65 * var(--theme-section-margin--lg) );
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    .section {
+      & + .section {
+        margin-top: calc( 0.65 * var(--theme-section-margin--xl) );
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    .section {
+      & + .section {
+        margin-top: calc( 0.65 * var(--theme-section-margin--xxl) );
+      }
+    }
+
+  } // min width xxl
+
+} // .flexible-content

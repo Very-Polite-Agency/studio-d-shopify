@@ -1,0 +1,73 @@
+//////////////////////////////////////////////////////////
+////  Masonry | Variables
+//////////////////////////////////////////////////////////
+
+$gutter: 10px;
+
+//////////////////////////////////////////////////////////
+////  Masonry | Styles
+//////////////////////////////////////////////////////////
+
+.masonry-grid {
+
+  &__collapse {
+    background: rgba(var(--theme-colour-white), 1);
+  }
+
+  &__container {
+    transition: height 280ms;
+    clear: both;
+    margin: 0 -10px -30px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &__sizer,
+  &__item {
+    width: 100%;
+  }
+
+  &__item {
+    background: rgba(var(--theme-colour-white), 1);
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    &.active {
+      z-index: 50;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &__sizer,
+    &__item {
+      width: 50%;
+      padding: 0 10px;
+    }
+
+  } // min width sm
+
+  @include media-breakpoint-up(md) {
+
+    &__sizer,
+		&__item {
+			width: 33.3333%;
+		}
+
+  } // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &__sizer,
+		&__item {
+			width: 25%;
+		}
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+} // .masonry

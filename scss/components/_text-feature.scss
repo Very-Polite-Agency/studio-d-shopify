@@ -1,0 +1,70 @@
+//////////////////////////////////////////////////////////
+////  Text Feature | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Text Feature | Styles
+//////////////////////////////////////////////////////////
+
+.text-feature {
+
+  text-align: center;
+
+  &__content {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+
+  &__cta {
+    margin-top: 45px;
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &__content {
+      font-size: 34px;
+    }
+
+  } // min width sm
+
+  @include media-breakpoint-up(md) {
+
+    &__content {
+      font-size: 36px;
+    }
+
+  } // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &__content {
+      font-size: 38px;
+    }
+
+    &__cta {
+      margin-top: 58px;
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {
+
+    &__content {
+      font-size: 45px;
+    }
+
+  } // min width xl
+
+  @include media-breakpoint-up(xxl) {
+
+    &__content {
+      font-size: 55px;
+    }
+
+  } // min width xxl
+
+} // .text-feature

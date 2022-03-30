@@ -1,0 +1,113 @@
+//////////////////////////////////////////////////////////
+////  Glide | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Glide | Styles
+//////////////////////////////////////////////////////////
+
+.glide {
+
+  &__bullets {
+    margin-top: var(--bs-gutter-width);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__bullet {
+    transition:
+      background var(--theme-transition-duration),
+      border var(--theme-transition-duration);
+    background: rgba(var(--theme-colour-black), 0.333);
+    height: var(--theme-glider-bullet-size);
+    width: var(--theme-glider-bullet-size);
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    display: block;
+    padding: 0;
+    & + .glide__bullet {
+      margin-left: 22px;
+    }
+    &:hover,
+    &:focus,
+    &--active {
+      background: rgba(var(--theme-colour-black), 1);
+    }
+  }
+
+  &__button {
+    padding: 0;
+    &.next {
+      right: 0;
+    }
+    &.prev {
+      left: 0;
+    }
+  }
+
+  &__slides {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__track {
+    transition: height var(--theme-transition-duration);
+    will-change: height;
+  }
+
+  &[data-glide-style="default"] {
+    .glide {
+      &__button {
+        &.next,
+        &.prev {
+          background: rgba(var(--theme-colour-white), 0 );
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 38px;
+          &:focus,
+          &:hover {
+            background: rgba(var(--theme-colour-white), 0.85 );
+          }
+        }
+      }
+    }
+  }
+
+  &[data-glide-style="project"] {
+    .glide__slide {
+      transition: opacity var(--theme-transition-duration);
+      opacity: 0.33;
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &[data-glide-style="default"] {
+      .glide {
+        &__button {
+          &.next,
+          &.prev {
+            width: 78px;
+          }
+        }
+      }
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+} // .glide

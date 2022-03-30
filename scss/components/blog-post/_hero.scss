@@ -1,0 +1,74 @@
+//////////////////////////////////////////////////////////
+////  Hero | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Hero | Styles
+//////////////////////////////////////////////////////////
+
+.hero {
+
+  color: rgba(var(--theme-colour-black), 1);
+  height: auto;
+  background: transparent;
+
+  &__date {
+    color: rgba( var(--theme-colour-black), 0.3333 );
+    font-family: var(--theme-font-family--sans-serif--neue-montreal);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1;
+    display: block;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-family: var(--theme-font-family--serif--gt-alpina);
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 1.1333;
+    letter-spacing: -0.03em;
+    & + .hero__date {
+      margin-top: 28px;
+    }
+  }
+
+  &__content {
+    padding: 35px 0;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {
+
+    &__content {
+      padding: 42px 0;
+    }
+
+    &__date {
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 38px;
+      & + .hero__date {
+        margin-top: 32px;
+      }
+    }
+
+  } // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+}  // .hero

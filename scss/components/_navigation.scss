@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////
+////  Navigation | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Navigation | Styles
+//////////////////////////////////////////////////////////
+
+.navigation {
+
+  &--grid {
+    display: grid;
+  }
+
+  &--flex {
+    display: inline-flex;
+  }
+
+  @include media-breakpoint-up(sm) {} // min width sm
+
+  @include media-breakpoint-up(md) {} // min width md
+
+  @include media-breakpoint-up(lg) {} // min width lg
+
+  @include media-breakpoint-up(xl) {} // min width xl
+
+  @include media-breakpoint-up(xxl) {} // min width xxl
+
+}

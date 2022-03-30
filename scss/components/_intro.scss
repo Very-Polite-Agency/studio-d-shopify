@@ -1,0 +1,98 @@
+//////////////////////////////////////////////////////////
+////  Intro | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  ComIntroment | Styles
+//////////////////////////////////////////////////////////
+
+.intro {
+
+  padding: 36px 0;
+
+  .title {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 1.1333;
+    letter-spacing: -0.03em;
+    margin: 0;
+    padding: 0;
+    br + span {
+      padding-left: 15%;
+      width: 100%;
+      display: block;
+    }
+    span {
+      font-family: var(--theme-font-family--sans-serif--neue-montreal);
+      font-weight: 100;
+    }
+  }
+
+  & + .page-content,
+  & + .flexible-content .section:first-child {
+    margin-top: 10px;
+  }
+
+  @include breakpoints(sm) {
+
+    .title {
+      font-size: 65px;
+      br + span {
+        padding-left: 20%;
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoints(md) {
+
+    .title {
+      font-size: 72px;
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    padding: 45px 0;
+
+    .title {
+      font-size: 120px;
+      br + span {
+        padding-left: 16%;
+      }
+    }
+
+    & + .page-content,
+    & + .flexible-content .section:first-child {
+      margin-top: 30px;
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    .title {
+      font-size: 140px;
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    padding: 55px 0;
+
+    .title {
+      font-size: 160px;
+    }
+
+    & + .page-content,
+    & + .flexible-content .section:first-child {
+      margin-top: 50px;
+    }
+
+  } // min width xxl
+
+} // .intro

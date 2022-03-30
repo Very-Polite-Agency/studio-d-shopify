@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////
+////  Client | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Client | Styles
+//////////////////////////////////////////////////////////
+
+.client {
+
+  background: rgba(var(--theme-colour-black), 0.015);
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {} // min width md
+
+  @include breakpoints(lg) {} // min width lg
+
+  @include breakpoints(xl) {} // min width xl
+
+  @include breakpoints(xxl) {} // min width xxl
+
+} // .client

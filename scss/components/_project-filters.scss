@@ -1,0 +1,230 @@
+//////////////////////////////////////////////////////////
+////  Project Filter | Vars
+//////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////
+////  Project Filter | Styles
+//////////////////////////////////////////////////////////
+
+.project-filters {
+
+  label {
+    @include post-subtitle();
+  }
+
+  .button {
+    &.apply,
+    &.clear {
+      min-width: 100px;
+    }
+    &.apply {
+      @include button( 'primary-outlined' );
+    }
+    &.clear {
+      @include button( 'primary' );
+    }
+    & + .button {
+      margin-left: var(--bs-gutter-width);
+    }
+  }
+
+  .collapsible {
+    &__content {
+      padding-top: 0;
+    }
+  }
+
+  .heading {
+    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    padding-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  .select {
+    min-height: 0;
+    opacity: 0.3;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__filter-toggle-button {
+    display: inline-flex;
+    width: auto;
+  }
+
+  &__header {
+    padding: var(--bs-gutter-width) 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    label,
+    button {
+      @include post-subtitle();
+      font-size: calc( var(--theme-body-copy) * 1 );
+      text-transform: uppercase;
+    }
+    button {
+      .button__title {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+    &:checked {
+      & + .project-filters__input-content {
+        opacity: 1;
+        .project-filters__option-icon {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__input-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    opacity: var(--theme-hover-opacity--heavy);
+  }
+
+  &__label {
+    @include post-subtitle();
+    text-transform: uppercase;
+    & + .project-filters__option {
+      margin-top: 18px;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    grid-gap: var(--bs-gutter-width);
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    & + .project-filters__actions {
+      margin-top: var(--bs-gutter-width);
+    }
+  }
+
+  &__option {
+    display: block;
+    cursor: pointer;
+    & + .project-filters__option {
+      margin-top: 15px;
+    }
+  }
+
+  &__option-name {}
+
+  &__option-icon {
+    display: none;
+    margin-left: 10px;
+  }
+
+  &__options {
+    //background: rgba(var(--theme-colour-black), 0.1 );
+  }
+
+  &__order {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  &__order-label {
+    display: block;
+    margin-right: 10px;
+  }
+
+  &__select {
+    flex: 1;
+  }
+
+  @include breakpoints(sm) {} // min width sm
+
+  @include breakpoints(md) {
+
+    &__header {
+      label,
+      button {
+        font-size: calc( var(--theme-body-copy--md) * 1 );
+      }
+    }
+
+  } // min width md
+
+  @include breakpoints(lg) {
+
+    &__actions {
+      justify-content: flex-end;
+    }
+
+    &__header {
+      padding: 14px 0;
+      justify-content: flex-end;
+      label,
+      button {
+        font-size: calc( var(--theme-body-copy--lg) * 1 );
+      }
+      .heading {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-right: auto;
+      }
+    }
+
+    &__label {
+      & + .project-filters__option {
+        margin-top: 10px;
+      }
+    }
+
+    &__layout {
+      width: 40%;
+      margin-left: auto;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__option {
+      & + .project-filters__option {
+        margin-top: 6px;
+      }
+    }
+
+    &__order {
+      margin-right: var(--bs-gutter-width);
+    }
+
+  } // min width lg
+
+  @include breakpoints(xl) {
+
+    &__header {
+      label,
+      button {
+        font-size: calc( var(--theme-body-copy--xl) * 1 );
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoints(xxl) {
+
+    &__header {
+      label,
+      button {
+        font-size: calc( var(--theme-body-copy--xxl) * 1 );
+      }
+    }
+
+  } // min width xxl
+
+} // .project-filter
