@@ -1,0 +1,82 @@
+{%- assign section_name = 'hero' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% assign height = section.settings.height | default: 'large' %}
+{% assign image = section.settings.image | default: false %}
+{% assign width = section.settings.width | default: 'full' %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+
+  {% if 'inset' == width %}{% render 'layout--container', state: 'open', col: 'col-12' %}{% endif %}
+    <div class="{{ section_name }}__media" data-height-{{ height }}>
+      {%
+        render 'content--lazyload-image',
+        background: true,
+        classes: 'hero__background-image',
+        image: image,
+        preload: true,
+        responsive: true,
+        duration: 500,
+      %}
+    </div>
+  {% if 'inset' == width %}{% render 'layout--container', state: 'closed' %}{% endif %}
+
+  <div class="{{ section_name }}__indicator">
+    <div class="{{ section_name }}__indicator-icon">
+      {% render 'svg', type: 'icon.chevron' %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "section section--hero",
+  "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "content": "Media",
+      "type": "header"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "image"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Width",
+      "type": "select",
+      "options": [
+        { "value": "full", "label": "Full" },
+        { "value": "inset", "label": "Inset" }
+      ],
+      "default": "full",
+      "id": "width"
+    },
+    {
+      "label": "Height",
+      "type": "select",
+      "options": [
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "large",
+      "id": "height"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

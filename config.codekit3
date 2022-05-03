@@ -1989,6 +1989,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -3523,68 +3531,12 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/sections\/announcement-bar.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/announcement-bar.liquid",
-      "oF" : 0
-    },
     "\/sections\/apps.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/apps.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-icon-bubble.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-icon-bubble.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-live-region-text.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-live-region-text.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-notification-button.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-notification-button.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-notification-product.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-notification-product.liquid",
-      "oF" : 0
-    },
-    "\/sections\/collage.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collage.liquid",
-      "oF" : 0
-    },
-    "\/sections\/collapsible-content.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collapsible-content.liquid",
       "oF" : 0
     },
     "\/sections\/collection-list.liquid" : {
@@ -3611,36 +3563,12 @@
       "oAP" : "\/sections\/custom-liquid.liquid",
       "oF" : 0
     },
-    "\/sections\/email-signup-banner.liquid" : {
+    "\/sections\/fifty-fifty.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/email-signup-banner.liquid",
-      "oF" : 0
-    },
-    "\/sections\/featured-blog.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/featured-blog.liquid",
-      "oF" : 0
-    },
-    "\/sections\/featured-collection.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/featured-collection.liquid",
-      "oF" : 0
-    },
-    "\/sections\/featured-product.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/featured-product.liquid",
+      "oAP" : "\/sections\/fifty-fifty.liquid",
       "oF" : 0
     },
     "\/sections\/footer.liquid" : {
@@ -3659,20 +3587,12 @@
       "oAP" : "\/sections\/header.liquid",
       "oF" : 0
     },
-    "\/sections\/image-banner.liquid" : {
+    "\/sections\/hero.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/image-banner.liquid",
-      "oF" : 0
-    },
-    "\/sections\/image-with-text.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/image-with-text.liquid",
+      "oAP" : "\/sections\/hero.liquid",
       "oF" : 0
     },
     "\/sections\/main-404.liquid" : {
@@ -3779,22 +3699,6 @@
       "oAP" : "\/sections\/main-search.liquid",
       "oF" : 0
     },
-    "\/sections\/multicolumn.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/multicolumn.liquid",
-      "oF" : 0
-    },
-    "\/sections\/newsletter.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/newsletter.liquid",
-      "oF" : 0
-    },
     "\/sections\/page.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3827,44 +3731,20 @@
       "oAP" : "\/sections\/product-recommendations.liquid",
       "oF" : 0
     },
-    "\/sections\/rich-text.liquid" : {
+    "\/snippets\/aos-attributes.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/rich-text.liquid",
+      "oAP" : "\/snippets\/aos-attributes.liquid",
       "oF" : 0
     },
-    "\/sections\/slideshow.liquid" : {
+    "\/snippets\/card-article.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/slideshow.liquid",
-      "oF" : 0
-    },
-    "\/sections\/video.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/video.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/article-card.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/article-card.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/card-collection.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/card-collection.liquid",
+      "oAP" : "\/snippets\/card-article.liquid",
       "oF" : 0
     },
     "\/snippets\/card-product.liquid" : {
@@ -3875,324 +3755,44 @@
       "oAP" : "\/snippets\/card-product.liquid",
       "oF" : 0
     },
-    "\/snippets\/cart-notification.liquid" : {
+    "\/snippets\/input.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/cart-notification.liquid",
+      "oAP" : "\/snippets\/input.liquid",
       "oF" : 0
     },
-    "\/snippets\/email-signup-banner-background-mobile.liquid" : {
+    "\/snippets\/json-ld.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/email-signup-banner-background-mobile.liquid",
+      "oAP" : "\/snippets\/json-ld.liquid",
       "oF" : 0
     },
-    "\/snippets\/email-signup-banner-background.liquid" : {
+    "\/snippets\/label.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/email-signup-banner-background.liquid",
+      "oAP" : "\/snippets\/label.liquid",
       "oF" : 0
     },
-    "\/snippets\/facets.liquid" : {
+    "\/snippets\/lazyload-image.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/facets.liquid",
+      "oAP" : "\/snippets\/lazyload-image.liquid",
       "oF" : 0
     },
-    "\/snippets\/icon-3d-model.liquid" : {
+    "\/snippets\/navigation.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/icon-3d-model.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-accordion.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-accordion.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-account.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-account.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-arrow.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-arrow.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-caret.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-caret.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-cart-empty.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-cart-empty.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-cart.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-cart.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-checkmark.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-checkmark.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-clipboard.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-clipboard.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-close-small.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-close-small.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-close.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-close.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-discount.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-discount.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-error.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-error.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-facebook.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-facebook.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-filter.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-filter.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-hamburger.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-hamburger.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-instagram.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-instagram.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-minus.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-minus.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-padlock.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-padlock.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-pause.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-pause.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-pinterest.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-pinterest.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-play.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-play.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-plus.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-plus.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-remove.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-remove.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-share.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-share.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-snapchat.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-snapchat.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-success.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-success.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-tick.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-tick.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-tiktok.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-tiktok.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-tumblr.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-tumblr.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-twitter.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-twitter.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-unavailable.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-unavailable.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-vimeo.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-vimeo.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-youtube.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-youtube.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/icon-zoom.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/icon-zoom.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/meta-tags.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/meta-tags.liquid",
+      "oAP" : "\/snippets\/navigation.liquid",
       "oF" : 0
     },
     "\/snippets\/pagination.liquid" : {
@@ -4211,20 +3811,84 @@
       "oAP" : "\/snippets\/price.liquid",
       "oF" : 0
     },
-    "\/snippets\/product-media.liquid" : {
+    "\/snippets\/share-this.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/product-media.liquid",
+      "oAP" : "\/snippets\/share-this.liquid",
       "oF" : 0
     },
-    "\/snippets\/product-thumbnail.liquid" : {
+    "\/snippets\/svg.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/product-thumbnail.liquid",
+      "oAP" : "\/snippets\/svg.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/tags.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/tags.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/textarea.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/textarea.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--classes.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--classes.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--container.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--container.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--css-variables.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--css-variables.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--meta-tags.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--meta-tags.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--preload-fonts.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--preload-fonts.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/tools--debug-this.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/tools--debug-this.liquid",
       "oF" : 0
     },
     "\/templates\/404.json" : {

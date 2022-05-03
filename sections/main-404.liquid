@@ -1,23 +1,94 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
+{% assign section_name = 'error-404' %}
+{% assign section_id = section_name | append: '--' | append: section.id %}
 
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
-    }
-  }
-</style>
+{% assign cta_title = section.settings.cta_title | default: '' %}
+{% assign cta_link = section.settings.cta_link | default: '' %}
+{% assign heading = section.settings.heading | default: '' %}
+{% assign image = section.settings.image | default: false %}
+{% assign message = section.settings.message | default: '' %}
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+<div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+    <div class="{{ section_name }}__main">
+
+      <h1 class="{{ section_name }}__heading heading--1">{{ heading }}</h1>
+
+      <div class="{{ section_name }}__image {% unless image %}no-image{% endunless %}">
+        {%
+          render 'content--lazyload-image',
+          alt_text: 'Error 404',
+          image: image,
+        %}
+        {% if message %}
+          <div class="{{ section_name }}__message body-copy--1">{{ message }}</div>
+        {% endif %}
+      </div>
+
+      {% if cta_title != blank and cta_link != blank %}
+        <div class="{{ section_name }}__cta">
+          <a class="{{ section_name }}__cta-button link--text" href="{{ cta_link }}" title="{{ cta_title }}">
+            <span class="button__title">{{ cta_title }}</span>
+          </a>
+        </div>
+      {% endif %}
+
+    </div>
+  {% render 'layout--container', state: 'closed' %}
 </div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "404",
+    "tag": "section",
+    "settings": [
+      {
+        "content": "Content",
+        "type": "header"
+      },
+      {
+        "label": "Heading",
+        "type": "text",
+        "default": "404",
+        "id": "heading"
+      },
+      {
+        "label": "Message",
+        "type": "richtext",
+        "id": "message"
+      },
+      {
+        "content": "Call to Action",
+        "type": "paragraph"
+      },
+      {
+        "label": "Title",
+        "type": "text",
+        "id": "cta_title"
+      },
+      {
+        "label": "Link",
+        "type": "url",
+        "id": "cta_link"
+      },
+      {
+        "content": "Media",
+        "type": "header"
+      },
+      {
+        "content": "Media",
+        "type": "header"
+      },
+      {
+        "label": "Image",
+        "type": "image_picker",
+        "id": "image"
+      }
+    ]
+  }
+{% endschema %}
