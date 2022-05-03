@@ -25,6 +25,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let credits = new Credits();
+let dynamicGrid = new DynamicGrid();
 let forms = new Forms();
 let gliders = new Gliders();
 let instagramFeed = new InstagramFeed();
@@ -34,6 +35,7 @@ let scrolling = new Scrolling();
 let sizing = new Sizing();
 
 Theme.init([
+  dynamicGrid,
   forms,
   gliders,
   instagramFeed,
@@ -45,8 +47,8 @@ Theme.init([
 ]);
 
 AOS.init({
-  offset: 150,         // offset (in px) from the original trigger point
-  delay: 0,           // values from 0 to 3000, with step 50ms
-  duration: 550,      // values from 0 to 3000, with step 50ms
-  easing: 'ease-in-out',     // default easing for AOS animations
+  offset: 150,                // offset (in px) from the original trigger point
+  delay: 0,                   // values from 0 to 3000, with step 50ms
+  duration: 550,              // values from 0 to 3000, with step 50ms
+  easing: 'ease-in-out',      // default easing for AOS animations
 });

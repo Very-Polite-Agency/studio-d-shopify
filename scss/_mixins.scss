@@ -126,7 +126,7 @@
 ////  UI/UX | Breakpoints
 //////////////////////////////////////////////////////////
 
-@mixin breakpoints( $size ) {
+@mixin breakpoint( $size ) {
 
   @if $size == sm {
 	  @media (min-width: map-get( $grid-breakpoints, sm )) { @content; }
@@ -146,6 +146,10 @@
 
   @else if $size == xxl {
     @media (min-width: map-get( $grid-breakpoints, xxl )) { @content; }
+  }
+
+  @else {
+    @media (min-width: $size) { @content; }
   }
 
 }
