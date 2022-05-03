@@ -1,215 +1,33 @@
 {
   "sections": {
-    "rich_text": {
-      "type": "rich-text",
+    "16516198750d9e0e2e": {
+      "type": "text-feature",
       "blocks": {
-        "heading": {
+        "e80d6b1d-fe29-4d3b-bef3-2bdfced7f578": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Duis lobortis nisl orci quis molestie nunc vulputate et",
+            "heading_size": "2"
           }
         },
-        "text": {
+        "af8652ac-605a-4af4-a45d-32a5899bacab": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Donec aliquet tortor augue, eget efficitur tortor feugiat vitae. Aliquam tincidunt ligula a purus tristique sagittis. Proin eleifend maximus nunc, eget luctus orci. Vestibulum non sem ac sem molestie gravida. Ut sollicitudin semper purus, in congue felis iaculis ac. Sed id neque diam. Vestibulum faucibus lacus nulla, at imperdiet magna placerat at. Nulla vitae eleifend lectus. Aliquam lacinia eget urna iaculis commodo.<\/p><p>Nam elementum cursus lorem eu varius. Phasellus dapibus elit dolor, nec ultricies tortor interdum vitae. Donec vel turpis quis nisl volutpat aliquam. Nulla imperdiet libero vel justo aliquam blandit. Maecenas pharetra scelerisque erat, posuere mattis sapien suscipit id. Duis facilisis eu velit sit amet euismod. Vivamus sed tempus est, quis congue dolor. Quisque sollicitudin hendrerit luctus. Proin et rhoncus lectus, ac tempor ex. Vivamus euismod id erat sit amet tincidunt. Phasellus tincidunt tristique turpis et varius. Fusce ullamcorper lacus justo, eu dapibus urna lobortis eget.<\/p><p>Sed eget nunc convallis, molestie metus id, blandit mauris. Sed vitae libero id nunc lacinia sodales in quis arcu. Nullam in condimentum urna. Aenean volutpat auctor laoreet. Duis lobortis nisl orci, quis molestie nunc vulputate et. Maecenas lobortis sit amet nulla sed porttitor. Phasellus luctus ultrices cursus. Sed eleifend sit amet nulla eu auctor. Proin imperdiet consequat sodales. Integer vel purus metus. Suspendisse ante mauris, venenatis non interdum nec, euismod quis dui. In augue dui, tincidunt sed nisi finibus, semper fermentum neque. Vestibulum bibendum nibh eu arcu tincidunt, vel hendrerit arcu gravida.<\/p>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "e80d6b1d-fe29-4d3b-bef3-2bdfced7f578",
+        "af8652ac-605a-4af4-a45d-32a5899bacab"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "disabled": true,
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "anchor_id": "",
+        "width": "full"
       }
     }
   },
   "order": [
-    "rich_text",
-    "image_banner",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "16516198750d9e0e2e"
   ]
 }
