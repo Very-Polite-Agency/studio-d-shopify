@@ -698,6 +698,17 @@
       "oAP" : "\/assets\/GTAlpinaFine-Th.woff2",
       "oF" : 0
     },
+    "\/assets\/main.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/main.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/media-gallery.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1250,6 +1261,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/theme-editor.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/vendors.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/vendors.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1941,6 +1963,28 @@
       "ft" : 524288,
       "oA" : 0,
       "oAP" : "\/locales\/zh-TW.schema.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/node_modules" : {
+      "ft" : 65536,
+      "oA" : 2,
+      "oAP" : "\/node_modules",
+      "oF" : 0
+    },
+    "\/package-lock.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package-lock.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/package.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
