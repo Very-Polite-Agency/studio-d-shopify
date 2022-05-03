@@ -16,29 +16,24 @@
         "id": "social_link_facebook"
       },
       {
+        "label": "Houzz",
+        "type": "text",
+        "id": "social_link_houzz"
+      },
+      {
         "label": "Instagram",
         "type": "text",
         "id": "social_link_instagram"
       },
       {
-        "label": "Linked In",
+        "label": "LinkedIn",
         "type": "text",
         "id": "social_link_linkedin"
       },
       {
-        "label": "Twitter",
+        "label": "Pinterest",
         "type": "text",
-        "id": "social_link_twitter"
-      },
-      {
-        "label": "Vimeo",
-        "type": "text",
-        "id": "social_link_vimeo"
-      },
-      {
-        "label": "YouTube",
-        "type": "text",
-        "id": "social_link_youtube"
+        "id": "social_link_pinterest"
       }
     ]
   }
