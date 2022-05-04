@@ -7,7 +7,7 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
 
-  {% if 'inset' == width %}{% render 'layout--container', state: 'open', col: 'col-12' %}{% endif %}
+  {% if 'inset' == width %}{% render 'bs-container', state: 'open', col: 'col-12' %}{% endif %}
     <div class="{{ section_name }}__media" data-height-{{ height }}>
       {%
         render 'content--lazyload-image',
@@ -19,7 +19,7 @@
         duration: 500,
       %}
     </div>
-  {% if 'inset' == width %}{% render 'layout--container', state: 'closed' %}{% endif %}
+  {% if 'inset' == width %}{% render 'bs-container', state: 'closed' %}{% endif %}
 
   <div class="{{ section_name }}__indicator">
     <div class="{{ section_name }}__indicator-icon">

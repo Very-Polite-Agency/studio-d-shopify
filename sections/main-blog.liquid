@@ -11,7 +11,7 @@
 
   {% if hero_heading != blank or hero_info != blank or hero_image %}
     <div class="{{ section_name }}__hero">
-      {% render 'layout--container', state: 'open' %}
+      {% render 'bs-container', state: 'open' %}
         <div class="{{ section_name }}__hero-main">
 
           {% if hero_image %}
@@ -32,18 +32,18 @@
           {% endif %}
 
         </div>
-      {% render 'layout--container', state: 'closed' %}
+      {% render 'bs-container', state: 'closed' %}
     </div>
   {% endif %}
 
   <div class="{{ section_name }}__main">
-    {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
       <div class="{{ section_name }}__list listing--grid">
         {%- for article in blog.articles -%}
           {%- render 'card-article', article: article, classes: 'blog__article' -%}
         {%- endfor -%}
       </div>
-    {% render 'layout--container', state: 'closed' %}
+    {% render 'bs-container', state: 'closed' %}
   </div>
 
   {%- if paginate.pages > 1 -%}

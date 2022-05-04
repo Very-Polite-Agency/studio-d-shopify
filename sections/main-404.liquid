@@ -8,7 +8,7 @@
 {% assign message = section.settings.message | default: '' %}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
     <div class="{{ section_name }}__main">
 
       <h1 class="{{ section_name }}__heading heading--1">{{ heading }}</h1>
@@ -33,7 +33,7 @@
       {% endif %}
 
     </div>
-  {% render 'layout--container', state: 'closed' %}
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% stylesheet %}

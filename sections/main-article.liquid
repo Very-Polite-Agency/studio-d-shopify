@@ -15,7 +15,7 @@
 
   <div class="{{ section_name }}__hero">
     {% if featured_image %}
-      {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+      {% render 'bs-container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
         <div class="{{ section_name }}__hero-image">
           {%
             render 'content--lazyload-image',
@@ -23,12 +23,12 @@
             image: featured_image,
           %}
         </div>
-      {% render 'layout--container', state: 'closed' %}
+      {% render 'bs-container', state: 'closed' %}
     {% endif %}
   </div>
 
   <div class="{{ section_name }}__body">
-    {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
 
       <time class="{{ section_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
 
@@ -44,12 +44,12 @@
 
       {%- render 'share-this', classes: 'article__share-this', title: title -%}
 
-    {% render 'layout--container', state: 'closed' %}
+    {% render 'bs-container', state: 'closed' %}
   </div>
 
   {% if article_next or article_previous %}
     <div class='{{ section_name }}__footer'>
-      {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+      {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
         <h2 class='{{ section_name }}__heading heading--1'>Related Articles</h2>
         <div class='{{ section_name }}__related-articles listing--flex'>
           {% if article_previous %}
@@ -59,7 +59,7 @@
             {%- render 'card-article', article: article_next, classes: 'article__related-articles-item next' -%}
           {% endif %}
         </div>
-      {% render 'layout--container', state: 'close' %}
+      {% render 'bs-container', state: 'close' %}
     </div>
   {% endif %}
 
