@@ -121,7 +121,9 @@
               "city": "San Francisco",
               "region": "CA",
               "postal": "94110",
-              "country": "USA"
+              "country": "USA",
+              "phone": "",
+              "email": ""
             }
           },
           "7a51016b-6368-4c01-ae38-d00cf70fef19": {
@@ -133,27 +135,15 @@
               "city": "Jersey City",
               "region": "NJ",
               "postal": "07310",
-              "country": "USA"
-            }
-          },
-          "ba195a5e-d4fd-4dc7-ae2c-8c7d6b60c850": {
-            "type": "social",
-            "settings": {
-              "account": "houzz"
-            }
-          },
-          "4a9c0b6d-6036-49fb-8c5b-1caeb2f2d564": {
-            "type": "social",
-            "settings": {
-              "account": "instagram"
+              "country": "USA",
+              "phone": "",
+              "email": ""
             }
           }
         },
         "block_order": [
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495",
-          "7a51016b-6368-4c01-ae38-d00cf70fef19",
-          "ba195a5e-d4fd-4dc7-ae2c-8c7d6b60c850",
-          "4a9c0b6d-6036-49fb-8c5b-1caeb2f2d564"
+          "7a51016b-6368-4c01-ae38-d00cf70fef19"
         ],
         "settings": {
           "menu_menu": "footer"
