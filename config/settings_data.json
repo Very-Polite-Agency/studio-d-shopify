@@ -139,18 +139,11 @@
               "phone": "",
               "email": ""
             }
-          },
-          "d6263341-2c58-4dd7-b26e-50b7d06b931a": {
-            "type": "social",
-            "settings": {
-              "title": "facebook"
-            }
           }
         },
         "block_order": [
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495",
-          "7a51016b-6368-4c01-ae38-d00cf70fef19",
-          "d6263341-2c58-4dd7-b26e-50b7d06b931a"
+          "7a51016b-6368-4c01-ae38-d00cf70fef19"
         ],
         "settings": {
           "menu_menu": "footer"
