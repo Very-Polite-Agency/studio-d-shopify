@@ -139,11 +139,18 @@
               "phone": "",
               "email": ""
             }
+          },
+          "4f96e15f-ee86-4772-a058-0c6e83c70616": {
+            "type": "social",
+            "settings": {
+              "title": "instagram"
+            }
           }
         },
         "block_order": [
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495",
-          "7a51016b-6368-4c01-ae38-d00cf70fef19"
+          "7a51016b-6368-4c01-ae38-d00cf70fef19",
+          "4f96e15f-ee86-4772-a058-0c6e83c70616"
         ],
         "settings": {
           "menu_menu": "footer"
