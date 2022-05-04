@@ -145,12 +145,40 @@
             "settings": {
               "title": "instagram"
             }
+          },
+          "eb369079-caa1-4516-bd1f-c50e9c701494": {
+            "type": "social",
+            "settings": {
+              "title": "facebook"
+            }
+          },
+          "082a0640-9246-4974-a8c7-728ec9b5a601": {
+            "type": "social",
+            "settings": {
+              "title": "linkedin"
+            }
+          },
+          "197dcbce-dc8e-474b-948a-24db9fec6d91": {
+            "type": "social",
+            "settings": {
+              "title": "pinterest"
+            }
+          },
+          "b60c15f1-342b-441f-bf66-bed78d0de01c": {
+            "type": "social",
+            "settings": {
+              "title": "houzz"
+            }
           }
         },
         "block_order": [
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495",
           "7a51016b-6368-4c01-ae38-d00cf70fef19",
-          "4f96e15f-ee86-4772-a058-0c6e83c70616"
+          "4f96e15f-ee86-4772-a058-0c6e83c70616",
+          "eb369079-caa1-4516-bd1f-c50e9c701494",
+          "082a0640-9246-4974-a8c7-728ec9b5a601",
+          "197dcbce-dc8e-474b-948a-24db9fec6d91",
+          "b60c15f1-342b-441f-bf66-bed78d0de01c"
         ],
         "settings": {
           "menu_menu": "footer"
