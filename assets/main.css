@@ -1,0 +1,19 @@
+/* Error: Undefined mixin.
+ *     ,
+ * 199 |   @include breakpoints(sm) {} // min width sm
+ *     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   scss\_mixins.scss 199:3            post-subtitle()
+ *   scss\components\_button.scss 61:5  @import
+ *   scss\main.scss 163:9               root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 199 \2502    @include breakpoints(sm) {} // min width sm\d\a     \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   scss\\_mixins.scss 199:3            post-subtitle()\a   scss\\components\\_button.scss 61:5  @import\a   scss\\main.scss 163:9               root stylesheet";
+}
