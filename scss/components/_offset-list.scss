@@ -93,9 +93,9 @@
     .offset-list__list {}
   }
 
-  @include breakpoints(sm) {} // min width sm
+  @include breakpoint(sm) {} // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     &__item {
       .count {
@@ -130,7 +130,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .heading {
       font-size: 52px;
@@ -169,7 +169,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     .heading {
       font-size: 62px;
@@ -184,7 +184,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     .heading {
       font-size: 72px;

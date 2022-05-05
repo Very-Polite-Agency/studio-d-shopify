@@ -76,7 +76,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
     }
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     &__brand {
       height: 28px;
@@ -92,7 +92,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     &__brand {
       height: 30px;
@@ -108,7 +108,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .navigation {
       flex: 1;
@@ -134,7 +134,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     .navigation {
       &__link {
@@ -150,7 +150,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     .navigation {
       &__link {

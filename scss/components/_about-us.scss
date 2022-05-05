@@ -67,7 +67,7 @@
     padding-bottom: 20px;
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     .acronym {
       font-size: 145px;
@@ -79,7 +79,7 @@
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     .acronym {
       font-size: 175px;
@@ -87,7 +87,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .acronym {
       font-size: 150px;
@@ -128,7 +128,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     .acronym {
       font-size: 185px;
@@ -161,7 +161,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     .acronym {
       font-size: 225px;

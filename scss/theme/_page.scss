@@ -14,11 +14,11 @@
     }
   }
 
-  @include breakpoints(sm) {} // min width sm
+  @include breakpoint(sm) {} // min width sm
 
-  @include breakpoints(md) {} // min width md
+  @include breakpoint(md) {} // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .intro {
       .title {
@@ -28,7 +28,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     .intro {
       .title {
@@ -38,7 +38,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     .intro {
       .title {

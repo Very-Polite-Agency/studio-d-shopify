@@ -147,9 +147,9 @@
     flex: 1;
   }
 
-  @include breakpoints(sm) {} // min width sm
+  @include breakpoint(sm) {} // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     &__header {
       label,
@@ -160,7 +160,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     &__actions {
       justify-content: flex-end;
@@ -205,7 +205,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     &__header {
       label,
@@ -216,7 +216,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     &__header {
       label,

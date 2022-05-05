@@ -104,7 +104,7 @@
     position: relative;
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     &__product {
       &-image {
@@ -117,9 +117,9 @@
 
   } // min width sm
 
-  @include breakpoints(md) {} // min width md
+  @include breakpoint(md) {} // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     &__layout {
       flex-flow: row;
@@ -161,9 +161,9 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {} // min width xl
+  @include breakpoint(xl) {} // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     &__product-marker {
       &:after {

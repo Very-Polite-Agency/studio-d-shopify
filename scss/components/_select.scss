@@ -25,14 +25,14 @@
     }
   }
 
-  @include breakpoints(sm) {} // min width sm
+  @include breakpoint(sm) {} // min width sm
 
-  @include breakpoints(md) {} // min width md
+  @include breakpoint(md) {} // min width md
 
-  @include breakpoints(lg) {} // min width lg
+  @include breakpoint(lg) {} // min width lg
 
-  @include breakpoints(xl) {} // min width xl
+  @include breakpoint(xl) {} // min width xl
 
-  @include breakpoints(xxl) {} // min width xxl
+  @include breakpoint(xxl) {} // min width xxl
 
 } // .select
