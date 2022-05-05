@@ -40,7 +40,7 @@
     flex-flow: column;
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     &__heading {
       font-size: 36px;
@@ -51,7 +51,7 @@
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     &__heading {
       font-size: 40px;
@@ -62,7 +62,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     &__content {
       padding-left: calc( 2.25 * var(--bs-gutter-width) );
@@ -94,7 +94,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     &__content {
       padding-left: calc( 2.5 * var(--bs-gutter-width) );
@@ -110,7 +110,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     &__content {
       padding-left: calc( 2.75 * var(--bs-gutter-width) );

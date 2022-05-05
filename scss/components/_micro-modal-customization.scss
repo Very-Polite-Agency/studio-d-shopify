@@ -104,9 +104,9 @@
     outline: none;
   }
 
-  @include breakpoints(sm) {} // min width sm
+  @include breakpoint(sm) {} // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     .team {
       display: flex;
@@ -136,9 +136,9 @@
 
   } // min width md
 
-  @include breakpoints(lg) {} // min width lg
+  @include breakpoint(lg) {} // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     &__content {
       max-width: 700px;
@@ -146,6 +146,6 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {} // min width xxl
+  @include breakpoint(xxl) {} // min width xxl
 
 } // .modal

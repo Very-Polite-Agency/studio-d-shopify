@@ -71,7 +71,7 @@
     }
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     section {
       & + section {
@@ -89,7 +89,7 @@
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     section {
       & + section {
@@ -115,7 +115,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     section {
       & + section {
@@ -141,7 +141,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     section {
       & + section {
@@ -151,7 +151,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     section {
       & + section {

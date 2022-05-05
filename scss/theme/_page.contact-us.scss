@@ -123,7 +123,7 @@
 
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     .contact-form {
       &__heading {
@@ -144,7 +144,7 @@
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     .contact-form {
       &__heading {
@@ -160,7 +160,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .contact-form {
       &__form {
@@ -251,7 +251,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     .contact-form {
       &__heading {
@@ -303,7 +303,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     .contact-form {
       &__heading {

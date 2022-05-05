@@ -83,7 +83,7 @@
     left: calc( -1 * var(--bs-gutter-width) );
   }
 
-  @include breakpoints(sm) {
+  @include breakpoint(sm) {
 
     &__layout {
       padding-top: var(--theme-section-margin--sm);
@@ -96,7 +96,7 @@
 
   } // min width sm
 
-  @include breakpoints(md) {
+  @include breakpoint(md) {
 
     &__layout {
       padding-top: var(--theme-section-margin--md);
@@ -104,7 +104,7 @@
 
   } // min width md
 
-  @include breakpoints(lg) {
+  @include breakpoint(lg) {
 
     .glide {
       &__button {
@@ -178,7 +178,7 @@
 
   } // min width lg
 
-  @include breakpoints(xl) {
+  @include breakpoint(xl) {
 
     &__layout {
       padding-top: var(--theme-section-margin--xl);
@@ -186,7 +186,7 @@
 
   } // min width xl
 
-  @include breakpoints(xxl) {
+  @include breakpoint(xxl) {
 
     &__layout {
       padding-top: var(--theme-section-margin--xxl);
