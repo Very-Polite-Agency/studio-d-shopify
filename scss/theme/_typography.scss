@@ -20,6 +20,34 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0px;
 }
 
+@mixin h4 {
+  font-family: var(--theme-font-family--serif--gt-alpina);
+  font-weight: 100;
+  font-size: 26px;
+}
+
+h4, .h4 {@include h4}
+
+@mixin link-text {
+  font-family: var( --theme-font-family--sans-serif--neue-montreal);
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 116%;
+  text-transform: uppercase;
+}
+
+.link-text, .header-tabs-tab {@include link-text}
+
+@mixin menu-title {
+  font-family: var(--theme-font-family--serif--gt-alpina-fine);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 100;
+  text-transform: none;
+}
+
+.menu-title {@include menu-title}
+
 // ---------------------------------------- Text Case
 .uppercase {
   text-transform: uppercase;

@@ -8,13 +8,13 @@
 
 // @font-face {
 //     font-family: 'SaaSeriesBD';
-//     src: url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.eot');
+//     src: url('./SaaSeriesBD.eot');
 //     src: local('SaaSeriesBD'),
-//        url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.eot?#iefix') format('embedded-opentype'),
-//         url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.woff2') format('woff2'),
-//         url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.woff') format('woff'),
-//         url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.ttf') format('truetype'),
-//         url('<?php echo $assets_dir; ?>/fonts/SaaSeriesBD.svg#SaaSeriesBD') format('svg');
+//        url('./SaaSeriesBD.eot?#iefix') format('embedded-opentype'),
+//         url('./SaaSeriesBD.woff2') format('woff2'),
+//         url('./SaaSeriesBD.woff') format('woff'),
+//         url('./SaaSeriesBD.ttf') format('truetype'),
+//         url('./SaaSeriesBD.svg#SaaSeriesBD') format('svg');
 //     font-weight: normal;
 //     font-style: normal;
 //     font-display: swap;
@@ -26,13 +26,13 @@
 
 @font-face {
     font-family: 'GT Alpina';
-    // src: url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.eot');
+    // src: url('./GTAlpina-Th.eot');
     src: local('GT Alpina Th'), local('GTAlpina-Th'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Th.svg#GTAlpina-Th') format('svg');
+        url('GTAlpina-Th.eot') format('embedded-opentype'),
+        url('GTAlpina-Th.woff2') format('woff2'),
+        url('GTAlpina-Th.woff') format('woff'),
+        url('GTAlpina-Th.ttf') format('truetype'),
+        url('/GTAlpina-Th.svg#GTAlpina-Th') format('svg');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -40,13 +40,13 @@
 
 @font-face {
     font-family: 'GT Alpina';
-    // src: url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.eot');
+    // src: url('./GTAlpina-Lt.eot');
     src: local('GT Alpina Lt'), local('GTAlpina-Lt'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Lt.svg#GTAlpina-Lt') format('svg');
+        url('./GTAlpina-Lt.eot?#iefix') format('embedded-opentype'),
+        url('./GTAlpina-Lt.woff2') format('woff2'),
+        url('./GTAlpina-Lt.woff') format('woff'),
+        url('./GTAlpina-Lt.ttf') format('truetype'),
+        url('./GTAlpina-Lt.svg#GTAlpina-Lt') format('svg');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -54,13 +54,13 @@
 
 @font-face {
     font-family: 'GT Alpina';
-    // src: url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.eot');
+    // src: url('./GTAlpina-Rg.eot');
     src: local('GT Alpina Rg'), local('GTAlpina-Rg'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpina-Rg.svg#GTAlpina-Rg') format('svg');
+        url('./GTAlpina-Rg.eot?#iefix') format('embedded-opentype'),
+        url('./GTAlpina-Rg.woff2') format('woff2'),
+        url('/GTAlpina-Rg.woff') format('woff'),
+        url('./GTAlpina-Rg.ttf') format('truetype'),
+        url('./GTAlpina-Rg.svg#GTAlpina-Rg') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -69,13 +69,13 @@
 // ---------------------------------------- Fine
 @font-face {
     font-family: 'GT Alpina Fine';
-    // src: url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.eot');
+    // src: url('./GTAlpinaFine-Th.eot');
     src: local('GT Alpina Fine Th'), local('GTAlpinaFine-Th'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/GTAlpinaFine-Th.svg#GTAlpinaFine-Th') format('svg');
+        url('./GTAlpinaFine-Th.eot?#iefix') format('embedded-opentype'),
+        url('./GTAlpinaFine-Th.woff2') format('woff2'),
+        url('./GTAlpinaFine-Th.woff') format('woff'),
+        url('./GTAlpinaFine-Th.ttf') format('truetype'),
+        url('./GTAlpinaFine-Th.svg#GTAlpinaFine-Th') format('svg');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -87,13 +87,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.eot');
+    // src: url('./NeueMontreal-Light.eot');
     src: local('Neue Montreal Light'), local('NeueMontreal-Light'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Light.svg#NeueMontreal-Light') format('svg');
+        url('./NeueMontreal-Light.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-Light.woff2') format('woff2'),
+        url('./NeueMontreal-Light.woff') format('woff'),
+        url('./NeueMontreal-Light.ttf') format('truetype'),
+        url('./NeueMontreal-Light.svg#NeueMontreal-Light') format('svg');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -101,13 +101,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.eot');
+    // src: url('./NeueMontreal-LightItalic.eot');
     src: local('Neue Montreal Light Italic'), local('NeueMontreal-LightItalic'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-LightItalic.svg#NeueMontreal-LightItalic') format('svg');
+        url('./NeueMontreal-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-LightItalic.woff2') format('woff2'),
+        url('./NeueMontreal-LightItalic.woff') format('woff'),
+        url('./NeueMontreal-LightItalic.ttf') format('truetype'),
+        url('./NeueMontreal-LightItalic.svg#NeueMontreal-LightItalic') format('svg');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -115,13 +115,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.eot');
+    // src: url('./NeueMontreal-Regular.eot');
     src: local('Neue Montreal Regular'), local('NeueMontreal-Regular'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Regular.svg#NeueMontreal-Regular') format('svg');
+        url('./NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-Regular.woff2') format('woff2'),
+        url('./NeueMontreal-Regular.woff') format('woff'),
+        url('./NeueMontreal-Regular.ttf') format('truetype'),
+        url('./NeueMontreal-Regular.svg#NeueMontreal-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -129,13 +129,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.eot');
+    // src: url('./NeueMontreal-Italic.eot');
     src: local('Neue Montreal Italic'), local('NeueMontreal-Italic'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Italic.svg#NeueMontreal-Italic') format('svg');
+        url('./NeueMontreal-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-Italic.woff2') format('woff2'),
+        url('./NeueMontreal-Italic.woff') format('woff'),
+        url('./NeueMontreal-Italic.ttf') format('truetype'),
+        url('./NeueMontreal-Italic.svg#NeueMontreal-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -143,13 +143,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.eot');
+    // src: url('./NeueMontreal-Bold.eot');
     src: local('Neue Montreal Bold'), local('NeueMontreal-Bold'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-Bold.svg#NeueMontreal-Bold') format('svg');
+        url('./NeueMontreal-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-Bold.woff2') format('woff2'),
+        url('./NeueMontreal-Bold.woff') format('woff'),
+        url('./NeueMontreal-Bold.ttf') format('truetype'),
+        url('./NeueMontreal-Bold.svg#NeueMontreal-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -157,13 +157,13 @@
 
 @font-face {
     font-family: 'Neue Montreal';
-    // src: url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.eot');
+    // src: url('./NeueMontreal-BoldItalic.eot');
     src: local('Neue Montreal Bold Italic'), local('NeueMontreal-BoldItalic'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.woff2') format('woff2'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.woff') format('woff'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.ttf') format('truetype'),
-        url('<?php echo $assets_dir; ?>/fonts/NeueMontreal-BoldItalic.svg#NeueMontreal-BoldItalic') format('svg');
+        url('./NeueMontreal-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./NeueMontreal-BoldItalic.woff2') format('woff2'),
+        url('./NeueMontreal-BoldItalic.woff') format('woff'),
+        url('./NeueMontreal-BoldItalic.ttf') format('truetype'),
+        url('./NeueMontreal-BoldItalic.svg#NeueMontreal-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
