@@ -282,3 +282,15 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
     bottom: -7px;
   }
 }
+
+.cart-count {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.account-link {
+  color: #247200;
+  .link__title {
+    margin-left: 5px;
+  }
+}

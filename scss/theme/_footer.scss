@@ -49,6 +49,10 @@
     flex-flow: column;
     width: 100%;
     position: relative;
+
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid black;
+    }
     &__address,
     &__email,
     &__phone {

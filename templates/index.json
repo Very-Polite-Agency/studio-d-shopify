@@ -1,33 +1,10 @@
 {
   "sections": {
-    "16516198750d9e0e2e": {
-      "type": "text-feature",
-      "blocks": {
-        "e80d6b1d-fe29-4d3b-bef3-2bdfced7f578": {
-          "type": "heading",
-          "settings": {
-            "heading": "Duis lobortis nisl orci quis molestie nunc vulputate et",
-            "heading_size": "2"
-          }
-        },
-        "af8652ac-605a-4af4-a45d-32a5899bacab": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Donec aliquet tortor augue, eget efficitur tortor feugiat vitae. Aliquam tincidunt ligula a purus tristique sagittis. Proin eleifend maximus nunc, eget luctus orci. Vestibulum non sem ac sem molestie gravida. Ut sollicitudin semper purus, in congue felis iaculis ac. Sed id neque diam. Vestibulum faucibus lacus nulla, at imperdiet magna placerat at. Nulla vitae eleifend lectus. Aliquam lacinia eget urna iaculis commodo.<\/p><p>Nam elementum cursus lorem eu varius. Phasellus dapibus elit dolor, nec ultricies tortor interdum vitae. Donec vel turpis quis nisl volutpat aliquam. Nulla imperdiet libero vel justo aliquam blandit. Maecenas pharetra scelerisque erat, posuere mattis sapien suscipit id. Duis facilisis eu velit sit amet euismod. Vivamus sed tempus est, quis congue dolor. Quisque sollicitudin hendrerit luctus. Proin et rhoncus lectus, ac tempor ex. Vivamus euismod id erat sit amet tincidunt. Phasellus tincidunt tristique turpis et varius. Fusce ullamcorper lacus justo, eu dapibus urna lobortis eget.<\/p><p>Sed eget nunc convallis, molestie metus id, blandit mauris. Sed vitae libero id nunc lacinia sodales in quis arcu. Nullam in condimentum urna. Aenean volutpat auctor laoreet. Duis lobortis nisl orci, quis molestie nunc vulputate et. Maecenas lobortis sit amet nulla sed porttitor. Phasellus luctus ultrices cursus. Sed eleifend sit amet nulla eu auctor. Proin imperdiet consequat sodales. Integer vel purus metus. Suspendisse ante mauris, venenatis non interdum nec, euismod quis dui. In augue dui, tincidunt sed nisi finibus, semper fermentum neque. Vestibulum bibendum nibh eu arcu tincidunt, vel hendrerit arcu gravida.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "e80d6b1d-fe29-4d3b-bef3-2bdfced7f578",
-        "af8652ac-605a-4af4-a45d-32a5899bacab"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "width": "full"
-      }
+    "fifty-fifty": {
+      "type": "fifty-fifty"
     }
   },
   "order": [
-    "16516198750d9e0e2e"
+    "fifty-fifty"
   ]
 }

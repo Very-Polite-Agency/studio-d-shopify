@@ -15248,13 +15248,22 @@ textarea.form-control-lg {
 .fifty-fifty__cta + .fifty-fifty__cta {
   margin-top: 15px;
 }
+.fifty-fifty__cta .link.outlined {
+  min-height: 24px;
+  padding: 0 50px;
+}
 .fifty-fifty__heading {
   font-family: var(--theme-font-family--serif--gt-alpina-fine);
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
+  font-size: 62px;
   line-height: 1.05;
   letter-spacing: -0.03em;
+}
+@media (max-width: 767.98px) {
+  .fifty-fifty__heading {
+    font-size: 52px;
+  }
 }
 .fifty-fifty__heading + .fifty-fifty__message {
   margin-top: var(--bs-gutter-width);
@@ -17378,6 +17387,11 @@ body.sticky-footer footer {
   width: 100%;
   position: relative;
 }
+@media (min-width: 992px) {
+  .footer .locations {
+    border-right: 1px solid black;
+  }
+}
 .footer .locations__address, .footer .locations__email, .footer .locations__phone {
   display: block;
 }
@@ -17810,6 +17824,18 @@ body.sticky-footer footer {
   bottom: -7px;
 }
 
+.cart-count {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.account-link {
+  color: #247200;
+}
+.account-link .link__title {
+  margin-left: 5px;
+}
+
 .index .flexible-content .section[data-index="0"], .index .flexible-content [data-index="0"].section--mt {
   margin-top: 0;
 }
@@ -18103,7 +18129,7 @@ h4, .h4 {
 
 .link-text, .header-tabs-tab {
   font-family: var(--theme-font-family--sans-serif--neue-montreal);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 116%;
   text-transform: uppercase;
