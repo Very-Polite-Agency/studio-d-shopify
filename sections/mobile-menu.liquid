@@ -1,0 +1,30 @@
+{% assign section_name = 'mobile-menu' %}
+{% assign section_id = section_name | append: '--' | append: section.id %}
+
+
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+ {
+ 	"name": "Mobile Menu",
+  "class": "mobile-menu",
+ 	"tag": "div",
+ 	"settings": [
+    {
+ 			"content": "Navigation",
+ 			"type": "header"
+ 		},
+ 		{
+ 			"label": "Main Menu",
+ 			"type": "link_list",
+ 			"id": "menu_menu"
+ 		}
+ 	]
+ }
+{% endschema %}
