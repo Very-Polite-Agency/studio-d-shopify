@@ -20,11 +20,11 @@
   <div class="row">
     <div class="col-12">
       <div class="header__layout" id="{{ section_id }}">
-    
-    
+
+
         <div class="header__brand">
           <a class="link" href="/" target="_self" title="Home">
-    
+
             <svg x="0px" y="0px" viewBox="0 0 170 34" style="enable-background:new 0 0 170 34;" xml:space="preserve">
               <g
                 class="studio" {%- render 'aos-attributes', anchor: section_id, anchor_placement: 'top-bottom', delay: 250, duration: 500, easing: 'ease-in-out', offset: 0, once: 'true', transition: 'fade-down' -%}
@@ -55,10 +55,10 @@
                 d="M167,28.7c-1.3,0-2.4,1-2.5,2.3c0,0,0,0.1,0,0.1c0.1,1.4,1.3,2.4,2.7,2.3c1.2-0.1,2.2-1.1,2.3-2.3c0-1.3-1.1-2.4-2.4-2.5
                 C167.1,28.7,167,28.7,167,28.7z"/>
             </svg>
-    
+
           </a>
         </div>
-    
+
         <nav class="header__navigation navigation d-none d-lg-inline-flex">
           {% for link in linklists.main-menu.links %}
 
@@ -82,7 +82,7 @@
                             </a>
                           </div>
                           {% for sub_sub_link in sub_link.links %}
-            
+
                             <li class="navigation__item">
                               <a href="{{sub_sub_link.url}}" class="navigation__link">
                               {{sub_sub_link.title}}
@@ -94,7 +94,7 @@
                     {% endfor %}
                   {% endfor %}
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -142,15 +142,15 @@
           {% endif %}
 
         </nav>
-    
-        
-    
+
+
+
         <button class="header__hamburger hamburger hamburger--squeeze js--mobile-menu-trigger d-lg-none" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
-    
+
       </div>
     </div>
   </div>
