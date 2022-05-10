@@ -1,10 +1,14 @@
 {
   "sections": {
+    "title": {
+      "type": "title"
+    },
     "fifty-fifty": {
       "type": "fifty-fifty"
     }
   },
   "order": [
+    "title",
     "fifty-fifty"
   ]
 }

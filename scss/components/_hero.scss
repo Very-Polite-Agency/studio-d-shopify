@@ -98,3 +98,19 @@
   } // min width xxl
 
 } // .hero
+
+.hero-section {
+  position: relative;
+
+  &-title {
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+
+    img {
+      object-fit: cover;
+    }
+  }
+}

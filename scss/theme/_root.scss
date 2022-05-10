@@ -20,3 +20,20 @@ button {
 input {
     border: none;
 }
+
+.section-title {
+    padding: 20px 0;
+
+}
+
+.collection-product-grid__filter {
+    padding-bottom: 40px;
+
+    @include media-breakpoint-down(lg){
+        padding-bottom: 55px;
+    }
+
+    .collection-description {
+        padding-top: 50px;
+    }
+  }

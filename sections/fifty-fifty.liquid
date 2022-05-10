@@ -16,7 +16,7 @@
 
   <div class="flexible-content__fifty-fifty fifty-fifty" id="fifty-fifty" data-layout="image-left" data-style="wide">
     <div class="fifty-fifty__main">
-      <div class="fifty-fifty__layout {% if section.settings.invert_layout %} flex-row-reverse {%endif%}">
+      <div class="fifty-fifty__layout  {% if section.settings.invert_layout %} fifty-fifty__inverted {%endif%}">
         {%- for block in section.blocks -%}
         {%- case block.type -%}
               {%- when 'media' -%}

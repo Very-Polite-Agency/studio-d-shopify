@@ -1,0 +1,32 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-2">
+            <h1>
+                {{ section.settings.title }}
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Title Section",
+  "tag": "section",
+  "class": "section-title",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title of the section",
+      "default": "The Shop."
+    }
+  ],
+  "presets": [
+    {
+        "name": "Title Section"
+    }
+  ]
+}
+{% endschema %}
