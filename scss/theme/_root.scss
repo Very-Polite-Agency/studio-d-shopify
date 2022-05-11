@@ -21,19 +21,12 @@ input {
     border: none;
 }
 
+.pl-0 {
+    padding-left: 0;
+}
+
 .section-title {
-    padding: 20px 0;
+    padding: 20px 0 110px;
 
 }
 
-.collection-product-grid__filter {
-    padding-bottom: 40px;
-
-    @include media-breakpoint-down(lg){
-        padding-bottom: 55px;
-    }
-
-    .collection-description {
-        padding-top: 50px;
-    }
-  }

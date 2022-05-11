@@ -57,7 +57,22 @@
 							data-aos-easing="ease-in-out" data-aos-offset="175" data-aos-once="true"
 							data-aos="fade-right" class="aos-init aos-animate">
 
-							<div class="location__address">{{ block.settings.address}}<br>{{ block.settings.address_2}}
+							<div class="location__address">
+								<span>
+									{{ block.settings.address}}
+									{{ block.settings.address_2}}
+
+								</span>
+
+								<br>
+
+								<span>
+									{{ block.settings.city}}
+									{{ block.settings.region}}
+									{{ block.settings.postal}}
+									{{ block.settings.country}}
+								</span>
+
 							</div>
 							<div class="locations__phone"><a class="link" href="tel:415.695.1430" title="Phone studio D"
 									target="_blank">{{ block.settings.phone}}</a></div>
@@ -266,29 +281,49 @@
 "type": "location",
 "settings": [
 {
-"label": "Name",
-"type": "text",
-"id": "title"
+	"label": "Name",
+	"type": "text",
+	"id": "title"
 },
 {
-"label": "Street Address",
-"type": "text",
-"id": "address"
+	"label": "Street Address",
+	"type": "text",
+	"id": "address"
 },
 {
-"label": "Apartment, suite, etc.",
-"type": "text",
-"id": "address_2"
+	"label": "Apartment, suite, etc.",
+	"type": "text",
+	"id": "address_2"
 },
 {
-"label": "Phone",
-"type": "text",
-"id": "phone"
+	"label": "City",
+	"type": "text",
+	"id": "city"
 },
 {
-"label": "email",
-"type": "text",
-"id": "email"
+	"label": "Region",
+	"type": "text",
+	"id": "region"
+},
+{
+	"label": "Postal",
+	"type": "text",
+	"id": "postal"
+},
+{
+	"label": "Country",
+	"type": "text",
+	"id": "country"
+},
+{
+	"label": "Phone",
+	"type": "text",
+	"id": "phone"
+},
+{
+	"label": "email",
+	"type": "text",
+	"id": "email"
 }
 ]
 },

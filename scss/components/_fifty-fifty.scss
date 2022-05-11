@@ -18,6 +18,13 @@
     position: relative;
   }
 
+  &__message {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+  }
+
   &__ctas {
     margin-top: 12px;
     display: flex;
@@ -32,7 +39,8 @@
 
     .link.outlined {
       min-height: 24px;
-      padding: 0 50px;
+      padding: 10px 50px;
+      
     }
 
   }
@@ -161,7 +169,7 @@
     }
 
     &__heading {
-      font-size: 52px;
+      font-size:76px;
     }
 
     &__image {
@@ -300,4 +308,17 @@
 
   flex-direction: column;
 
+}
+
+.fifty-fifty-wrapper {
+  .row {
+    @include media-breakpoint-down(lg){
+      .fifty-fifty_media {
+        order: 1;
+      }
+      .fifty-fifty_content {
+        order: 2;
+      }
+    }
+  }
 }

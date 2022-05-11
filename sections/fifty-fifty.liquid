@@ -8,31 +8,22 @@
 {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }} data-text-alignment-{{
-  text_alignment }}>
+<div class="container-fluid px-0 {{ section_name }}-wrapper mb-lg-150">
+  <div class="row justify-content-center">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'media' -%}
 
-  
-  
+      <div class="fifty-fifty_media  col-12 col-lg-7 px-0">
+        <img
+          class="lazyload-item lazyload-item--image lazyload-item--inline lazyautosizes lazyloaded"
+          src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image">
+      </div>
 
-  <div class="flexible-content__fifty-fifty fifty-fifty" id="fifty-fifty" data-layout="image-left" data-style="wide">
-    <div class="fifty-fifty__main">
-      <div class="fifty-fifty__layout  {% if section.settings.invert_layout %} fifty-fifty__inverted {%endif%}">
-        {%- for block in section.blocks -%}
-        {%- case block.type -%}
-              {%- when 'media' -%}
-  
-        <div class="fifty-fifty__image aos-init aos-animate lazyloaded"
-          data-aos-anchor="#fifty-fifty--a886272a18cce4f5028e21adcc68b9f6" data-aos-anchor-placement="top-bottom"
-          data-aos-delay="0" data-aos-duration="550" data-aos-easing="ease-in-out" data-aos-offset="175"
-          data-aos-once="true" data-aos="fade-left"><img
-            class="lazyload-item lazyload-item--image lazyload-item--inline lazyautosizes lazyloaded"
-            src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image">
-        </div>
-  
-  
-        {%- when 'content' -%}
-  
-        <div class="fifty-fifty__content">
+      {%- when 'content' -%} 
+
+      <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex justify-content-center px-lg-65 py-50 py-lg-0 ">
+        <div class="d-flex flex-column justify-content-center">
           <h2 class="fifty-fifty__heading heading aos-init aos-animate">{{ block.settings.heading }}</h2>
           <div class="fifty-fifty__message message rte aos-init aos-animate">
             <p>{{ block.settings.description }}</p>
@@ -44,20 +35,21 @@
             <div class="fifty-fifty__cta aos-init aos-animate">
               <div class="cta" data-justify="not-set"><a class="link outlined"
                   href="{{ block.settings.cta_link }}" target="_self">
-                  <span class="link__title">Shop now</span>
+                  <span class="link__title">{{ block.settings.cta_title }}</span>
                 </a></div>
             </div>
           </div>
           {%endif%}
 
         </div>
-  
-        {%endcase%}
-        {%- endfor -%}
       </div>
-    </div>
+
+      
+
+      {%endcase%}
+      {%- endfor -%}
   </div>
-  
+</div>
   
 
 
@@ -70,12 +62,7 @@
 "class": "section section--fifty-fifty",
 "max_blocks": 2,
 "settings": [
-{
-"type": "checkbox",
-"id": "invert_layout",
-"label": "Invert layout",
-"default": false
-}
+
 ],
 "blocks": [
 {
@@ -94,7 +81,13 @@
 "id": "description"
 },
 {
-"label": "Link",
+  "label": "CTA Title",
+  "type": "text",
+  "id": "cta_title",
+  "default": "Shop now"
+  },
+{
+"label": "CTA Link",
 "type": "url",
 "id": "cta_link"
 }
