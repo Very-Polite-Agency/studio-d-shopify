@@ -78,7 +78,14 @@
         <div class="container-fluid">
           <div class="row justify-content-center justify-content-lg-end align-items-baseline">
               <div class="col-8 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-                Filter
+
+                <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
+                  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+                  {% for option in collection.sort_options %}
+                    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
+                  {% endfor %}
+                </select>
+
               </div>
           </div>
         </div>
@@ -101,8 +108,11 @@
               <div class="dynamic-grid__vr"></div>
               <div class="dynamic-grid__vr"></div>
               <div class="dynamic-grid__container">
+                <div class="dynamic-grid__item-sizer"></div>
                 {%- for product in collection.products -%}
-                  {%- render 'card-product', product: product, style: section_name -%}
+                  <div class="dynamic-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+                    {%- render 'card-product', product: product, style: section_name -%}
+                  </div>
                 {%- endfor -%}
               </div>
             </div>
