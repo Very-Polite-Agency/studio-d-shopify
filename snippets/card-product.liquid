@@ -3,10 +3,9 @@
     Accepts:
     - product: {Object} Product Liquid object
     - style: {String} Conditionally load different card types by passing style option
-    - caption: {String} Description of featured image (optional)
 
     Usage:
-    {% render 'card-product', product: product, caption: 'What an amazing caption' %}
+    {% render 'card-product', product: product, style: 'some-section-or-template-name-here' %}
 
 {% endcomment %}
 
@@ -32,18 +31,19 @@
     {% case style %}
 
       {% when 'collection-product-grid' %}
+
         <div class="{{ snippet_name }}__featured-image product__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
-              render 'content--lazyload-image',
+              render 'lazyload-image',
               alt_text: title,
               image: featured_image,
             %}
           </a>
         </div>
         <div class="{{ snippet_name }}__info">
-          <strong class="{{ snippet_name }}__title caption--2">{{ title }}</strong>
-          <span class="{{ snippet_name }}__price caption--2">{% render 'price', product: product %}</strong>
+          <strong class="{{ snippet_name }}__title">{{ title }}</strong>
+          <span class="{{ snippet_name }}__price">{% render 'price', product: product %}</strong>
         </div>
 
       {% when 'contact-form' %}
@@ -55,7 +55,7 @@
         <div class="{{ snippet_name }}__featured-image product__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
-              render 'content--lazyload-image',
+              render 'lazyload-image',
               alt_text: title,
               image: featured_image,
             %}
@@ -72,7 +72,7 @@
         <div class="{{ snippet_name }}__featured-image product__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
-              render 'content--lazyload-image',
+              render 'lazyload-image',
               alt_text: title,
               image: featured_image,
             %}

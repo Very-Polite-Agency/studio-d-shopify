@@ -18,7 +18,7 @@
       {% render 'bs-container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
         <div class="{{ section_name }}__hero-image">
           {%
-            render 'content--lazyload-image',
+            render 'lazyload-image',
             alt_text: title,
             image: featured_image,
           %}

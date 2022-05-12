@@ -87,19 +87,29 @@
 
       <div class="{{ section_name }}__main">
         {% render 'bs-container', state: 'open', col: 'col-12' %}
-          <div class="{{ section_name }}__listing listing--{{ section_name }}">
-            <div class="row">
-              {%- for product in collection.products -%}
-                <div class="col-4 d-flex flex-column ">
-                  {% render 'lazyload-image', image: product.featured_image %}
-                   <h4>
-                    {{product.title}}
-                   </h4>
-                   <span>{{product.price | money }}</span>
-                </div>
-              {%- endfor -%}
+
+          <!-- Beginning of Dynamic Grid Block -->
+          <div
+            class="{{ section_name }}__dynamic-grid dynamic-grid js--data-dynamic-grid"
+            data-grid-columns="three-column"
+            data-grid-layout="vertical-stroke"
+            data-post-type="post"
+            id="{{ section_name }}--dynamic-grid--{{ section.id }}"
+          >
+
+            <div class="dynamic-grid__main">
+              <div class="dynamic-grid__vr"></div>
+              <div class="dynamic-grid__vr"></div>
+              <div class="dynamic-grid__container">
+                {%- for product in collection.products -%}
+                  {%- render 'card-product', product: product, style: section_name -%}
+                {%- endfor -%}
+              </div>
             </div>
+
           </div>
+          <!-- End of Dynamic Grid Block -->
+
         {% render 'bs-container', state: 'closed' %}
       </div>
 

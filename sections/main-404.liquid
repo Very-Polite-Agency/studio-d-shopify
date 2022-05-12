@@ -15,7 +15,7 @@
 
       <div class="{{ section_name }}__image {% unless image %}no-image{% endunless %}">
         {%
-          render 'content--lazyload-image',
+          render 'lazyload-image',
           alt_text: 'Error 404',
           image: image,
         %}
