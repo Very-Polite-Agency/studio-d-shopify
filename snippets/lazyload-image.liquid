@@ -1,24 +1,33 @@
 {% comment %}
 
-  Use snippet like so...
+    Accepts:
+    - alt_text: {String} Optionally include alternative text to support SEO best practices
+    - background: {Boolean} Conditionally echo background image as <div></div> or inline as <img />
+    - classes: {String} Optionally include custom classes
+    - cloudinary: {Not Sure} This might be a legacy scenario now with Shopify metafields
+    - delay: {Integer} Optionally include a transition delay in increments of 50
+    - duration: {Integer} Optionally include a transition delay in increments of 50
+    - image: {Object} Image Liquid object
+    - preload: {Boolean} Conditionally have item preloaded before it has entered the viewport
+    - responsive: {Boolean} Conditionally include srcset values for responsive media
 
-  {%
-    render 'lazyload-image',
-    alt_text: 'Great Picture',
-    background: false,
-    classes: 'sample-class',
-    cloudinary: false,
-    delay: 50,
-    image: false,
-    preload: false,
-    responsive: false,
-    duration: 500,
-  %}
+    Usage:
+    {%
+      render 'lazyload-image',
+      alt_text: 'Great Picture',
+      background: false,
+      classes: 'sample-class another-sample-class',
+      cloudinary: false,
+      delay: 50,
+      duration: 550,
+      image: featured_image,
+      preload: false,
+      responsive: true,
+    %}
 
 {% endcomment %}
 
-{% comment %} ## Default Values ## {% endcomment %}
-
+{% comment %} Default Values {% endcomment %}
 {% assign alt_text = alt_text | default: false %}
 {% assign base_classes = 'lazyload lazyload-item lazyload-item--image' %}
 {% assign cloudinary = cloudinary | default: false %}
@@ -30,8 +39,7 @@
 {% assign duration = duration | default: 300 %}
 {% assign background = background | default: false %}
 
-{% comment %} ## Conditional Values ## {% endcomment %}
-
+{% comment %} Conditional Values {% endcomment %}
 {% if preload %}
   {% assign base_classes = base_classes | append: ' lazypreload' %}
 {% endif %}
@@ -45,7 +53,7 @@
   {% assign base_classes = base_classes | prepend: ' ' | prepend: classes  %}
 {% endif %}
 
-{% comment %} ## Conditional Layout ## {% endcomment %}
+{% comment %} Conditional Layout {% endcomment %}
 
 {% if image %}
   {% if background %}
