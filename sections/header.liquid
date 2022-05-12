@@ -106,10 +106,41 @@
             </a>
           </div>
           {% endif %}
-
-
-
+            
           {% endfor %}
+
+          <div class="navigation__item">
+            <a href="#" class="navigation__link d-flex align-items-center">
+              <svg width="15" height="17" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="5.5" width="10" height="7" stroke="#121212"/>
+                <path d="M9 4.5C9 2.567 7.433 1 5.5 1C3.567 1 2 2.567 2 4.5" stroke="#121212"/>
+                </svg>                          
+              <div class="cart-count ">({{ cart.item_count }})</div>
+            </a>
+          </div>
+          
+          {% if customer %}
+          <div class="navigation__item account-link">
+            <a href="#" class="navigation__link d-flex align-items-center">
+              <svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="3" r="2.5" stroke="#247200"/>
+                <path d="M11 12C11 9.23858 8.76142 7 6 7C3.23858 7 1 9.23858 1 12" stroke="#247200"/>
+                </svg>                                      
+              <div class="link__title">Logout</div>
+            </a>
+          </div>
+          {%else%}
+          <div class="navigation__item account-link">
+            <a href="#" class="navigation__link d-flex align-items-center">
+              <svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="3" r="2.5" stroke="#247200"/>
+                <path d="M11 12C11 9.23858 8.76142 7 6 7C3.23858 7 1 9.23858 1 12" stroke="#247200"/>
+                </svg>                                      
+              <div class="link__title">Login</div>
+            </a>
+          </div>
+          {% endif %}
+
         </nav>
 
 

@@ -5,165 +5,121 @@
 {% assign text_alignment = section.settings.text_alignment | default: 'bottom' %}
 
 {% if section.settings.anchor_id != blank %}
-  {% assign section_id = section.settings.anchor_id %}
+{% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }} data-text-alignment-{{ text_alignment }}>
-  {% render 'theme--container', state: 'open' %}
-    <div class="{{ section_name }}__layout">
+<div class="container-fluid px-0 {{ section_name }}-wrapper mb-lg-150">
+  <div class="row justify-content-center">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'media' -%}
 
-      {%- for block in section.blocks -%}
-        <div class="{{ section_name }}__item" data-item-type-{{ block.type }}>
-          {%- case block.type -%}
-            {%- when 'content' -%}
+      <div class="fifty-fifty_media  col-12 col-lg-7 px-0">
+        <img
+          class="lazyload-item lazyload-item--image lazyload-item--inline lazyautosizes lazyloaded"
+          src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image">
+      </div>
 
-              {% assign cta_link = block.settings.cta_link | default: '' %}
-              {% assign cta_title = block.settings.cta_title | default: '' %}
-              {% assign heading = block.settings.heading | default: '' %}
-              {% assign message = block.settings.message | default: '' %}
-              {% assign product = block.settings.product | default: '' %}
+      {%- when 'content' -%} 
 
-              {% if heading != blank or message != blank %}
-                <div class="{{ section_name }}__content">
-                  {% if product != blank %}
-                    {%- render 'card-product', classes: 'fifty-fifty__product', product: product, style: section_name -%}
-                  {% endif %}
-                  {% if heading != blank %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
-                  {% if message != blank %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
-                  {% if cta_link != blank and cta_title != blank %}
-                    <div class="{{ section_name }}__cta">
-                      <a class="{{ section_name }}__button link--text" href="{{ cta_link }}" title="{{ cta_title }}" target="_self">
-                        <span class="button__title">{{ cta_title }}</span>
-                      </a>
-                    </div>
-                  {% endif %}
-                </div>
-              {% endif %}
+      <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex justify-content-center px-lg-65 py-50 py-lg-0 ">
+        <div class="d-flex flex-column justify-content-center">
+          <h2 class="fifty-fifty__heading heading aos-init aos-animate">{{ block.settings.heading }}</h2>
+          <div class="fifty-fifty__message message rte aos-init aos-animate">
+            <p>{{ block.settings.description }}</p>
+          </div>
 
-            {%- when 'media' -%}
+          {% if block.settings.cta_link != blank %}
 
-              {% assign caption = block.settings.caption | default: '' %}
-              {% assign image = block.settings.image | default: false %}
-              {% assign stamp = block.settings.stamp | default: false %}
+          <div class="fifty-fifty__ctas">
+            <div class="fifty-fifty__cta aos-init aos-animate">
+              <div class="cta" data-justify="not-set"><a class="link outlined"
+                  href="{{ block.settings.cta_link }}" target="_self">
+                  <span class="link__title">{{ block.settings.cta_title }}</span>
+                </a></div>
+            </div>
+          </div>
+          {%endif%}
 
-              {% if image %}
-                <div class="{{ section_name }}__image">
-                  {% render 'content--lazyload-image', image: image %}
-                  {% if caption != blank %}
-                    <span class="{{ section_name }}__caption caption--1">{{ caption }}</span>
-                  {% endif %}
-                </div>
-              {% endif %}
-              {% if stamp %}
-                <div class="{{ section_name }}__stamp">{% render 'content--lazyload-image', image: stamp %}</div>
-              {% endif %}
-
-          {%- endcase -%}
         </div>
-      {%- endfor -%}
+      </div>
 
-    </div>
-  {% render 'theme--container', state: 'closed' %}
+      
+
+      {%endcase%}
+      {%- endfor -%}
+  </div>
+</div>
+  
+
+
 </div>
 
 {% schema %}
 {
-  "name": "Fifty-Fifty",
-  "tag": "section",
-  "class": "section section--fifty-fifty",
-  "max_blocks": 2,
-  "settings": [
-    {
-      "label": "Anchor ID",
-      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
-      "type": "text",
-      "id": "anchor_id"
-    },
-    {
-      "label": "Colour Theme",
-      "type": "select",
-      "options": [
-        { "value": "light", "label": "Light" },
-        { "value": "dark", "label": "Dark" }
-      ],
-      "default": "light",
-      "id": "colour_theme"
-    },
-    {
-      "label": "Text Alignment",
-      "type": "select",
-      "options": [
-        { "value": "center", "label": "Center" },
-        { "value": "bottom", "label": "Bottom" }
-      ],
-      "default": "center",
-      "id": "text_alignment"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Content",
-      "type": "content",
-      "limit": 1,
-      "settings": [
-        {
-          "label": "Product",
-          "type": "product",
-          "id": "product"
-        },
-        {
-          "label": "Heading",
-          "type": "richtext",
-          "id": "heading"
-        },
-        {
-          "label": "Message",
-          "type": "richtext",
-          "id": "message"
-        },
-        {
-          "content": "Call to Action",
-          "type": "paragraph"
-        },
-        {
-          "label": "Title",
-          "type": "text",
-          "id": "cta_title"
-        },
-        {
-          "label": "Link",
-          "type": "url",
-          "id": "cta_link"
-        }
-      ]
-    },
-    {
-      "name": "Media",
-      "type": "media",
-      "limit": 1,
-      "settings": [
-        {
-          "label": "Image",
-          "type": "image_picker",
-          "id": "image"
-        },
-        {
-          "label": "Caption",
-          "type": "text",
-          "id": "caption"
-        },
-        {
-          "label": "Stamp",
-          "type": "image_picker",
-          "id": "stamp"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Fifty-Fifty"
-    }
-  ]
+"name": "Fifty-Fifty",
+"tag": "section",
+"class": "section section--fifty-fifty",
+"max_blocks": 2,
+"settings": [
+
+],
+"blocks": [
+{
+"name": "Content",
+"type": "content",
+"limit": 1,
+"settings": [
+{
+"label": "Heading",
+"type": "text",
+"id": "heading"
+},
+{
+"label": "Description",
+"type": "richtext",
+"id": "description"
+},
+{
+  "label": "CTA Title",
+  "type": "text",
+  "id": "cta_title",
+  "default": "Shop now"
+  },
+{
+"label": "CTA Link",
+"type": "url",
+"id": "cta_link"
+}
+]
+},
+{
+"name": "Media",
+"type": "media",
+"limit": 1,
+"settings": [
+{
+"label": "Image",
+"type": "image_picker",
+"id": "image"
+},
+{
+"label": "Caption",
+"type": "text",
+"id": "caption"
+},
+{
+"label": "Stamp",
+"type": "image_picker",
+"id": "stamp"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Fifty-Fifty"
+}
+]
 }
 {% endschema %}

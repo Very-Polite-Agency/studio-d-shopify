@@ -7,11 +7,22 @@
 //////////////////////////////////////////////////////////
 
 .fifty-fifty {
+  margin: 90px 0;
 
+  @include media-breakpoint-down(lg){
+      margin: 30px 0;
+  }
   &__content {
     padding: 0 var(--bs-gutter-width);
     overflow: hidden;
     position: relative;
+  }
+
+  &__message {
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: -0.03em;
   }
 
   &__ctas {
@@ -25,15 +36,27 @@
     & + .fifty-fifty__cta {
       margin-top: 15px;
     }
+
+    .link.outlined {
+      min-height: 24px;
+      padding: 10px 50px;
+      
+    }
+
   }
 
   &__heading {
     font-family: var(--theme-font-family--serif--gt-alpina-fine);
     font-style: normal;
     font-weight: normal;
-    font-size: 42px;
+    font-size: 62px;
     line-height: 1.05;
     letter-spacing: -0.03em;
+
+    @include media-breakpoint-down(md){
+      font-size: 52px;
+    }
+
     & + .fifty-fifty__message {
       margin-top: var(--bs-gutter-width);
     }
@@ -46,13 +69,24 @@
     }
   }
 
+  &__content {
+    @include media-breakpoint-down(lg){
+      padding-bottom: 60px;
+    }
+  }
+
   &__layout {
     display: flex;
     width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
+    flex-direction: row;
+
+    @include media-breakpoint-down(lg){
+      flex-direction: column;
+    }
+
   }
 
   &__main {
@@ -135,7 +169,7 @@
     }
 
     &__heading {
-      font-size: 52px;
+      font-size:76px;
     }
 
     &__image {
@@ -151,7 +185,6 @@
       height: auto;
       justify-content: space-between;
       align-items: center;
-      flex-flow: row nowrap;
     }
 
     &__subtitle {
@@ -266,3 +299,26 @@
   } // min width xxl
 
 } // .fifty-fifty
+
+
+.fifty-fifty__inverted {
+  @include media-breakpoint-up(lg){
+    flex-direction: row-reverse;
+  }
+
+  flex-direction: column;
+
+}
+
+.fifty-fifty-wrapper {
+  .row {
+    @include media-breakpoint-down(lg){
+      .fifty-fifty_media {
+        order: 1;
+      }
+      .fifty-fifty_content {
+        order: 2;
+      }
+    }
+  }
+}

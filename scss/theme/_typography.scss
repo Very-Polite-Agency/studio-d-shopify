@@ -20,6 +20,22 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0px;
 }
 
+@mixin h1 {
+  font-family:'GT Alpina Fine';
+  font-weight: 100;
+  font-size: 120px;
+
+  @include media-breakpoint-down(lg){
+    font-size: 90px;
+  }
+
+  @include media-breakpoint-down(lg){
+    font-size: 60px;
+  }
+}
+
+h1, .h1 {@include h1}
+
 @mixin h4 {
   font-family: var(--theme-font-family--serif--gt-alpina);
   font-weight: 100;
@@ -30,7 +46,7 @@ h4, .h4 {@include h4}
 
 @mixin link-text {
   font-family: var( --theme-font-family--sans-serif--neue-montreal);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 116%;
   text-transform: uppercase;
