@@ -100,13 +100,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "background-1",
-          "logo_width": 100,
-          "logo_position": "middle-left",
-          "menu": "main-menu",
-          "show_line_separator": true,
-          "enable_sticky_header": true,
-          "margin_bottom": 0
+          "menu_menu": ""
         }
       },
       "footer": {
@@ -115,7 +109,7 @@
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495": {
             "type": "location",
             "settings": {
-              "title": "San Francisco",
+              "title": "SF",
               "address": "3130 20th St",
               "address_2": "#150",
               "city": "San Francisco",
@@ -129,7 +123,7 @@
           "7a51016b-6368-4c01-ae38-d00cf70fef19": {
             "type": "location",
             "settings": {
-              "title": "New York",
+              "title": "NY",
               "address": "234 16th Street",
               "address_2": "5th Floor, Dock 25\/26",
               "city": "Jersey City",
@@ -143,44 +137,23 @@
           "4f96e15f-ee86-4772-a058-0c6e83c70616": {
             "type": "social",
             "settings": {
-              "title": "instagram"
-            }
-          },
-          "eb369079-caa1-4516-bd1f-c50e9c701494": {
-            "type": "social",
-            "settings": {
-              "title": "facebook"
-            }
-          },
-          "082a0640-9246-4974-a8c7-728ec9b5a601": {
-            "type": "social",
-            "settings": {
-              "title": "linkedin"
-            }
-          },
-          "197dcbce-dc8e-474b-948a-24db9fec6d91": {
-            "type": "social",
-            "settings": {
-              "title": "pinterest"
-            }
-          },
-          "b60c15f1-342b-441f-bf66-bed78d0de01c": {
-            "type": "social",
-            "settings": {
-              "title": "houzz"
+              "instagram_link": "https:\/\/www.instagram.com\/studiodhome\/",
+              "facebook_link": "https:\/\/www.facebook.com\/studioDstaging",
+              "linkedin_link": "https:\/\/www.linkedin.com\/company\/studiodstaging\/",
+              "pinterest_link": "https:\/\/www.pinterest.ca\/studiodstaging\/",
+              "houzz_link": "https:\/\/www.houzz.com\/pro\/studiodhome"
             }
           }
         },
         "block_order": [
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495",
           "7a51016b-6368-4c01-ae38-d00cf70fef19",
-          "4f96e15f-ee86-4772-a058-0c6e83c70616",
-          "eb369079-caa1-4516-bd1f-c50e9c701494",
-          "082a0640-9246-4974-a8c7-728ec9b5a601",
-          "197dcbce-dc8e-474b-948a-24db9fec6d91",
-          "b60c15f1-342b-441f-bf66-bed78d0de01c"
+          "4f96e15f-ee86-4772-a058-0c6e83c70616"
         ],
         "settings": {
+          "newsletter_show": true,
+          "newsletter_heading": "",
+          "newsletter_button_title": "",
           "menu_menu": "footer"
         }
       },
@@ -195,6 +168,12 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "mobile-menu": {
+        "type": "mobile-menu",
+        "settings": {
+          "menu_menu": ""
         }
       }
     },
