@@ -42,8 +42,22 @@
           </a>
         </div>
         <div class="{{ snippet_name }}__info">
-          <strong class="{{ snippet_name }}__title">{{ title }}</strong>
-          <span class="{{ snippet_name }}__price">{% render 'price', product: product %}</strong>
+          <div class="row">
+            <div class="col-6">
+              <p>{{ title }}</p>
+              <p class="muted-text">{{ type }}</p>
+              <span>{% render 'price', product: product %} </span>
+            </div>
+            <div class="col-6 d-flex align-items-center">
+              <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined"
+                href="#" target="_self">
+                <span class="link__title">Shop Now</span>
+              </a></div>
+            </div>
+          </div>
+          
+
+          
         </div>
 
       {% when 'contact-form' %}

@@ -13,11 +13,12 @@
       {% render 'theme--container', state: 'open', col: col %}
     {% endif %}
 
-    <div class="{{ snippet_name }}__layout">
+    <div class="{{ snippet_name }}__layout d-flex">
 
-      <div class="{{ snippet_name }}__item previous d-none">
+      <div class="{{ snippet_name }}__item previous">
         {%- if paginate.previous -%}
-          <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+          <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+            <
           </a>
         {%- endif -%}
       </div>
@@ -36,9 +37,10 @@
         </div>
       {%- endfor -%}
 
-      <div class="{{ snippet_name }}__item next d-none">
+      <div class="{{ snippet_name }}__item next ">
         {%- if paginate.next -%}
-          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+            >
           </a>
         {%- endif -%}
       </div>

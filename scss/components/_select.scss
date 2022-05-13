@@ -6,7 +6,22 @@
 ////  Select | Styles
 //////////////////////////////////////////////////////////
 
+select {
+  appearance: none;
+  border: none;
+  text-shadow: none;
+
+  &:focus, &:focus-visible, &:focus-within {
+    outline: none;
+  }
+}
+
 .select {
+  
+  &--primary {
+    margin-left: 5px;
+    color: #B3B3B3;
+  }
 
   @include field-min-height();
   width: 100%;

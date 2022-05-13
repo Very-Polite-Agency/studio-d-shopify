@@ -16,10 +16,10 @@
 
   <div class="price">
     {% if price_compare %}
-      <span class="price__value">{{ price_compare | divided_by: 100  | floor }}</span>
+      <span class="price__value discount">{{ price_compare | money }}</span>
     {% endif %}
-    <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ price | divided_by: 100  | floor }}</span>
-    <span class="price__currency">{{ shop.currency }}</span>
+    <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ price | money }}</span>
+    <!-- <span class="price__currency">{{ shop.currency }}</span> -->
   </div>
 
 {%- endif -%}

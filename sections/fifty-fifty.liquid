@@ -15,9 +15,14 @@
       {%- when 'media' -%}
 
       <div class="fifty-fifty_media  col-12 col-lg-7 px-0">
-        <img
+        {%
+          render 'lazyload-image',
+          alt_text: 'Fifty-Fifty Image',
+          image:  block.settings.image,
+        %}
+        <!-- <img
           class="lazyload-item lazyload-item--image lazyload-item--inline lazyautosizes lazyloaded"
-          src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image">
+          src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image"> -->
       </div>
 
       {%- when 'content' -%} 

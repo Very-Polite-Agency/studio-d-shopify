@@ -14887,12 +14887,25 @@ textarea.form-control-lg {
   }
 }
 
+select {
+  appearance: none;
+  border: none;
+  text-shadow: none;
+}
+select:focus, select:focus-visible, select:focus-within {
+  outline: none;
+}
+
 .select {
   min-height: var(--theme-field-min-height);
   width: 100%;
   border: none;
   outline: none;
   padding: 0;
+}
+.select--primary {
+  margin-left: 5px;
+  color: #B3B3B3;
 }
 @media (min-width: 576px) {
   .select {
@@ -35748,6 +35761,19 @@ button {
 
 input {
   border: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.muted-text {
+  color: #B3B3B3;
+}
+
+.discount {
+  color: #B3B3B3;
+  text-decoration: line-through;
 }
 
 .pl-0 {

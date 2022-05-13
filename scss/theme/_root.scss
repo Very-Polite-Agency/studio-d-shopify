@@ -21,6 +21,19 @@ input {
     border: none;
 }
 
+p {
+    margin-bottom: 0;
+}
+
+.muted-text {
+    color: #B3B3B3;
+}
+
+.discount {
+    color: #B3B3B3;
+    text-decoration: line-through;
+}
+
 .pl-0 {
     padding-left: 0;
 }

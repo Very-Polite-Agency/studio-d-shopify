@@ -32,7 +32,7 @@
         <div class="container-fluid px-0">
           <div class="row position-relative">
             <div class="col-12">
-              {% render 'lazyload-image', image: collection.image %}
+              {% render 'lazyload-image', image: collection.image, alt_text: title %}
             </div>
             <div class="col-10 offset-lg-2 hero-section-title">
               <h1>
@@ -55,42 +55,32 @@
 
       </div>
 
-      {% if description != blank %}
+      
       <div class="{{ section_name }}__filter py-50">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row justify-content-center justify-content-lg-end align-items-baseline">
-
+            {% if description != blank %}
               <div class="col-12 col-lg-7 offset-lg-1 collection-description text-center text-lg-left">
                 <h4>
                   {{ description }}
                 </h4>
 
               </div>
-
-              <div class="col-8 col-lg-4 d-flex justify-content-center justify-content-lg-end pt-50">
-                Filter
-              </div>
-          </div>
-        </div>
-      </div>
-      {% else %}
-      <div class="{{ section_name }}__filter">
-        <div class="container-fluid">
-          <div class="row justify-content-center justify-content-lg-end align-items-baseline">
-              <div class="col-8 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-
+              {% endif %}
+              <div class="col-8 col-lg-4 d-flex justify-content-center justify-content-lg-end link-text">
+                <span>Sort by:</span>
                 <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
                   {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
                   {% for option in collection.sort_options %}
                     <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
                   {% endfor %}
                 </select>
-
+                <span class="ml-20">Filter -</span>
               </div>
           </div>
         </div>
       </div>
-      {% endif %}
+      
 
       <div class="{{ section_name }}__main">
         {% render 'bs-container', state: 'open', col: 'col-12' %}
