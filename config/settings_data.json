@@ -172,6 +172,21 @@
       },
       "mobile-menu": {
         "type": "mobile-menu",
+        "blocks": {
+          "ced83c8e-d1b3-4dac-8077-41d44f9991b4": {
+            "type": "social",
+            "settings": {
+              "instagram_link": "https:\/\/www.instagram.com\/studiodhome\/",
+              "facebook_link": "https:\/\/www.facebook.com\/studioDstaging",
+              "linkedin_link": "https:\/\/www.linkedin.com\/company\/studiodstaging\/",
+              "pinterest_link": "https:\/\/www.pinterest.ca\/studiodstaging\/",
+              "houzz_link": "https:\/\/www.houzz.com\/pro\/studiodhome"
+            }
+          }
+        },
+        "block_order": [
+          "ced83c8e-d1b3-4dac-8077-41d44f9991b4"
+        ],
         "settings": {
           "menu_menu": ""
         }

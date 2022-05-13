@@ -1,14 +1,125 @@
 {
   "sections": {
     "title": {
-      "type": "title"
+      "type": "title",
+      "settings": {
+        "title": "The Shop."
+      }
     },
     "fifty-fifty": {
-      "type": "fifty-fifty"
+      "type": "fifty-fifty",
+      "blocks": {
+        "545323db-6951-4a6d-a35e-31a7baea4d70": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/studioD-kitchen.png",
+            "caption": ""
+          }
+        },
+        "e0707195-153a-4b8d-a51d-6b07f9a0aaba": {
+          "type": "content",
+          "settings": {
+            "heading": "Eat.",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "cta_title": "Shop now",
+            "cta_link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "545323db-6951-4a6d-a35e-31a7baea4d70",
+        "e0707195-153a-4b8d-a51d-6b07f9a0aaba"
+      ],
+      "settings": {
+      }
+    },
+    "165241309540ef8647": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "c532b13d-037e-442e-9041-673ecd92227e": {
+          "type": "content",
+          "settings": {
+            "heading": "Live.",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "cta_title": "Shop now",
+            "cta_link": "shopify:\/\/collections\/live"
+          }
+        },
+        "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/L1_Great_Living_5093-2048x1365_2.png",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "c532b13d-037e-442e-9041-673ecd92227e",
+        "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc"
+      ],
+      "settings": {
+      }
+    },
+    "16524131360b807cfb": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "7fa30201-5c79-4802-bf41-8fc33c85ba46": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_229.png",
+            "caption": ""
+          }
+        },
+        "c3f5eaf2-475b-44cb-bd99-5b56478ded89": {
+          "type": "content",
+          "settings": {
+            "heading": "Sleep.",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "cta_title": "Shop now",
+            "cta_link": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "7fa30201-5c79-4802-bf41-8fc33c85ba46",
+        "c3f5eaf2-475b-44cb-bd99-5b56478ded89"
+      ],
+      "settings": {
+      }
+    },
+    "165241319043b17bb0": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "ec2c8cb6-4c13-4b4f-9afd-e1c495b0513b": {
+          "type": "content",
+          "settings": {
+            "heading": "Work.",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "cta_title": "Shop now",
+            "cta_link": "shopify:\/\/collections"
+          }
+        },
+        "286b4be7-ab83-4ef7-abe8-49e41bb305b7": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/L1_Great_Living_5093-2048x1365_3.png",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "ec2c8cb6-4c13-4b4f-9afd-e1c495b0513b",
+        "286b4be7-ab83-4ef7-abe8-49e41bb305b7"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "title",
-    "fifty-fifty"
+    "fifty-fifty",
+    "165241309540ef8647",
+    "16524131360b807cfb",
+    "165241319043b17bb0"
   ]
 }
