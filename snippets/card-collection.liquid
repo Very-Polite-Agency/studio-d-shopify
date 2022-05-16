@@ -1,19 +1,19 @@
 {% comment %}
 
     Accepts:
-    - product: {Object} Product Liquid object
+    - collection: {Object} collection Liquid object
     - style: {String} Conditionally load different card types by passing style option
 
     Usage:
-    {% render 'card-product', product: product, style: 'some-section-or-template-name-here' %}
+    {% render 'card-collection', collection: collection, style: 'some-section-or-template-name-here' %}
 
 {% endcomment %}
 
-{%- if product and product != blank -%}
+{%- if collection and collection != blank -%}
 
-  {% assign snippet_name = 'card-product' %}
+  {% assign snippet_name = 'card-collection' %}
   {% assign snippet_classes = snippet_name %}
-  {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
+  {% assign snippet_id = snippet_name | append: '--' | append: collection.id -%}
   {% assign caption = caption | default: '' %}
   {% assign style = style | default: 'default' %}
 
@@ -21,18 +21,18 @@
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
   {% endif %}
 
-  {% assign featured_image = product.featured_image | default: false %}
-  {% assign title = product.title | default: '' %}
-  {% assign type = product.type | default: '' %}
-  {% assign url = product.url | default: '' %}
+  {% assign featured_image = collection.featured_image | default: false %}
+  {% assign title = collection.title | default: '' %}
+  {% assign type = collection.type | default: '' %}
+  {% assign url = collection.url | default: '' %}
 
-  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}" data-published-at="{{ product.published_at | date: "%Y-%m-%d %H:%M:%S" }}">
+  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} collection" id="{{ snippet_id }}" data-published-at="{{ collection.published_at | date: "%Y-%m-%d %H:%M:%S" }}">
 
     {% case style %}
 
-      {% when 'collection-product-grid' %}
+      {% when 'collection-collection-grid' %}
 
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
+        <div class="{{ snippet_name }}__featured-image collection__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
               render 'lazyload-image',
@@ -46,13 +46,7 @@
             <div class="col-6">
               <p>{{ title }}</p>
               <p class="muted-text">{{ type }}</p>
-              <span>{% render 'price', product: product %} </span>
-            </div>
-            <div class="col-6 d-flex align-items-center">
-              <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined"
-                href="{{ url }}" target="_self">
-                <span class="link__title">Shop Now</span>
-              </a></div>
+              <span>{% render 'price', collection: collection %} </span>
             </div>
           </div>
           
@@ -66,7 +60,7 @@
           {% assign title = caption %}
         {% endif %}
 
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
+        <div class="{{ snippet_name }}__featured-image collection__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
               render 'lazyload-image',
@@ -83,7 +77,7 @@
 
       {% when 'fifty-fifty' %}
 
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
+        <div class="{{ snippet_name }}__featured-image collection__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
               render 'lazyload-image',

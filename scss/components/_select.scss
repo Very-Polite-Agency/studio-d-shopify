@@ -19,6 +19,8 @@ select {
 .select {
   
   &--primary {
+    width: 70px;
+    text-overflow: ellipsis;
     margin-left: 5px;
     color: #B3B3B3;
   }

@@ -1,0 +1,39 @@
+{% assign snippet_name = 'card-recommended' %}
+{% assign snippet_classes = snippet_name %}
+{% assign snippet_id = snippet_name | append: '--' | append: recommendation.id -%}
+{% assign caption = caption | default: '' %}
+{% assign style = style | default: 'default' %}
+
+{% assign featured_image = recommendation.featured_image | default: false %}
+{% assign title = recommendation.title | default: '' %}
+{% assign type = recommendation.type | default: '' %}
+{% assign url = recommendation.url | default: '' %}
+
+
+<div class="{{ snippet_name }}__featured-image product__featured-image">
+    <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+        {%
+        render 'lazyload-image',
+        alt_text: title,
+        image: featured_image,
+        %}
+    </a>
+</div>
+<div class="{{ snippet_name }}__info">
+    <div class="row">
+        <div class="col-6">
+            <p>{{ title }}</p>
+            <p class="muted-text">{{ type }}</p>
+            <span>{% render 'price', product: product %} </span>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+            <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined" href="{{ url }}"
+                    target="_self">
+                    <span class="link__title">Shop Now</span>
+                </a></div>
+        </div>
+    </div>
+
+
+
+</div>
