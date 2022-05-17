@@ -1,4 +1,10 @@
 //General Styles
+body {
+    &.show {
+        overflow-y: hidden;
+    }
+}
+
 
 ul {
     padding-left: 0;
@@ -99,9 +105,30 @@ p {
 
     &__button {
         height: 26px;
+        width: 29px;
         padding: 2px 9px;
         border: 1px solid $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 
 }
 
+.cart-item {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid $black;
+
+    &__thumb {
+        max-height: 120px;
+        object-fit: cover;
+    }
+
+    &__remove {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

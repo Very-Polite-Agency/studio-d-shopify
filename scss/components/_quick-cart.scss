@@ -1,0 +1,54 @@
+#quick-cart {
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    visibility: hidden;
+    transition: all .3s ease;
+    z-index: 101;
+    height: 100%;
+    width: 35vw;
+
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+    }
+
+    .background-modal {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        background-color: rgba(0,0,0,.2);
+        z-index: 1;
+      }
+    
+      .quick-cart {
+          background-color: white;
+          padding: 60px 40px;
+          height: 100%;
+          width: 100%;
+          
+          position: relative;
+          z-index: 2;
+
+          display: flex;
+          flex-direction: column;
+
+          &__header {
+              padding-bottom: 60px;
+          }
+
+          &__main {
+              overflow-y: auto;
+          }
+
+          &__footer {
+              padding-top: 60px;
+              margin-top: auto;
+          }
+      }
+}
