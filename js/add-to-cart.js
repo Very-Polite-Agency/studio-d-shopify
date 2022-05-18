@@ -1,3 +1,13 @@
+//  <button
+//   class="{{ snippet_name }}__button button--tertiary js--add-to-cart"
+//   type="button"
+//   data-variant-id="{{ variant.id }}"
+//   data-quantity="1"
+//   data-featured-image="{{ featured_image | image_url: width: 200 }}" // optional data attribute
+// >
+//   <span class="button__title">{% if available %}Add to Cart{% else %}Unavailable{% endif %}</span>
+// </button>
+
 ( document.querySelectorAll('.js--add-to-cart') || [] ).forEach( button => {
   button.addEventListener('click', event => {
     event.preventDefault();
@@ -65,4 +75,3 @@ function addProductToCartFromButton( $button = false ) {
   .then(function () {});
 
 };
-
