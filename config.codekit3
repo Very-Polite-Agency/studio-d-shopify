@@ -33,6 +33,17 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/assets\/add-to-cart.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/add-to-cart.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/app.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -3581,6 +3592,14 @@
       "oAP" : "\/snippets\/card-recommended.liquid",
       "oF" : 0
     },
+    "\/snippets\/debug-this.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/debug-this.liquid",
+      "oF" : 0
+    },
     "\/snippets\/input.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3715,14 +3734,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/theme--preload-fonts.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/tools--debug-this.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/tools--debug-this.liquid",
       "oF" : 0
     },
     "\/templates\/404.json" : {
