@@ -164,8 +164,10 @@
           <div class="row pt-20">
             <div class="col-12 link-text">
               <p class="pb-2">This item appears in:</p>
-              <p class="underline pb-2"> NYC HOUSE</p>
-              <p class="underline pb-2">LA apartment</p>
+              {% for location in product.metafields.appears.location %} 
+                <a href=" {{ product.metafields.appears.link[forloop.index0] }}" class="underline pb-2 d-block"> {{ location }} </a>
+              {% endfor %} 
+              
             </div>
           </div>
 
@@ -201,22 +203,25 @@
 
 <!-- Initialize Swiper -->
 <script>
-  var swiper = new Swiper(".swiper-thumbnail", {
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
-    watchSlidesProgress: true,
-    clickable: true,
-  });
-  var swiper2 = new Swiper(".swiper-product", {
-    spaceBetween: 10,
-    effect: "fade",
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
+  $(function () {
+    var swiper = new Swiper(".swiper-thumbnail", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+      clickable: true,
+    });
+    var swiper2 = new Swiper(".swiper-product", {
+      spaceBetween: 10,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+
+  })
 </script>
