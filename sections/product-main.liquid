@@ -1,3 +1,8 @@
+{% assign details = product.metafields.info.details | default: '' %}
+{% assign dimensions = product.metafields.info.dimensions | default: '' %}
+{% assign features = product.metafields.info.features | default: '' %}
+{% assign materials = product.metafields.info.materials | default: '' %}
+
 <main class="page-product pt-40">
 
   <!-- SECTION: PRODUCT MAIN -->
@@ -46,7 +51,7 @@
             {{ product.description }}
           </p>
 
-         
+
 
           {% render 'product-form' with
             product: product,
@@ -59,78 +64,78 @@
             <div class="col-12">
               <div class="accordion" id="accordion-{{ product.title | replace: ' ', '-' }}">
 
-                {% if product.metafields.my_fields.details != blank %}
-                  
+                {% if details != blank %}
+
                   <div class="navigation__item" id="headingOne-{{ product.title | replace: ' ', '-' }}">
                     <button class="navigation__link link w-100 justify-content-between" target="_self" title="ShopAll" type="button" data-toggle="collapse" data-target="#collapseOne-{{product.title | replace: ' ', '-'}}" aria-expanded="false" aria-controls="collapseOne-{{product.title | replace: ' ', '-'}}"><span
                       class="link-text">Details</span>
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.5 0V11" stroke="black"/>
                         <path d="M11 5.5L0 5.5" stroke="black"/>
-                      </svg>                    
+                      </svg>
                     </button>
                   </div>
-    
+
                   <div id="collapseOne-{{ product.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingOne-{{ product.title | replace: ' ', '-' }} " data-parent="#accordion-{{ product.title | replace: ' ', '-' }}">
                     <p class="pt-2">
-                      {{ product.metafields.my_fields.details | metafield_tag  }}
+                      {{ details  }}
                     </p>
                   </div>
                 {% endif %}
 
-                {% if product.metafields.my_fields.features != blank %}
-                  
+                {% if features != blank %}
+
                   <div class="navigation__item" id="headingTwo-{{ product.title | replace: ' ', '-' }}">
                     <button class="navigation__link link w-100 justify-content-between" target="_self" title="ShopAll" type="button" data-toggle="collapse" data-target="#collapseTwo-{{product.title | replace: ' ', '-'}}" aria-expanded="false" aria-controls="collapseTwo-{{product.title | replace: ' ', '-'}}"><span
                       class="link-text">Features</span>
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.5 0V11" stroke="black"/>
                         <path d="M11 5.5L0 5.5" stroke="black"/>
-                      </svg>                    
+                      </svg>
                     </button>
                   </div>
-    
+
                   <div id="collapseTwo-{{ product.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingTwo-{{ product.title | replace: ' ', '-' }} " data-parent="#accordion-{{ product.title | replace: ' ', '-' }}">
                     <p class="pt-2">
-                      {{ product.metafields.my_fields.features | metafield_tag }}
+                      {{ features }}
                     </p>
                   </div>
                 {% endif %}
 
-                {% if product.metafields.my_fields.dimensions != blank %}
-                  
+                {% if dimensions != blank %}
+
                   <div class="navigation__item" id="headingThree-{{ product.title | replace: ' ', '-' }}">
                     <button class="navigation__link link w-100 justify-content-between" target="_self" title="ShopAll" type="button" data-toggle="collapse" data-target="#collapseThree-{{product.title | replace: ' ', '-'}}" aria-expanded="false" aria-controls="collapseThree-{{product.title | replace: ' ', '-'}}"><span
                       class="link-text">Dimensions</span>
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.5 0V11" stroke="black"/>
                         <path d="M11 5.5L0 5.5" stroke="black"/>
-                      </svg>                    
+                      </svg>
                     </button>
                   </div>
-    
+
                   <div id="collapseThree-{{ product.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingThree-{{ product.title | replace: ' ', '-' }} " data-parent="#accordion-{{ product.title | replace: ' ', '-' }}">
                     <p class="pt-2">
-                      {{ product.metafields.my_fields.dimensions | metafield_tag }}
+                      {{ dimensions }}
                     </p>
                   </div>
                 {% endif %}
-                
-                {% if product.metafields.my_fields.materials != blank %}
-                  
+
+                {% if materials != blank %}
+
                   <div class="navigation__item" id="headingFour-{{ product.title | replace: ' ', '-' }}">
                     <button class="navigation__link link w-100 justify-content-between" target="_self" title="ShopAll" type="button" data-toggle="collapse" data-target="#collapseFour-{{product.title | replace: ' ', '-'}}" aria-expanded="false" aria-controls="collapseFour-{{product.title | replace: ' ', '-'}}"><span
                       class="link-text">Materials + Care</span>
                       <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.5 0V11" stroke="black"/>
                         <path d="M11 5.5L0 5.5" stroke="black"/>
-                      </svg>                    
+                      </svg>
                     </button>
                   </div>
-    
+
                   <div id="collapseFour-{{ product.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingFour-{{ product.title | replace: ' ', '-' }} " data-parent="#accordion-{{ product.title | replace: ' ', '-' }}">
                     <p class="pt-2">
-                      {{ product.metafields.my_fields.materials | metafield_tag }}
+                      {{ materials }}
                     </p>
                   </div>
                 {% endif %}
@@ -146,7 +151,6 @@
                   {% if current_variant.sku != blank %}
                   <p class="pb-2">SKU: {{ current_variant.sku }}</p>
                   {% endif %}
-
 
                   {% if product.available %}
                   <p>Item availability: in stock</p>
@@ -172,7 +176,7 @@
   </section>
   <!-- // -->
 
-  
+
 
 </main>
 
@@ -185,9 +189,9 @@
 
   $(document).on("click", ".input-number-decrement", function (e) {
     var quantity = $(this).parent().find("input").val();
-    if (quantity <= 1) 
+    if (quantity <= 1)
       $(this).parent().find("input").val(1).change();
-    else 
+    else
       $(this).parent().find("input").val(parseInt(quantity) - 1).change();
   });
 })

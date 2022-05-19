@@ -51,7 +51,7 @@
     {% endif %}
 
     <script src="{{ 'vendors.min.js' | asset_url }}" async></script>
-    
+
     {{ content_for_header }}
 
     {% render 'theme--css-variables' %}
@@ -96,6 +96,11 @@
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
     <!-- Libs -->
 
-    
+    {% case template %}
+      {% when 'collection', 'product' %}
+        <script src="{{ 'add-to-cart.min.js' | asset_url }}" defer></script>
+    {% endcase %}
+
+
   </body>
 </html>
