@@ -57,15 +57,20 @@ data-current-product-id: current_variant.id
             <div class="product-form__item product-form__item--submit
           {%- if show_dynamic_checkout %} product-form__item--payment-button {%- endif -%}
           {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}">
-                <button type="submit" name="add"
+                <button type="submit" name="add" {% if product.available == false %} disabled {% endif %}
                     aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
-                    class="product-form__cart-submit cta justify-content-end {% if show_dynamic_checkout %}btn--secondary{% else %}btn--primary{% endif %}"
+                    class="product-form__cart-submit   cta justify-content-end {% if show_dynamic_checkout %}btn--secondary{% else %}btn--primary{% endif %}"
                     data-add-to-cart data-lang-available="{{ 'product.add_to_cart' | t }}"
                     data-lang-unavailable="{{ 'product.unavailable' | t }}"
                     data-lang-sold-out="{{ 'product.sold_out' | t }}">
-                    <span data-add-to-cart-text class="link outlined
+                    <span data-add-to-cart-text class="link outlined {% if product.available == false %} disabled {% endif %}
                     ">
-                        {{ 'products.product.add_to_cart' | t }}
+                    {% if product.available %}
+                    {{ 'products.product.add_to_cart' | t }}
+                    {% else %}
+                     Sold out 
+                     {% endif %}
+                        
                     </span>
                     <div class="btn__loading-wrap">
                         <div class="btn__loading-bar"></div>

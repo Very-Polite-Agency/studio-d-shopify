@@ -31,6 +31,20 @@ p {
     margin-bottom: 0;
 }
 
+//Utility CLasses
+
+.bb-black {
+    border-bottom: 1px solid black;
+}
+
+.disabled {
+    opacity: 0.4;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .muted-text {
     color: #B3B3B3;
 }
@@ -47,6 +61,9 @@ p {
 .pl-0 {
     padding-left: 0;
 }
+
+
+// Pages & Components
 
 .section-title {
     padding: 20px 0 110px;
@@ -129,6 +146,7 @@ p {
     &__remove {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 20px;
+        
     }
 }
