@@ -45,9 +45,7 @@
   }
 }
 
-.customer .field {
-  margin: 2rem 0 0 0;
-}
+
 
 .customer .field:first-of-type {
   margin-top: 0;
@@ -323,11 +321,7 @@
 }
 
 /* Login */
-.login a {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-}
+
 
 .login a[href='#recover'] {
   margin-left: 0;

@@ -42,12 +42,12 @@
               padding-bottom: 60px;
           }
 
-          &__main {
-              overflow-y: auto;
+          &_main {
+              overflow: auto;
           }
 
           &__footer {
-              padding-top: 60px;
+              padding-top: 20px;
               margin-top: auto;
           }
       }

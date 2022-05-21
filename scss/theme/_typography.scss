@@ -25,16 +25,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   font-size: 120px;
 
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(md){
     font-size: 90px;
   }
 
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(sm){
     font-size: 60px;
   }
 }
 
 h1, .h1 {@include h1}
+
+@mixin h2 {
+  font-family:'GT Alpina Fine';
+  font-weight: 100;
+  font-size: 76px;
+  font-weight: normal;
+
+  @include media-breakpoint-down(sm){
+    font-size: 60px;
+  }
+}
+
+h2, .h2 {@include h2}
 
 @mixin h4 {
   font-family: var(--theme-font-family--serif--gt-alpina);

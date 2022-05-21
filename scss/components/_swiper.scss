@@ -24,7 +24,13 @@
     .swiper-slide {
         padding-right: 1px;
         img {
+            
+
             height: 460px;
+
+            @media (min-width: 1300px) {
+                height: 800px;
+            }
 
             @include media-breakpoint-down(sm){
                 height: 280px;
