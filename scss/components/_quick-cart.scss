@@ -51,4 +51,18 @@
               margin-top: auto;
           }
       }
+      
+      .quantity {
+        input[type=number] {
+            width: 26px;
+            height: 26px;
+        }
+    
+        &__button {
+            height:26px;
+            width: 26px;
+        }
+    }
+
 }
+

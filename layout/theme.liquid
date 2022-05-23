@@ -96,6 +96,23 @@
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
     <!-- Libs -->
 
+    <script>
+      $(function (){
+      $(document).on("click", ".input-number-increment", function (e) {
+        var quantity = $(this).parent().find("input").val();
+        $(this).parent().find("input").val(parseInt(quantity) + 1).change();
+      });
+    
+      $(document).on("click", ".input-number-decrement", function (e) {
+        var quantity = $(this).parent().find("input").val();
+        if (quantity <= 1)
+          $(this).parent().find("input").val(1).change();
+        else
+          $(this).parent().find("input").val(parseInt(quantity) - 1).change();
+      });
+    })
+    </script>
+
     {% case template %}
       {% when 'collection', 'product' %}
         <script src="{{ 'add-to-cart.min.js' | asset_url }}" defer></script>

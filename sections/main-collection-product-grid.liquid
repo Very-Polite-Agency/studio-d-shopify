@@ -2,7 +2,7 @@
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% if section.settings.anchor_id != blank %}
-{% assign section_id = section.settings.anchor_id %}
+  {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
 {% assign title = collection.title | defualt: '' %}
@@ -13,109 +13,111 @@
 <div class="{{ section_name }}" id="{{ section_id }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
 
-  {%- if collection.products.size == 0 -%}
+    {%- if collection.products.size == 0 -%}
 
-  <div class="{{ section_name }}__hero">
-    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-    <div class="{{ section_name }}__hero-content">
-      <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
-      <div class="{{ section_name }}__description body-copy--1">It looks like there are currently no products in this
-        collection!</div>
-    </div>
-    {% render 'bs-container', state: 'closed' %}
-  </div>
+       <div class="{{ section_name }}__hero">
+        {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+          <div class="{{ section_name }}__hero-content">
+            <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
+            <div class="{{ section_name }}__description body-copy--1">It looks like there are currently no products in this collection!</div>
+          </div>
+        {% render 'bs-container', state: 'closed' %}
+       </div>
 
-  {%- else -%}
+    {%- else -%}
 
-  <div class="{{ section_name }}__hero hero-section">
+      <div class="{{ section_name }}__hero hero-section">
 
-    {% if collection.image != blank %}
-    <div class="container-fluid px-0">
-      <div class="row position-relative">
-        <div class="col-12">
-          {% render 'lazyload-image', image: collection.image, alt_text: title %}
+        {% if collection.image != blank %}
+        <div class="container-fluid px-0">
+          <div class="row position-relative">
+            <div class="col-12">
+              {% render 'lazyload-image', image: collection.image, alt_text: title %}
+            </div>
+            <div class="col-10 offset-1 offset-lg-2 hero-section-title">
+              <h1>
+                {{ title }}
+              </h1>
+            </div>
+          </div>
         </div>
-        <div class="col-10 offset-1 offset-lg-2 hero-section-title">
-          <h1>
-            {{ title }}
-          </h1>
-        </div>
-      </div>
-    </div>
-    {% else %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-10 offset-lg-2">
-          <h1>
-            {{ title }}
-          </h1>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-
-  </div>
-
-
-  <div class="{{ section_name }}__filter py-50">
-    <div class="container">
-      <div class="row justify-content-center justify-content-lg-end align-items-baseline">
-        {% if description != blank %}
-        <div class="col-12 col-lg-7 offset-lg-1 collection-description text-center text-lg-left">
-          <h4>
-            {{ description }}
-          </h4>
-
+        {% else %}
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 offset-lg-2">
+                <h1>
+                  {{ title }}
+                </h1>
+              </div>
+            </div>
         </div>
         {% endif %}
-        <div
-          class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end link-text {% if description != blank %} pt-50 pt-lg-0 {% endif %}">
-          <span>Sort by:</span>
-          <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
-            {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-            {% for option in collection.sort_options %}
-            <option value="{{ option.value }}" {% if option.value==sort_by %}selected="selected" {% endif %}>{{
-              option.name }}</option>
-            {% endfor %}
-          </select>
-          <span class="ml-20">Filter -</span>
-        </div>
+
       </div>
-    </div>
-  </div>
 
+      
+      <div class="{{ section_name }}__filter py-50">
+        <div class="container">
+          <div class="row justify-content-center justify-content-lg-end align-items-baseline">
+            {% if description != blank %}
+              <div class="col-12 col-lg-7 offset-lg-1 collection-description text-center text-lg-left">
+                <h4>
+                  {{ description }}
+                </h4>
 
-  <div class="{{ section_name }}__main">
-    {% render 'bs-container', state: 'open', col: 'col-12' %}
-
-    <!-- Beginning of Dynamic Grid Block -->
-    <div class="{{ section_name }}__dynamic-grid dynamic-grid js--data-dynamic-grid" data-grid-columns="three-column"
-      data-grid-layout="vertical-stroke" data-post-type="post" id="{{ section_name }}--dynamic-grid--{{ section.id }}">
-
-      <div class="dynamic-grid__main">
-        <div class="dynamic-grid__vr"></div>
-        <div class="dynamic-grid__vr"></div>
-        <div class="dynamic-grid__container">
-          <div class="dynamic-grid__item-sizer"></div>
-          {%- for product in collection.products -%}
-          <div class="dynamic-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
-            {%- render 'card-product', product: product, style: section_name -%}
+              </div>
+              {% endif %}
+              <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end link-text {% if description != blank %} pt-50 pt-lg-0 {% endif %}">
+                <span>Sort by:</span>
+                <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
+                  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+                  {% for option in collection.sort_options %}
+                    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
+                  {% endfor %}
+                </select>
+                <span class="ml-20">Filter -</span>
+              </div>
           </div>
-          {%- endfor -%}
         </div>
       </div>
+      
 
-    </div>
-    <!-- End of Dynamic Grid Block -->
+      <div class="{{ section_name }}__main">
+        {% render 'bs-container', state: 'open', col: 'col-12' %}
 
-    {% render 'bs-container', state: 'closed' %}
-  </div>
+          <!-- Beginning of Dynamic Grid Block -->
+          <div
+            class="{{ section_name }}__dynamic-grid dynamic-grid js--data-dynamic-grid"
+            data-grid-columns="three-column"
+            data-grid-layout="vertical-stroke"
+            data-post-type="post"
+            id="{{ section_name }}--dynamic-grid--{{ section.id }}"
+          >
 
-  {%- if paginate.pages > 1 -%}
-  {% render 'pagination', paginate: paginate, anchor: '' %}
-  {%- endif -%}
+            <div class="dynamic-grid__main">
+              <div class="dynamic-grid__vr"></div>
+              <div class="dynamic-grid__vr"></div>
+              <div class="dynamic-grid__container">
+                <div class="dynamic-grid__item-sizer"></div>
+                {%- for product in collection.products -%}
+                  <div class="dynamic-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+                    {%- render 'card-product', product: product, style: section_name -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
 
-  {%- endif -%}
+          </div>
+          <!-- End of Dynamic Grid Block -->
+
+        {% render 'bs-container', state: 'closed' %}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination', paginate: paginate, anchor: '' %}
+      {%- endif -%}
+
+    {%- endif -%}
 
   {%- endpaginate -%}
 </div>
@@ -125,12 +127,13 @@
 
 {% javascript %}
 
-Shopify.queryParams = {};
+  Shopify.queryParams = {};
 
-// Preserve existing query parameters
-if (location.search.length) {
-var params = location.search.substr(1).split('&');
-for (var i = 0; i < params.length; i++) { var keyValue=params[i].split('=');
+  // Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
       if (keyValue.length) {
         Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
       }
@@ -138,11 +141,37 @@ for (var i = 0; i < params.length; i++) { var keyValue=params[i].split('=');
   }
 
   // Update sort_by query parameter on select change
-  document.querySelector(' #sort-by').addEventListener('change', function(e) {
-  Shopify.queryParams.sort_by=e.target.value; location.search=new URLSearchParams(Shopify.queryParams).toString(); });
-  {% endjavascript %} {% schema %} { "name" : "Collection Product Grid" , "class" : "section section--collection-grid"
-  , "settings" : [ { "label" : "Products per Page" , "type" : "select" , "options" : [ { "value" : "3" , "label" : "3"
-  }, { "value" : "9" , "label" : "9" }, { "value" : "12" , "label" : "12" }, { "value" : "18" , "label" : "18" },
-  { "value" : "24" , "label" : "24" } ], "default" : "9" , "id" : "products_per_page" }, { "label"
-  : "Show second image on hover" , "type" : "checkbox" , "default" : false, "id" : "show_secondary_image" } ] } {%
-  endschema %}
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    Shopify.queryParams.sort_by = e.target.value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Collection Product Grid",
+  "class": "section section--collection-grid",
+  "settings": [
+    {
+      "label": "Products per Page",
+      "type": "select",
+      "options": [
+        { "value": "3", "label": "3" },
+        { "value": "9", "label": "9" },
+        { "value": "12", "label": "12" },
+        { "value": "18", "label": "18" },
+        { "value": "24", "label": "24" }
+      ],
+      "default": "9",
+      "id": "products_per_page"
+    },
+    {
+      "label": "Show second image on hover",
+      "type": "checkbox",
+      "default": false,
+      "id": "show_secondary_image"
+    }
+  ]
+}
+{% endschema %}

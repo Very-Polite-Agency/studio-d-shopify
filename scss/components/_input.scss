@@ -64,3 +64,29 @@
 
   }
 }
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  opacity: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    transition: 120ms transform ease-in-out;
+    
+  }
+
+  &:checked::before {
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.691406 4.00002L4.07602 7.38463L9.30679 0.923096' stroke='black'/%3E%3C/svg%3E%0A");
+  }
+  
+}
