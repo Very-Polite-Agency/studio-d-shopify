@@ -35,61 +35,62 @@
 
 
             {% else %}
-
-            <div class="row">
-                <div class="col-6 d-flex align-items-center">
-                    <h4 class="pb-2">Your Cart</h4>
-                </div>
-                <div class="col-6 align-items-center d-flex justify-content-end link-text">
-                    (<span class="mr-5">{{cart.item_count }}</span> {{cart.item_count | pluralize: 'item', 'items' }})
-                </div>
-            </div>
-            {% for item in cart.items %}
-            <div class="row cart-item">
-                <div class="col-6">
-                    {%
-                    render 'lazyload-image',
-                    alt_text: item.title,
-                    classes: 'cart-item__thumb'
-                    image: item.image,
-                    %}
-                </div>
-                <div class="col-5">
-                    <a role="button" class="cart-item__remove" href="{{ item.url_to_remove }}">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.759766 0.5L11.3094 11" stroke="black" />
-                            <path d="M11.3086 0.5L0.758941 11" stroke="black" />
-                        </svg>
-                    </a>
-                    <p class="pb-20">
-                        {{item.title}}
-                    </p>
-
-                    <div class="product-form__quantity quantity">
-                        <span class="input-number-decrement quantity__button">
-                            -
-                        </span>
-                        <input type="number" id="Quantity-{{ product.id }}" name="quantity" value="{{ item.quantity}}"
-                            min="1" pattern="[0-9]*"
-                            class="quantity__input product-form__input product-form__input--quantity"
-                            aria-label="{{ 'general.accessibility.quantity' | t }}">
-                        <span class="input-number-increment quantity__button">
-                            +
-                        </span>
+            <form action="">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                        <h4 class="pb-2">Your Cart</h4>
                     </div>
-
-                    <div class="price pt-20">
-                        {% if price_compare %}
-                        <span class="price__value discount">{{ item.price_compare | money }}</span>
-                        {% endif %}
-                        <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ item.price | money
-                            }}</span>
-                        <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+                    <div class="col-6 align-items-center d-flex justify-content-end link-text">
+                        (<span class="mr-5">{{cart.item_count }}</span> {{cart.item_count | pluralize: 'item', 'items' }})
                     </div>
-
                 </div>
-            </div>
-            {% endfor %}
+                {% for item in cart.items %}
+                <div class="row cart-item">
+                    <div class="col-6">
+                        {%
+                        render 'lazyload-image',
+                        alt_text: item.title,
+                        classes: 'cart-item__thumb'
+                        image: item.image,
+                        %}
+                    </div>
+                    <div class="col-5">
+                        <a role="button" class="cart-item__remove" href="{{ item.url_to_remove }}">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.759766 0.5L11.3094 11" stroke="black" />
+                                <path d="M11.3086 0.5L0.758941 11" stroke="black" />
+                            </svg>
+                        </a>
+                        <p class="pb-20">
+                            {{item.title}}
+                        </p>
+    
+                        <div class="product-form__quantity quantity">
+                            <span class="input-number-decrement quantity__button">
+                                -
+                            </span>
+                            <input type="number" id="updates_{{ item.key }}" name="updates[]" value="{{ item.quantity}}"
+                                min="1" pattern="[0-9]*"
+                                class="quantity__input product-form__input product-form__input--quantity"
+                                aria-label="{{ 'general.accessibility.quantity' | t }}">
+                            <span class="input-number-increment quantity__button">
+                                +
+                            </span>
+                        </div>
+    
+                        <div class="price pt-20">
+                            {% if price_compare %}
+                            <span class="price__value discount">{{ item.price_compare | money }}</span>
+                            {% endif %}
+                            <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ item.price | money
+                                }}</span>
+                            <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+                        </div>
+    
+                    </div>
+                </div>
+                {% endfor %}
+            </form>
 
 
             {% endif %}
