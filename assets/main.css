@@ -18749,9 +18749,11 @@ body.sticky-footer footer {
 .main-header {
   background-color: white;
 }
+.main-header .navigation__link {
+  transition: all 0.3s ease;
+}
 .main-header .navigation__link:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  opacity: 0.3;
 }
 
 .nav-submenu {

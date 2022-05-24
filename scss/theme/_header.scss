@@ -197,9 +197,9 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
   background-color: white;
 
   .navigation__link {
+    transition: all .3s ease;
     &:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+        opacity: 0.3;
     }
 
     

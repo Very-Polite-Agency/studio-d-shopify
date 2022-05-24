@@ -1,0 +1,137 @@
+
+<main class="pt-50">
+
+    <div class="container-fluid">
+
+        {% if cart.item_count < 1 %} 
+
+        <div class="row pb-150">
+            <div class="col-12 d-flex flex-column justify-content-center">
+                <h2 class="text-center">Your cart is empty</h2>
+                <a href="/collections/all" class="underline link mt-70"> <h4> Start shopping</h4> </a>
+            </div>
+        </div>
+
+        {% else %}
+
+        <form action="{{ routes.cart_url }}" method="post" data-form novalidate>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+            
+                    <section class="quick-cart_main">
+            
+                        <div class="container-fluid px-md-0">
+            
+                        <div class="row pb-1 bb-black">
+                            <div class="col-6 pl-md-0 d-flex align-items-center">
+                                <h4 class="pb-2">Your Cart</h4>
+                            </div>
+                            <div class="col-6 pr-md-0 align-items-center d-flex justify-content-end link-text">
+                                (<span class="mr-5">{{cart.item_count }}</span> {{cart.item_count | pluralize: 'item', 'items' }})
+                            </div>
+                        </div>
+                        {% for item in cart.items %}
+                        <div class="row justify-content-between cart-item">
+                            <div class="col-4">
+                                {%
+                                render 'lazyload-image',
+                                alt_text: item.title,
+                                classes: 'cart-item__thumb'
+                                image: item.image,
+                                %}
+                            </div>
+                            <div class="col-5">
+                                <a role="button" class="cart-item__remove" href="{{ item.url_to_remove }}">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.759766 0.5L11.3094 11" stroke="black" />
+                                        <path d="M11.3086 0.5L0.758941 11" stroke="black" />
+                                    </svg>
+                                </a>
+                                <p class="pb-20">
+                                    {{item.title}}
+                                </p>
+            
+                                <div class="product-form__quantity quantity">
+                                    <span class="input-number-decrement quantity__button js-qty__adjust">
+                                        -
+                                    </span>
+                                    <input type="number" id="updates_{{ item.key }}" name="updates[]" value="{{ item.quantity}}"
+                                        min="1" pattern="[0-9]*"
+                                        class="quantity__input product-form__input product-form__input--quantity"
+                                        aria-label="{{ 'general.accessibility.quantity' | t }}">
+                                    <span class="input-number-increment quantity__button js-qty__adjust">
+                                        +
+                                    </span>
+                                </div>
+            
+                                <div class="price pt-20">
+                                    {% if price_compare %}
+                                    <span class="price__value discount">{{ item.price_compare | money }}</span>
+                                    {% endif %}
+                                    <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ item.price | money
+                                        }}</span>
+                                    <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+                                </div>
+            
+                            </div>
+                        </div>
+                        {% endfor %}
+    
+            
+                    </section>
+            
+                    <section class="pt-20">
+                        
+                        <div class="container-fluid px-md-0">
+                            <div class="row justify-content-end">
+                                <div class="col-12 col-md-8 col-lg-6 px-0 ">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span>Subtotal: </span>
+                                        </div>
+                                        <div class="col-6 text-right cart-subtotal__price">
+                                            {{cart.items_subtotal_price | money}}
+                                        </div>
+                                    </div>
+                                    <div class="row pt-10">
+                                        <div class="col-6">
+                                            <!-- Button updates the cart -->
+                                            <div class="cta w-100">
+                                                <button class="link outlined w-100"
+                                                type="submit">
+                                                <span class="link__title">Update</span>
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 ">
+                                            <div class="cta w-100">
+                                                <a class="link outlined w-100"
+                                                href="/checkout" target="_self">
+                                                <span class="link__title">Checkout</span>
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                                            <a href="/collections/all" class="underline link-text link mt-15"> Continue shopping </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+            
+                    </section>
+                </div>
+            </div>
+        </form>
+
+        {% endif %}
+
+        
+
+    </div>
+
+
+</main>
