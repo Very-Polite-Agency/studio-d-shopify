@@ -18353,6 +18353,7 @@ body.sticky-footer footer {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0;
 }
 .footer a:active, .footer a:focus, .footer a:hover {
   opacity: var(--theme-hover-opacity--heavy);
