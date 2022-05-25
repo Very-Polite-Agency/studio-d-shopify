@@ -245,3 +245,13 @@ input {
     }
 
 }
+
+#collection-list {
+    .fifty-fifty--row {
+        @include media-breakpoint-up(md){
+            &:nth-child(2n + 1){
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

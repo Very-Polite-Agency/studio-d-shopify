@@ -36891,4 +36891,10 @@ input:focus, input:focus-visible {
   padding: 0 9px;
 }
 
+@media (min-width: 768px) {
+  #collection-list .fifty-fifty--row:nth-child(2n+1) {
+    flex-direction: row-reverse;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
