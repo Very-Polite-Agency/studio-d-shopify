@@ -1735,6 +1735,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_account.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_account.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_adjacent-posts.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2945,7 +2960,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/main.css",
-      "oF" : 2,
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -3286,6 +3301,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/apps.liquid",
+      "oF" : 0
+    },
+    "\/sections\/cart-main.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/cart-main.liquid",
       "oF" : 0
     },
     "\/sections\/collection-list.liquid" : {
