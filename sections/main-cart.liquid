@@ -135,28 +135,3 @@
 
 
 </section>
-
-<script>
-    $(".js-qty__adjust").on("click", function (){
-  var $this=$(this)
-  setTimeout(function(){
-  var lineno = $this.parents(".cartline").attr("data-line");
-  var qty=$this.parents(".cartline").find(".jsqtynum").val();
-  var price = parseInt($this.parents(".cartline").find(".finds_pricess").attr('data-line-price'));
-  jQuery.ajax({
-      type: 'POST',
-      url: '/cart/change.js',
-    data: { line:lineno,quantity:qty },
-      dataType: 'json',
-      success: function() {
-        window.location.href = window.location.href
-            getCart(function(data){
-            var finaltotal = theme.Currency.formatMoney(data.total_price,theme.moneyFormat);
-            $('.cart-subtotal__price').html(finaltotal);
-            });
- 
-      }
-   });
-    },100);
-});
-</script>

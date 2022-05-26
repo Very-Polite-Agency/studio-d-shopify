@@ -3,7 +3,7 @@
 {% assign features = product.metafields.info.features | default: '' %}
 {% assign materials = product.metafields.info.materials | default: '' %}
 
-<main class="page-product pt-40">
+<section class="page-product pt-40">
 
   <!-- SECTION: PRODUCT MAIN -->
   <section class="product-main">
@@ -180,24 +180,9 @@
 
 
 
-</main>
+</section>
 
-<script>
-  $(function (){
-  $(document).on("click", ".input-number-increment", function (e) {
-    var quantity = $(this).parent().find("input").val();
-    $(this).parent().find("input").val(parseInt(quantity) + 1).change();
-  });
 
-  $(document).on("click", ".input-number-decrement", function (e) {
-    var quantity = $(this).parent().find("input").val();
-    if (quantity <= 1)
-      $(this).parent().find("input").val(1).change();
-    else
-      $(this).parent().find("input").val(parseInt(quantity) - 1).change();
-  });
-})
-</script>
 
 
 

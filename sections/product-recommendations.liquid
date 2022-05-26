@@ -21,7 +21,15 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 }
 {%- endstyle -%}
 
+
+
+
 <div class="container-fluid pt-60">
+  <div class="row">
+    <div class="col-12 pb-10">
+      <h4> {{section.settings.heading}} </h4>
+    </div>
+  </div>
   <div class="row">
     <div class="col-12">
       <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate"
@@ -29,16 +37,13 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       {% if recommendations.performed and recommendations.products_count > 0 %}
   
       <!-- Beginning of Dynamic Grid Block -->
-      <div class="{{ section_name }}__dynamic-grid dynamic-grid js--data-dynamic-grid" data-grid-columns="three-column"
-        data-grid-layout="vertical-stroke" data-post-type="post" id="{{ section_name }}--dynamic-grid--{{ section.id }}">
+      <div class="recommended-grid" id="{{ section_name }}--recommended-grid--{{ section.id }}">
   
-        <div class="dynamic-grid__main">
-          <div class="dynamic-grid__vr"></div>
-          <div class="dynamic-grid__vr"></div>
-          <div class="dynamic-grid__container">
-            <div class="dynamic-grid__item-sizer"></div>
+        <div class="recommended-grid__main">
+          <div class="recommended-grid__container">
+            
             {% for recommendation in recommendations.products %}
-            <div class="dynamic-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+            <div class="recommended-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
   
               <div class="recommended__featured-image product__featured-image">
                 <a class="recommended__featured-image-link" href="{{ recommendation.url }}" title="{{ recommendation.title }}" target="_self">
@@ -49,15 +54,14 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
                   %}
                 </a>
               </div>
-              <div class="recommended__info">
+              <div class="recommended__info mt-auto">
                 <div class="row">
-                  <div class="col-6">
+                  <div class="col-12 col-md-7">
                     <p>{{ recommendation.title }}</p>
-                    <p class="muted-text">{{ recommendation.type }}</p>
                     <span> {% render 'price', product: recommendation %}  </span>
                   </div>
-                  <div class="col-6 d-flex align-items-center">
-                    <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined" href="{{ recommendation.url }}"
+                  <div class="col-12 col-md-5 d-flex align-items-end">
+                    <div class="cta justify-md-content-end pt-15 pt-md-0" data-justify="not-set"><a class="link outlined" href="{{ recommendation.url }}"
                         target="_self">
                         <span class="link__title">Shop Now</span>
                       </a></div>
@@ -70,6 +74,8 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
   
             </div>
             {%- endfor -%}
+
+
           </div>
         </div>
   

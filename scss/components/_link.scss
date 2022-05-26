@@ -89,7 +89,8 @@ a{
   &.outlined {
     border: 1px solid rgba( var(--theme-colour-black), 1 );
     color: rgba( var(--theme-colour-black), 1 );
-    padding: 0 20px;
+    padding: 0 10px;
+    text-align: center;
     min-height: 40px;
     text-transform: uppercase;
     &:hover {

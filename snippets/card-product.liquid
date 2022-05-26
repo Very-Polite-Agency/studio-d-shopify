@@ -1,103 +1,110 @@
 {% comment %}
 
-    Accepts:
-    - product: {Object} Product Liquid object
-    - style: {String} Conditionally load different card types by passing style option
+Accepts:
+- product: {Object} Product Liquid object
+- style: {String} Conditionally load different card types by passing style option
 
-    Usage:
-    {% render 'card-product', product: product, style: 'some-section-or-template-name-here' %}
+Usage:
+{% render 'card-product', product: product, style: 'some-section-or-template-name-here' %}
 
 {% endcomment %}
 
 {%- if product and product != blank -%}
 
-  {% assign snippet_name = 'card-product' %}
-  {% assign snippet_classes = snippet_name %}
-  {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
-  {% assign caption = caption | default: '' %}
-  {% assign style = style | default: 'default' %}
+{% assign snippet_name = 'card-product' %}
+{% assign snippet_classes = snippet_name %}
+{% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
+{% assign caption = caption | default: '' %}
+{% assign style = style | default: 'default' %}
 
-  {% if classes and classes != empty %}
-    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+{% if classes and classes != empty %}
+{% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+{% endif %}
+
+{% assign featured_image = product.featured_image | default: false %}
+{% assign title = product.title | default: '' %}
+{% assign type = product.type | default: '' %}
+{% assign url = product.url | default: '' %}
+
+<article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}"
+  data-published-at="{{ product.published_at | date: " %Y-%m-%d %H:%M:%S" }}">
+
+  {% case style %}
+
+  {% when 'collection-product-grid' %}
+
+  <div class="{{ snippet_name }}__featured-image product__featured-image">
+    <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+      {%
+      render 'lazyload-image',
+      alt_text: title,
+      image: featured_image,
+      %}
+    </a>
+  </div>
+  <div class="{{ snippet_name }}__info">
+    <div class="row">
+      <div class="col-7">
+        <p>{{ title }}</p>
+        <p class="muted-text">{{ type }}</p>
+        <span>{% render 'price', product: product %} </span>
+      </div>
+      <div class="col-5 d-flex align-items-center">
+        <!-- <button class="{{ snippet_name }}__button button--tertiary js--add-to-cart" type="button"
+          data-variant-id="{{ variant.id }}" data-quantity="1"
+          data-featured-image="{{ featured_image | image_url: width: 200 }}">
+          <span class="button__title">{% if available %}Add to Cart{% else %}Unavailable{% endif %}</span>
+        </button> -->
+
+        <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined w-100" href="{{ url }}"
+            target="_self">
+            <span class="link__title">Shop Now</span>
+          </a></div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  {% when 'contact-form' %}
+
+  {% if caption != blank %}
+  {% assign title = caption %}
   {% endif %}
 
-  {% assign featured_image = product.featured_image | default: false %}
-  {% assign title = product.title | default: '' %}
-  {% assign type = product.type | default: '' %}
-  {% assign url = product.url | default: '' %}
+  <div class="{{ snippet_name }}__featured-image product__featured-image">
+    <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+      {%
+      render 'lazyload-image',
+      alt_text: title,
+      image: featured_image,
+      %}
+    </a>
+    {% if title != blank %}
+    <div class="{{ snippet_name }}__caption caption--2">
+      <strong>{{ title }}</strong>
+    </div>
+    {% endif %}
+  </div>
 
-  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}" data-published-at="{{ product.published_at | date: "%Y-%m-%d %H:%M:%S" }}">
+  {% when 'fifty-fifty' %}
 
-    {% case style %}
+  <div class="{{ snippet_name }}__featured-image product__featured-image">
+    <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+      {%
+      render 'lazyload-image',
+      alt_text: title,
+      image: featured_image,
+      %}
+    </a>
+    {% if type != blank %}
+    <strong class="{{ snippet_name }}__type caption--2">{{ type }}</strong>
+    {% endif %}
+  </div>
 
-      {% when 'collection-product-grid' %}
+  {% endcase %}
 
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
-            {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
-            %}
-          </a>
-        </div>
-        <div class="{{ snippet_name }}__info">
-          <div class="row">
-            <div class="col-6">
-              <p>{{ title }}</p>
-              <p class="muted-text">{{ type }}</p>
-              <span>{% render 'price', product: product %} </span>
-            </div>
-            <div class="col-6 d-flex align-items-center">
-              <div class="cta justify-content-end" data-justify="not-set"><a class="link outlined"
-                href="{{ url }}" target="_self">
-                <span class="link__title">Shop Now</span>
-              </a></div>
-            </div>
-          </div>
-          
-
-          
-        </div>
-
-      {% when 'contact-form' %}
-
-        {% if caption != blank %}
-          {% assign title = caption %}
-        {% endif %}
-
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
-            {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
-            %}
-          </a>
-          {% if title != blank %}
-            <div class="{{ snippet_name }}__caption caption--2">
-              <strong>{{ title }}</strong>
-            </div>
-          {% endif %}
-        </div>
-
-      {% when 'fifty-fifty' %}
-
-        <div class="{{ snippet_name }}__featured-image product__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
-            {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
-            %}
-          </a>
-          {% if type != blank %}
-            <strong class="{{ snippet_name }}__type caption--2">{{ type }}</strong>
-          {% endif %}
-        </div>
-
-    {% endcase %}
-
-  </article>
+</article>
 
 {%- endif -%}

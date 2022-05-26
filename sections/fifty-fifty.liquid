@@ -8,36 +8,78 @@
 {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="container-fluid px-0 {{ section_name }}-wrapper mb-lg-150">
+{% capture aos_attrs_img %}
+    {%
+      render 'aos-attributes',
+      anchor: section.id,
+      anchor_placement: 'top-bottom',
+      delay: 0,
+      duration: 550,
+      easing: 'ease-in-out',
+      offset: 175,
+      once: 'true',
+      transition: 'fade-left',
+    %}
+{% endcapture %}
+
+
+{% capture aos_attrs_text %}
+    {%
+      render 'aos-attributes',
+      anchor: section.id,
+      anchor_placement: 'top-bottom',
+      delay: 500,
+      duration: 550,
+      easing: 'ease-in-out',
+      offset: 175,
+      once: 'true',
+      transition: 'fade-right',
+    %}
+{% endcapture %}
+
+{% capture aos_attrs_btn %}
+    {%
+      render 'aos-attributes',
+      anchor: section.id,
+      anchor_placement: 'top-bottom',
+      delay: 1000,
+      duration: 550,
+      easing: 'ease-in-out',
+      offset: 175,
+      once: 'true',
+      transition: 'fade-up',
+    %}
+{% endcapture %}
+
+
+<div class="container-fluid px-0 {{ section_name }}-wrapper mb-lg-150" id="{{ section.id }}">
   <div class="row justify-content-center">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
       {%- when 'media' -%}
 
-      <div class="fifty-fifty_media  col-12 col-lg-7 px-0">
+      <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
         {%
           render 'lazyload-image',
           alt_text: 'Fifty-Fifty Image',
           image:  block.settings.image,
         %}
-        <!-- <img
-          class="lazyload-item lazyload-item--image lazyload-item--inline lazyautosizes lazyloaded"
-          src="{{ block.settings.image | img_url: 'master'  }}" alt="Fifty-Fifty Image"> -->
       </div>
 
       {%- when 'content' -%} 
 
       <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex justify-content-center px-lg-65 py-50 py-lg-0 ">
         <div class="d-flex flex-column justify-content-center">
-          <h2 class="fifty-fifty__heading heading aos-init aos-animate">{{ block.settings.heading }}</h2>
-          <div class="fifty-fifty__message message rte aos-init aos-animate">
+          
+          <h2 class="fifty-fifty__heading heading " {{aos_attrs_text}}>{{ block.settings.heading }}</h2>
+          <div class="fifty-fifty__message message" {{aos_attrs_text}}>
             <p>{{ block.settings.description }}</p>
           </div>
 
           {% if block.settings.cta_link != blank %}
 
           <div class="fifty-fifty__ctas">
-            <div class="fifty-fifty__cta aos-init aos-animate">
+            <div class="fifty-fifty__cta " {{aos_attrs_btn}}>
               <div class="cta" data-justify="not-set"><a class="link outlined"
                   href="{{ block.settings.cta_link }}" target="_self">
                   <span class="link__title">{{ block.settings.cta_title }}</span>

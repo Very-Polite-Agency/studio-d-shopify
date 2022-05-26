@@ -1,28 +1,64 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
-  {%- liquid
-    case section.settings.sort
-      when 'products_high' or 'products_low'
-        assign collections = collections | sort: 'all_products_count'
-      when 'date' or 'date_reversed'
-        assign collections = collections | sort: 'published_at'
-    endcase
+<div id="collection-list" class="container-fluid px-0 mb-lg-150">
+  <div class="row pb-120">
+    <div class="col-10 offset-1 offset-lg-2 ">
+      <h1>{{ section.settings.title | escape }}</h1>
+    </div>
+  </div>
 
-    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-      assign collections = collections | reverse
-    endif
-  -%}
-  <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
-    {%- for collection in collections -%}
-      <li class="collection-list__item grid__item">
-        {% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
-      </li>
-    {%- endfor -%}
-  </ul>
+  
+    
+      {%- for collection in collections -%}
+      <div class="row justify-content-center fifty-fifty--row pb-120">
+    {% if collection.image != blank %}
+    <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
+      {%
+        render 'lazyload-image',
+        alt_text: 'Fifty-Fifty Image',
+        image:  collection.image,
+      %}
+    </div>
+    {% else %}
+    <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
+      {{ 'lifestyle-1' | placeholder_svg_tag }}
+    </div>
+
+    {% endif %}
+
+     
+      <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex px-lg-65 py-50 py-lg-0 ">
+        <div class="d-flex flex-column justify-content-center">
+          
+          <h2 class="fifty-fifty__heading heading aos-init aos-animate" {{aos_attrs_text}}>{{ collection.title }}</h2>
+          <div class="fifty-fifty__message message rte aos-init aos-animate" {{aos_attrs_text}}>
+            <p>{{ collection.description }}</p>
+          </div>
+
+         
+
+          <div class="fifty-fifty__ctas">
+            <div class="fifty-fifty__cta aos-init aos-animate" {{aos_attrs_btn}}>
+              <div class="cta" data-justify="not-set"><a class="link outlined"
+                  href="{{ collection.url }}" target="_self">
+                  <span class="link__title">Shop now</span>
+                </a></div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+      </div>
+      {% endfor %}
+    
+  </div>
+
+
 </div>
+
 
 {% schema %}
 {

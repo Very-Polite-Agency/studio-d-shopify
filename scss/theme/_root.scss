@@ -93,9 +93,6 @@ p {
     }
     .cta {
         padding-right: 0;
-        .link.outlined {
-            min-height: 26px;
-        }
     }
 }
 
@@ -109,20 +106,20 @@ p {
     }
 
     input[type=number] {
-        width: 30px;
+        width: 40px;
         -moz-appearance: textfield;
 
         margin: 0 10px;
-        height: 26px;
+        height: 40px;
         border: 1px solid $black;
-        padding: 2px 9px;
+        padding: 2px 0px;
         text-align: center;
         @include link-text;
     }
 
     &__button {
-        height: 26px;
-        width: 29px;
+        height:40px;
+        width: 40px;
         padding: 2px 9px;
         border: 1px solid $black;
         display: flex;
@@ -138,10 +135,6 @@ p {
     padding: 20px 0;
     border-bottom: 1px solid $black;
 
-    &__thumb {
-        max-height: 120px;
-        object-fit: cover;
-    }
 
     &__remove {
         position: absolute;
@@ -174,5 +167,91 @@ p {
     &.show {
         opacity: 1;
         pointer-events: all;
+    }
+}
+
+a {
+    &:hover {
+        color: inherit;
+    }
+}
+
+button {
+    padding: 0;
+}
+
+input {
+    &:focus, &:focus-visible {
+        outline: none;
+        border: none;
+    }
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.page-account {
+    @include media-breakpoint-down(sm){
+        .link-text {
+            font-size: 10px;
+        }
+    }
+}
+
+
+.recommended-grid {
+
+    &__main {
+        padding-top: 15px;
+        border-top: 1px solid $black;
+        
+
+        @include media-breakpoint-down(sm){
+            padding-bottom: 15px;
+            border-bottom: 1px solid $black;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    &__item {
+        min-width: 25%;
+        padding: 0 20px;
+        border-right: 1px solid $black;
+
+        &:last-child {
+            border-right-color: transparent;
+        }
+
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-down(md){
+            min-width: 66.66%;
+        }
+
+        .link.outlined {
+            padding: 0 9px;
+        }
+    }
+
+}
+
+#collection-list {
+    .fifty-fifty--row {
+        @include media-breakpoint-up(md){
+            &:nth-child(2n + 1){
+                flex-direction: row-reverse;
+            }
+        }
     }
 }

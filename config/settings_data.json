@@ -109,13 +109,13 @@
           "9e162cf5-b0d8-4797-87e3-f5a0360e6495": {
             "type": "location",
             "settings": {
-              "title": "SF",
+              "title": "SF.",
               "address": "3130 20th St",
               "address_2": "#150",
               "city": "San Francisco",
               "region": "CA",
               "postal": "94110",
-              "country": "USA",
+              "country": "",
               "phone": "415.695.1430",
               "email": "hello.sf@studiodhome.com"
             }
@@ -123,13 +123,13 @@
           "7a51016b-6368-4c01-ae38-d00cf70fef19": {
             "type": "location",
             "settings": {
-              "title": "NY",
+              "title": "NY.",
               "address": "234 16th Street",
               "address_2": "5th Floor, Dock 25\/26",
               "city": "Jersey City",
               "region": "NJ",
               "postal": "07310",
-              "country": "USA",
+              "country": "",
               "phone": "646.766.0800",
               "email": "hello.ny@studiodhome.com"
             }
@@ -189,6 +189,11 @@
         ],
         "settings": {
           "menu_menu": ""
+        }
+      },
+      "quick-cart": {
+        "type": "quick-cart",
+        "settings": {
         }
       }
     },
