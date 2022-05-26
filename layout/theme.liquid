@@ -35,6 +35,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="{{ 'swiper.js' | asset_url }}"></script>
     <script src="{{ 'app.js' | asset_url }}"></script>
+    
+    <script type="application/json" data-ajax-cart-initial-state >
+      {{ cart | json }}
+    </script>
+     
+    <script type="module">
+      import '{{ "liquid-ajax-cart-v1.10.1.js" | asset_url }}';
+    </script>
+
 
     <!-- Preload Fonts  -->
     {% render 'theme--preload-fonts', fonts: 'GTAlpina-Lt, GTAlpina-Rg, GTAlpina-Th, GTAlpinaFine-Th, NeueMontreal-Bold, NeueMontreal-BoldItalic, NeueMontreal-Italic, NeueMontreal-Light, NeueMontreal-LightItalic, NeueMontreal-Regular' %}
@@ -96,48 +105,10 @@
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
     <!-- Libs -->
 
-    <script>
-      $(function (){
-      $(document).on("click", ".input-number-increment", function (e) {
-        var quantity = $(this).parent().find("input").val();
-        $(this).parent().find("input").val(parseInt(quantity) + 1).change();
-      });
-    
-      $(document).on("click", ".input-number-decrement", function (e) {
-        var quantity = $(this).parent().find("input").val();
-        if (quantity <= 1)
-          $(this).parent().find("input").val(1).change();
-        else
-          $(this).parent().find("input").val(parseInt(quantity) - 1).change();
-      });
-    })
-    </script>
+ 
 
     
-<script>
-  $(".js-qty__adjust").on("click", function (){
-var $this=$(this)
-setTimeout(function(){
-var lineno = $this.parents(".cartline").attr("data-line");
-var qty=$this.parents(".cartline").find(".jsqtynum").val();
-var price = parseInt($this.parents(".cartline").find(".finds_pricess").attr('data-line-price'));
-jQuery.ajax({
-    type: 'POST',
-    url: '/cart/change.js',
-  data: { line:lineno,quantity:qty },
-    dataType: 'json',
-    success: function() {
-      window.location.href = window.location.href
-          getCart(function(data){
-          var finaltotal = theme.Currency.formatMoney(data.total_price,theme.moneyFormat);
-          $('.cart-subtotal__price').html(finaltotal);
-          });
 
-    }
- });
-  },100);
-});
-</script>
 
     {% case template %}
       {% when 'collection', 'product' %}

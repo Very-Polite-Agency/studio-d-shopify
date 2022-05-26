@@ -228,6 +228,10 @@ input {
         padding: 0 20px;
         border-right: 1px solid $black;
 
+        &:first-child {
+            padding-left: 0;
+        }
+
         &:last-child {
             border-right-color: transparent;
         }
