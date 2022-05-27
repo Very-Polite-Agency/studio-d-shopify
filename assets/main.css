@@ -18036,6 +18036,13 @@ button.swiper-pagination-bullet {
   width: 26px;
 }
 
+body.js-ajax-cart-not-empty .quick-cart-not-empty {
+  display: flex !important;
+}
+body.js-ajax-cart-not-empty .quick-cart-empty {
+  display: none !important;
+}
+
 .page-add-address {
   position: relative;
 }

@@ -66,3 +66,15 @@
 
 }
 
+
+
+body {
+    &.js-ajax-cart-not-empty {
+        .quick-cart-not-empty {
+            display: flex !important;
+        }
+        .quick-cart-empty {
+            display: none !important;
+        }
+    }
+}

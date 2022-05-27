@@ -182,17 +182,21 @@
 
 </section>
 
+<script>
+
+
+
+</script>
 
 <script>
-  $('#add-to-cart').click(function() {
+  $('#add-to-cart').click(function(e) {
     $('#quick-cart').addClass('show')
   })
 </script>
 
 <!-- Initialize Swiper -->
 <script>
-  $(function () {
-    var swiper = new Swiper(".swiper-thumbnail", {
+  var swiper = new Swiper(".swiper-thumbnail", {
       spaceBetween: 10,
       slidesPerView: 3,
       freeMode: true,
@@ -211,5 +215,4 @@
       },
     });
 
-  })
 </script>
