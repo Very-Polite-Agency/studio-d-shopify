@@ -14932,7 +14932,6 @@ select:focus, select:focus-visible, select:focus-within {
   padding: 0;
 }
 .select--primary {
-  width: 70px;
   text-overflow: ellipsis;
   margin-left: 5px;
   color: #B3B3B3;
