@@ -4,29 +4,32 @@
 {% assign locations = section.blocks | where: 'type', 'location' %}
 {% assign main_menu = section.settings.menu_menu | default: false %}
 {% assign social_accounts = section.blocks | where: 'type', 'social' %}
+{% assign newsletter_button_title = section.settings.newsletter_button_title | default: "Let's get started!" %}
+{% assign newsletter_heading = section.settings.newsletter_heading | default: "A (design) rut we can get you out of!" %}
+{% assign newsletter_show = section.settings.newsletter_show | default: false %}
 
-
-<div class="container-fluid pb-5">
-	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<h4 class="text-center pb-4">A (design) rut we can get you out of.</h4>
-				</div>
-				<div class="col-8 col-md-5">
-					<form action="">
-						<input class="input-newsletter" type="email" placeholder="Enter your email..."
-							aria-label="input element">
-						<div class="d-flex justify-content-center pt-4">
-							<button class="link outlined link__title" type="submit" aria-label="button element">Let's
-								get started</button>
-						</div>
-					</form>
+{% if newsletter_show %}
+	<div class="container-fluid pb-5">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-8 col-lg-6">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<h4 class="text-center pb-4">{{ newsletter_heading }}</h4>
+					</div>
+					<div class="col-8 col-md-5">
+						<form action="">
+							<input class="input-newsletter" type="email" placeholder="Enter your email..."
+								aria-label="input element">
+							<div class="d-flex justify-content-center pt-4">
+								<button class="link outlined link__title" type="submit" aria-label="button element">{{ newsletter_button_title }}</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{% endif %}
 
 
 
@@ -107,7 +110,7 @@
 
 						{% if block.settings.instagram_link != blank %}
 
-						<div class="social__item"><a class="social__link link" href="{{block.settings.instagram_link}}"
+						<div class="social__item"><a class="social__link link" href="{{ block.settings.instagram_link }}"
 								target="_blank" title="instagram"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
 									style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -130,7 +133,7 @@
 
 						{% if block.settings.facebook_link != blank %}
 
-						<div class="social__item"><a class="social__link link" href="{{block.settings.facebook_link}}"
+						<div class="social__item"><a class="social__link link" href="{{ block.settings.facebook_link }}"
 								target="_blank" title="facebook"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8.6 16"
 									style="enable-background:new 0 0 8.6 16;" xml:space="preserve">
@@ -144,7 +147,7 @@
 						{% if block.settings.linkedin_link != blank %}
 
 						<div class="social__item"><a class="social__link link"
-								href="{{block.settings.linkedin_link}}" target="_blank"
+								href="{{ block.settings.linkedin_link }}" target="_blank"
 								title="linkedin"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20"
 									style="enable-background:new 0 0 20 20;" xml:space="preserve">
@@ -159,9 +162,9 @@
 						{% endif %}
 
 						{% if block.settings.pinterest_link != blank %}
-								
+
 						<div class="social__item"><a class="social__link link"
-								href="{block.settings.pinterest_link{}}" target="_blank" title="pinterest"><svg
+								href="{{ block.settings.pinterest_link }}" target="_blank" title="pinterest"><svg
 									version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
 									style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -177,11 +180,11 @@
 								</svg></a></div>
 
 								{% endif %}
-						
+
 						{% if block.settings.houzz_link != blank %}
 
 						<div class="social__item"><a class="social__link link"
-								href="{{block.settings.houzz_link}}" target="_blank" title="houzz"><svg
+								href="{{ block.settings.houzz_link }}" target="_blank" title="houzz"><svg
 									width="95" height="94" viewBox="0 0 95 94" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M85.2111 0H10.0137C7.52074 0 5.12989 0.990347 3.36711 2.75319C1.60433 4.51603 0.614014 6.90697 0.614014 9.4V84.6C0.614014 87.093 1.60433 89.484 3.36711 91.2468C5.12989 93.0096 7.52074 94 10.0137 94H85.2111C87.7041 94 90.0949 93.0096 91.8577 91.2468C93.6205 89.484 94.6108 87.093 94.6108 84.6V9.4C94.6108 6.90697 93.6205 4.51603 91.8577 2.75319C90.0949 0.990347 87.7041 0 85.2111 0ZM74.9185 77.3385H54.7091V57.105H40.6096V77.3385H20.3768V16.6615H34.4764V30.7615L74.9185 42.4175V77.3385Z">
@@ -219,144 +222,136 @@
 </div>
 </div>
 
-
-
 {% stylesheet %}
-
-
-
 {% endstylesheet %}
 
 {% javascript %}
-
-
-
 {% endjavascript %}
 
 {% schema %}
 {
-"name": "Footer",
-"class": "footer",
-"tag": "footer",
-"settings": [
-{
-"content": "Newsletter Sign-up",
-"type": "header"
-},
-{
-"label": "Show Newsletter Sign-up",
-"type": "checkbox",
-"default": true,
-"id": "newsletter_show"
-},
-{
-"label": "Heading",
-"type": "text",
-"id": "newsletter_heading"
-},
-{
-"label": "Button Title",
-"type": "text",
-"id": "newsletter_button_title"
-},
-{
-"content": "Navigation",
-"type": "header"
-},
-{
-"label": "Main Menu",
-"type": "link_list",
-"id": "menu_menu"
-}
-],
-"blocks": [
-{
-"name": "Location",
-"type": "location",
-"settings": [
-{
-	"label": "Name",
-	"type": "text",
-	"id": "title"
-},
-{
-	"label": "Street Address",
-	"type": "text",
-	"id": "address"
-},
-{
-	"label": "Apartment, suite, etc.",
-	"type": "text",
-	"id": "address_2"
-},
-{
-	"label": "City",
-	"type": "text",
-	"id": "city"
-},
-{
-	"label": "Region",
-	"type": "text",
-	"id": "region"
-},
-{
-	"label": "Postal",
-	"type": "text",
-	"id": "postal"
-},
-{
-	"label": "Country",
-	"type": "text",
-	"id": "country"
-},
-{
-	"label": "Phone",
-	"type": "text",
-	"id": "phone"
-},
-{
-	"label": "email",
-	"type": "text",
-	"id": "email"
-}
-]
-},
-{
-"name": "Social",
-"type": "social",
-"settings": [
-{
-"type": "text",
-"id": "instagram_link",
-"label": "Instagram Link",
-"default": "https://www.instagram.com/studiodhome/"
-},
-{
-"type": "text",
-"id": "facebook_link",
-"label": "Facebook Link",
-"default": "https://www.facebook.com/studioDstaging"
-},
-{
-"type": "text",
-"id": "linkedin_link",
-"label": "Linkedin Link",
-"default": "https://www.linkedin.com/company/studiodstaging/"
-},
-{
-"type": "text",
-"id": "pinterest_link",
-"label": "Pinteres Link",
-"default": "https://www.pinterest.ca/studiodstaging/"
-},
-{
-	"type": "text",
-	"id": "houzz_link",
-	"label": "Houzz Link",
-	"default": "https://www.houzz.com/pro/studiodhome"
-	}
-]
-}
-]
+	"name": "Footer",
+	"class": "footer",
+	"tag": "footer",
+	"settings": [
+	  	{
+			"content": "Newsletter Sign-up",
+			"type": "header"
+		},
+		{
+			"label": "Show Newsletter Sign-up",
+			"type": "checkbox",
+			"default": true,
+			"id": "newsletter_show"
+		},
+		{
+			"label": "Heading",
+			"type": "text",
+			"id": "newsletter_heading"
+		},
+		{
+			"label": "Button Title",
+			"type": "text",
+			"id": "newsletter_button_title"
+		},
+		{
+			"content": "Navigation",
+			"type": "header"
+		},
+		{
+			"label": "Main Menu",
+			"type": "link_list",
+			"id": "menu_menu"
+		}
+	],
+	"blocks": [
+	  {
+			"name": "Location",
+			"type": "location",
+			"settings": [
+			  {
+					"label": "Name",
+					"type": "text",
+					"id": "title"
+				},
+				{
+					"label": "Street Address",
+					"type": "text",
+					"id": "address"
+				},
+				{
+					"label": "Apartment, suite, etc.",
+					"type": "text",
+					"id": "address_2"
+				},
+				{
+					"label": "City",
+					"type": "text",
+					"id": "city"
+				},
+				{
+					"label": "Region",
+					"type": "text",
+					"id": "region"
+				},
+				{
+					"label": "Postal",
+					"type": "text",
+					"id": "postal"
+				},
+				{
+					"label": "Country",
+					"type": "text",
+					"id": "country"
+				},
+				{
+					"label": "Phone",
+					"type": "text",
+					"id": "phone"
+				},
+				{
+					"label": "email",
+					"type": "text",
+					"id": "email"
+				}
+			]
+		},
+		{
+			"name": "Social",
+			"type": "social",
+			"settings": [
+			  {
+					"type": "text",
+					"id": "instagram_link",
+					"label": "Instagram Link",
+					"default": "https://www.instagram.com/studiodhome/"
+				},
+				{
+					"type": "text",
+					"id": "facebook_link",
+					"label": "Facebook Link",
+					"default": "https://www.facebook.com/studioDstaging"
+				},
+				{
+					"type": "text",
+					"id": "linkedin_link",
+					"label": "Linkedin Link",
+					"default": "https://www.linkedin.com/company/studiodstaging/"
+				},
+				{
+					"type": "text",
+					"id": "pinterest_link",
+					"label": "Pinteres Link",
+					"default": "https://www.pinterest.ca/studiodstaging/"
+				},
+				{
+					"type": "text",
+					"id": "houzz_link",
+					"label": "Houzz Link",
+					"default": "https://www.houzz.com/pro/studiodhome"
+				}
+			]
+		}
+	]
 }
 {% endschema %}
