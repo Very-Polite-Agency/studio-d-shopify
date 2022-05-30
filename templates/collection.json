@@ -1,9 +1,13 @@
 {
-  "order": ["product-grid"],
+  "order": [
+    "product-grid"
+  ],
   "sections": {
     "product-grid": {
-      "settings": { "products_per_page": "3", "show_secondary_image": false },
-      "type": "main-collection-product-grid"
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": "9"
+      }
     }
   }
 }

@@ -8,8 +8,6 @@
 {% assign title = collection.title | defualt: '' %}
 {% assign description = collection.description | defualt: '' %}
 
-
-
 <div class="{{ section_name }}" id="{{ section_id }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
 
@@ -55,7 +53,7 @@
 
       </div>
 
-      
+
       <div class="{{ section_name }}__filter py-50">
         <div class="container">
           <div class="row justify-content-center justify-content-lg-end align-items-baseline">
@@ -79,7 +77,7 @@
           </div>
         </div>
       </div>
-      
+
 
       <div class="{{ section_name }}__main">
         {% render 'bs-container', state: 'open', col: 'col-12' %}
@@ -164,12 +162,6 @@
       ],
       "default": "9",
       "id": "products_per_page"
-    },
-    {
-      "label": "Show second image on hover",
-      "type": "checkbox",
-      "default": false,
-      "id": "show_secondary_image"
     }
   ]
 }

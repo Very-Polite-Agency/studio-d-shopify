@@ -7,6 +7,8 @@
 <noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
 
+{% assign product_limit = section.settings.product_limit | default: 6 %}
+
 {%- style -%}
 .section-{{ section.id }}-padding {
 padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -21,9 +23,6 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 }
 {%- endstyle -%}
 
-
-
-
 <div class="container-fluid pr-0 pr-md-20 pt-60">
   <div class="row">
     <div class="col-12 pb-10">
@@ -35,22 +34,22 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate"
       data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
       {% if recommendations.performed and recommendations.products_count > 0 %}
-  
+
       <!-- Beginning of Dynamic Grid Block -->
       <div class="recommended-grid" id="{{ section_name }}--recommended-grid--{{ section.id }}">
-  
+
         <div class="recommended-grid__main">
           <div class="recommended-grid__container">
-            
-            {% for recommendation in recommendations.products %}
+
+            {% for recommendation in recommendations.products limit: 5 %}
             <div class="recommended-grid__item" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
-  
+
               <div class="recommended__featured-image product__featured-image">
                 <a class="recommended__featured-image-link" href="{{ recommendation.url }}" title="{{ recommendation.title }}" target="_self">
                   {%
-                  render 'lazyload-image',
-                  alt_text: recommendation.title,
-                  image: recommendation.featured_image,
+                    render 'lazyload-image',
+                    alt_text: recommendation.title,
+                    image: recommendation.featured_image,
                   %}
                 </a>
               </div>
@@ -67,21 +66,21 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
                       </a></div>
                   </div>
                 </div>
-  
-  
-  
+
+
+
               </div>
-  
+
             </div>
             {%- endfor -%}
 
 
           </div>
         </div>
-  
+
       </div>
       <!-- End of Dynamic Grid Block -->
-  
+
       {% endif %}
     </product-recommendations>
     </div>
@@ -128,165 +127,39 @@ customElements.define('product-recommendations', ProductRecommendations);
 
 {% schema %}
 {
-"name": "t:sections.product-recommendations.name",
-"tag": "section",
-"class": "section",
-"settings": [
-{
-"type": "paragraph",
-"content": "t:sections.product-recommendations.settings.paragraph__1.content"
-},
-{
-"type": "text",
-"id": "heading",
-"default": "You may also like",
-"label": "t:sections.product-recommendations.settings.heading.label"
-},
-{
-"type": "select",
-"id": "heading_size",
-"options": [
-{
-"value": "h2",
-"label": "t:sections.all.heading_size.options__1.label"
-},
-{
-"value": "h1",
-"label": "t:sections.all.heading_size.options__2.label"
-},
-{
-"value": "h0",
-"label": "t:sections.all.heading_size.options__3.label"
-}
-],
-"default": "h1",
-"label": "t:sections.all.heading_size.label"
-},
-{
-"type": "range",
-"id": "columns_desktop",
-"min": 1,
-"max": 4,
-"step": 1,
-"default": 4,
-"label": "t:sections.product-recommendations.settings.columns_desktop.label"
-},
-{
-"type": "select",
-"id": "color_scheme",
-"options": [
-{
-"value": "accent-1",
-"label": "t:sections.all.colors.accent_1.label"
-},
-{
-"value": "accent-2",
-"label": "t:sections.all.colors.accent_2.label"
-},
-{
-"value": "background-1",
-"label": "t:sections.all.colors.background_1.label"
-},
-{
-"value": "background-2",
-"label": "t:sections.all.colors.background_2.label"
-},
-{
-"value": "inverse",
-"label": "t:sections.all.colors.inverse.label"
-}
-],
-"default": "background-1",
-"label": "t:sections.all.colors.label",
-"info": "t:sections.all.colors.has_cards_info"
-},
-{
-"type": "header",
-"content": "t:sections.product-recommendations.settings.header__2.content"
-},
-{
-"type": "select",
-"id": "image_ratio",
-"options": [
-{
-"value": "adapt",
-"label": "t:sections.product-recommendations.settings.image_ratio.options__1.label"
-},
-{
-"value": "portrait",
-"label": "t:sections.product-recommendations.settings.image_ratio.options__2.label"
-},
-{
-"value": "square",
-"label": "t:sections.product-recommendations.settings.image_ratio.options__3.label"
-}
-],
-"default": "adapt",
-"label": "t:sections.product-recommendations.settings.image_ratio.label"
-},
-{
-"type": "checkbox",
-"id": "show_secondary_image",
-"default": false,
-"label": "t:sections.product-recommendations.settings.show_secondary_image.label"
-},
-{
-"type": "checkbox",
-"id": "show_vendor",
-"default": false,
-"label": "t:sections.product-recommendations.settings.show_vendor.label"
-},
-{
-"type": "checkbox",
-"id": "show_rating",
-"default": false,
-"label": "t:sections.product-recommendations.settings.show_rating.label",
-"info": "t:sections.product-recommendations.settings.show_rating.info"
-},
-{
-"type": "header",
-"content": "t:sections.product-recommendations.settings.header_mobile.content"
-},
-{
-"type": "select",
-"id": "columns_mobile",
-"default": "2",
-"label": "t:sections.product-recommendations.settings.columns_mobile.label",
-"options": [
-{
-"value": "1",
-"label": "t:sections.product-recommendations.settings.columns_mobile.options__1.label"
-},
-{
-"value": "2",
-"label": "t:sections.product-recommendations.settings.columns_mobile.options__2.label"
-}
-]
-},
-{
-"type": "header",
-"content": "t:sections.all.padding.section_padding_heading"
-},
-{
-"type": "range",
-"id": "padding_top",
-"min": 0,
-"max": 100,
-"step": 4,
-"unit": "px",
-"label": "t:sections.all.padding.padding_top",
-"default": 36
-},
-{
-"type": "range",
-"id": "padding_bottom",
-"min": 0,
-"max": 100,
-"step": 4,
-"unit": "px",
-"label": "t:sections.all.padding.padding_bottom",
-"default": 36
-}
-]
+	"name": "Product Recommendations",
+	"tag": "section",
+	"class": "section",
+	"settings": [
+    {
+      "content": "Dynamic recommendations use order and product information to change and improve over time.",
+			"type": "paragraph"
+		},
+		{
+      "label": "Heading",
+			"type": "text",
+      "default": "You may also like",
+			"id": "heading"
+		},
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Max number of recommended products",
+      "type": "range",
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "default": 4,
+      "id": "product_limit"
+    }
+	],
+  "presets": [
+    {
+      "name": "Product Recommendations"
+    }
+  ],
+  "templates": [ "product" ]
 }
 {% endschema %}

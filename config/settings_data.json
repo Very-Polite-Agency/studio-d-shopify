@@ -152,8 +152,8 @@
         ],
         "settings": {
           "newsletter_show": true,
-          "newsletter_heading": "",
-          "newsletter_button_title": "",
+          "newsletter_heading": "A (design) rut we can get you out of.",
+          "newsletter_button_title": "Let's Get Started",
           "menu_menu": "footer"
         }
       },
