@@ -1,1 +1,20 @@
-{"order":["main","product-recommendations"],"sections":{"main":{"settings":{},"type":"main-product"},"product-recommendations":{"settings":{},"type":"product-recommendations"}}}
+{
+  "order": [
+    "main",
+    "product-recommendations"
+  ],
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "product_limit": 4
+      }
+    }
+  }
+}
