@@ -15497,9 +15497,6 @@ select:focus, select:focus-visible, select:focus-within {
   }
 }
 
-.fifty-fifty_content {
-  width: 100%;
-}
 @media (min-width: 576px) {
   .fifty-fifty_content {
     max-width: 540px;
