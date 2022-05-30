@@ -12,8 +12,8 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also likes",
-        "product_limit": 5
+        "heading": "You may also like",
+        "product_limit": 3
       }
     }
   }
