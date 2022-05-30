@@ -3493,12 +3493,12 @@
       "oAP" : "\/sections\/main-password-header.liquid",
       "oF" : 0
     },
-    "\/sections\/main-product-old.liquid" : {
+    "\/sections\/main-product--LEGACY.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/main-product-old.liquid",
+      "oAP" : "\/sections\/main-product--LEGACY.liquid",
       "oF" : 0
     },
     "\/sections\/main-product.liquid" : {
@@ -3557,12 +3557,12 @@
       "oAP" : "\/sections\/predictive-search.liquid",
       "oF" : 0
     },
-    "\/sections\/product-main.liquid" : {
+    "\/sections\/product-main--LEGACY.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/product-main.liquid",
+      "oAP" : "\/sections\/product-main--LEGACY.liquid",
       "oF" : 0
     },
     "\/sections\/product-recommendations.liquid" : {
