@@ -163,10 +163,12 @@
 
           <div class="row pt-20">
             <div class="col-12 link-text">
-              <p class="pb-2">This item appears in:</p>
-              {% for location in product.metafields.appears.location %} 
-                <a href=" {{ product.metafields.appears.link[forloop.index0] }}" class="underline pb-2 d-block"> {{ location }} </a>
-              {% endfor %} 
+              {% if product.metafields.appears != blank %}
+                <p class="pb-2">This item appears in:</p>
+                {% for location in product.metafields.appears.location %} 
+                  <a href=" {{ product.metafields.appears.link[forloop.index0] }}" class="underline pb-2 d-block"> {{ location }} </a>
+                {% endfor %} 
+              {% endif %}
               
             </div>
           </div>
@@ -182,13 +184,22 @@
 
 </section>
 
+<script>
 
 
+
+</script>
+
+<script>
+  $('#add-to-cart').click(function(e) {
+    $('#quick-cart').addClass('show')
+    $('body').addClass('show')
+  })
+</script>
 
 <!-- Initialize Swiper -->
 <script>
-  $(function () {
-    var swiper = new Swiper(".swiper-thumbnail", {
+  var swiper = new Swiper(".swiper-thumbnail", {
       spaceBetween: 10,
       slidesPerView: 3,
       freeMode: true,
@@ -207,5 +218,4 @@
       },
     });
 
-  })
 </script>

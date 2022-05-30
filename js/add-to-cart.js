@@ -55,8 +55,10 @@ function updateCartItemsCount() {
 
 function addProductToCartFromButton( $button = false ) {
 
+ 
+
   let variantID = parseInt( $button.dataset.variantId ) || 123456;
-  let quantity = parseInt( $button.dataset.quantity ) || 1;
+  let quantity =  document.querySelector('.quantity__input').value;
   let image = $button.dataset.featuredImage || '';
   let config = {
     method: 'post',
@@ -75,3 +77,4 @@ function addProductToCartFromButton( $button = false ) {
   .then(function () {});
 
 };
+

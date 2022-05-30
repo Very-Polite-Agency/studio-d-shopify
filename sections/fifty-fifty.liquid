@@ -68,8 +68,10 @@
 
       {%- when 'content' -%} 
 
-      <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex justify-content-center px-lg-65 py-50 py-lg-0 ">
-        <div class="d-flex flex-column justify-content-center">
+
+
+      <div class="fifty-fifty_content  {% if forloop.first == true %} left {% else %} right {% endif%}  col-10 col-md-8 col-lg-5 d-flex px-30 px-lg-50  pt-50 pb-75 pb-lg-50 py-lg-0   ">
+        <div class="fifty-fifty_content-wrapper  d-flex flex-column justify-content-center">
           
           <h2 class="fifty-fifty__heading heading " {{aos_attrs_text}}>{{ block.settings.heading }}</h2>
           <div class="fifty-fifty__message message" {{aos_attrs_text}}>

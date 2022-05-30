@@ -57,3 +57,27 @@ $(function () {
       .animate({ scrollTop: $($trigger).offset().top - $offset });
   });
 });
+
+$(function () {
+  $(document).on("click", ".input-number-increment", function (e) {
+    var quantity = $(this).parent().find("input").val();
+    $(this)
+      .parent()
+      .find("input")
+      .val(parseInt(quantity) + 1)
+      .change();
+  });
+
+  $(document).on("click", ".input-number-decrement", function (e) {
+    var quantity = $(this).parent().find("input").val();
+    if (quantity <= 1) $(this).parent().find("input").val(1).change();
+    else
+      $(this)
+        .parent()
+        .find("input")
+        .val(parseInt(quantity) - 1)
+        .change();
+  });
+});
+
+

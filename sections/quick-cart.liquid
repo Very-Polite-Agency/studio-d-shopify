@@ -1,48 +1,54 @@
 <section id="quick-cart">
 
-    <div class="quick-cart">
-        <section class="quick-cart__header">
-            <div class="row">
-                <div class="col-8">
-                    <a href="#" data-toggle="show" role="button" aria-expanded="true" aria-controls="#quick-cart"
-                        data-target="#quick-cart,body" aria-label="cart">
-                        <span class="link-text">← CONTINUE SHOPPING</span>
-                    </a>
-                </div>
-                <div class="col-4 d-flex align-items-center justify-content-end">
-                    <a href="#" data-toggle="show" role="button" aria-expanded="true" aria-controls="#quick-cart"
-                        data-target="#quick-cart, body" aria-label="cart">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.804688 1L11.3543 11.5" stroke="black" />
-                            <path d="M11.3535 1L0.803894 11.5" stroke="black" />
-                        </svg>
-                    </a>
-                </div>
+    <div class="quick-cart quick-cart-empty">
+        <div class="container-fluid d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                <h4 class="text-center">Cart is empty</h4>
+                <a href="/collections/all" class="underline  link mt-30"> Continue shopping </a>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <div class="quick-cart quick-cart-not-empty">
+
+    <section class="quick-cart__header">
+        <div class="row">
+            <div class="col-8">
+                <a href="#" data-toggle="show" role="button" aria-expanded="true" aria-controls="#quick-cart"
+                    data-target="#quick-cart, body" aria-label="cart">
+                    <span class="link-text">← CONTINUE SHOPPING</span>
+                </a>
+            </div>
+            <div class="col-4 d-flex align-items-center justify-content-end">
+                <a href="#" data-toggle="show" role="button" aria-expanded="true" aria-controls="#quick-cart"
+                    data-target="#quick-cart, body" aria-label="cart">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.804688 1L11.3543 11.5" stroke="black" />
+                        <path d="M11.3535 1L0.803894 11.5" stroke="black" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
-            <section class="quick-cart_main h-100 main-cart-items">
 
-                <div class="container-fluid">
+    <section class="quick-cart_main h-100 main-cart-items">
 
-                    {% if cart.item_count < 1 %} 
-
-                    <div
-                        class="d-flex flex-column align-items-center justify-content-center h-100">
-                        <h4 class="text-center">Cart is empty</h4>
-                        <a href="/collections/all" class="underline  link mt-30"> Continue shopping </a>
-                    </div>
+        <div class="container-fluid">
 
 
-                {% else %}
-                <form action="{{ routes.cart_url }}" method="post" data-form novalidate>
+
+            <form action="{{ routes.cart_url }}" method="post">
+                <div class="quick-cart-content" data-ajax-cart-section >
                     <div class="row">
                         <div class="col-6 d-flex align-items-center">
                             <h4 class="pb-2">Your Cart</h4>
                         </div>
                         <div class="col-6 align-items-center d-flex justify-content-end link-text">
-                            (<span class="mr-5">{{cart.item_count }}</span> {{cart.item_count | pluralize: 'item', 'items' }})
+                            (<span class="mr-5">{{cart.item_count }}</span> {{cart.item_count | pluralize: 'item',
+                            'items'
+                            }})
                         </div>
                     </div>
                     {% for item in cart.items %}
@@ -56,8 +62,9 @@
                             %}
                         </div>
                         <div class="col-5">
-                            <a role="button" class="cart-item__remove" href="{{ item.url_to_remove }}">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a data-ajax-cart-request-button class="cart-item__remove" href="{{ item.url_to_remove }}">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.759766 0.5L11.3094 11" stroke="black" />
                                     <path d="M11.3086 0.5L0.758941 11" stroke="black" />
                                 </svg>
@@ -65,70 +72,78 @@
                             <p class="pb-20">
                                 {{item.title}}
                             </p>
-        
+
                             <div class="product-form__quantity quantity">
-                                <span class="input-number-decrement quantity__button js-qty__adjust">
+                                <a data-ajax-cart-request-button class="quantity__button"
+                                    href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | minus: 1 }}">
                                     -
-                                </span>
-                                <input type="number" id="updates_{{ item.key }}" name="updates[]" value="{{ item.quantity}}"
-                                    min="1" pattern="[0-9]*"
-                                    class="quantity__input product-form__input product-form__input--quantity"
-                                    aria-label="{{ 'general.accessibility.quantity' | t }}">
-                                <span class="input-number-increment quantity__button js-qty__adjust">
+                                </a>
+                                <input data-ajax-cart-quantity-input="{{ forloop.index }}" value="{{ item.quantity }}"
+                                    name="updates[]" type="number" />
+                                <a data-ajax-cart-request-button class="quantity__button"
+                                    href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | plus: 1 }}">
                                     +
-                                </span>
+                                </a>
                             </div>
-        
+
                             <div class="price pt-20">
-                                {% if price_compare %}
-                                <span class="price__value discount">{{ item.price_compare | money }}</span>
-                                {% endif %}
-                                <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ item.price | money
-                                    }}</span>
-                                <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+                                <div class="price">
+                                    {% if price_compare %}
+                                    <span class="price__value discount">{{ item.price | money }}</span>
+                                    <span class="price__value {% if item.rice_compare %}sale-price{% endif %}"> {{
+                                        item.price_compare | money }}</span>
+                                    {% else %}
+                                    <span class="price__value {% if item.price_compare %}sale-price{% endif %}">{{
+                                        item.price | money }}</span>
+                                    {% endif %}
+                                    <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+                                </div>
                             </div>
-        
+
                         </div>
                     </div>
                     {% endfor %}
-                </form>
-
-
-                {% endif %}
-
-            </section>
-
-            <section class="quick-cart__footer main-cart-footer">
-
-                <div class="container-fluid px-0">
-                    <div class="row justify-content-between">
-                        <div class="col-6">
-                            <span>Subtotal: </span>
-                        </div>
-                        <div class="col-6 text-right cart-subtotal__price">
-                             {{cart.items_subtotal_price | money}}
-                        </div>
-                    </div>
-                    <div class="row pt-20">
-                        <div class="col-6">
-                            <div class="cta w-100">
-                                <a class="link outlined w-100" href="/cart" target="_self">
-                                    <span class="link__title">Review cart</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6 ">
-                            <div class="cta w-100">
-                                <a class="link outlined w-100" href="/checkout" target="_self">
-                                    <span class="link__title">Checkout</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-            </section>
-        
+            </form>
+
+
+
+    </section>
+
+    <section class="quick-cart__footer main-cart-footer">
+
+        <div class="container-fluid px-0">
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <span>Subtotal: </span>
+                </div>
+                <div class="col-6 text-right cart-subtotal__price" data-ajax-cart-bind-state="cart.items_subtotal_price | money_with_currency">
+                    {{cart.items_subtotal_price | money_with_currency }}
+                </div>
+            </div>
+            <div class="row pt-20">
+                <div class="col-6">
+                    <div class="cta w-100">
+                        <a class="link outlined w-100" href="/cart" target="_self">
+                            <span class="link__title">Review cart</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="cta w-100">
+                        <a class="link outlined w-100" href="/checkout" target="_self">
+                            <span class="link__title">Checkout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
     </div>
 
     <a href="#" data-toggle="show" role="button" aria-expanded="true" aria-controls="#quick-cart"
@@ -136,10 +151,18 @@
 
 </section>
 
-<script>
 
+<!-- 
+<script type="text/javascript">
+     
 
+    $('.cart-item__remove').click(function (e) {
+        e.preventDefault();
+        CartJS.clear();
+    });
 
-
-
-</script>
+    $(document).on('cart.requestComplete', function(event, cart) {
+        $('#counter').html(cart.item_count);
+        console.log('Change on cart')
+    });
+</script> -->

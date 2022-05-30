@@ -35,21 +35,30 @@
               
             </div>
 
-            {%- for order in customer.orders -%}
+            {% if customer.orders.size > 0 %}
+              {%- for order in customer.orders -%}
+              
 
-            <div class="row py-15 bb-black"  data-label="{{ 'customer.orders.order_number' | t }}">
-              <div class="col-2 link-text pl-0">
-                <a class="underline" href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}" >
-                  {{ order.name }}
-                </a>
+              <div class="row py-15 bb-black"  data-label="{{ 'customer.orders.order_number' | t }}">
+                <div class="col-2 link-text pl-0">
+                  <a class="underline" href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}" >
+                    {{ order.name }}
+                  </a>
+                </div>
+                <div class="col-2 link-text pl-0 ">  {{ order.created_at | date: "%m/%d/%y" }}  </div>
+                <div class="col-3 link-text"> {{ order.financial_status_label }}  </div>
+                <div class="col-3 link-text pr-0">  {{ order.fulfillment_status_label }} </div>
+                <div class="col-2 text-right link-text pr-0"> {{ order.total_price | money }} </div>
               </div>
-              <div class="col-2 link-text pl-0 ">  {{ order.created_at | date: "%m/%d/%y" }}  </div>
-              <div class="col-3 link-text"> {{ order.financial_status_label }}  </div>
-              <div class="col-3 link-text pr-0">  {{ order.fulfillment_status_label }} </div>
-              <div class="col-2 text-right link-text pr-0"> {{ order.total_price | money }} </div>
-            </div>
 
-            {% endfor %}
+              {% endfor %}
+            {% else %}
+              <p class="py-20 text-center">
+                It looks like there are no orders associated with this account!
+              </p>
+            {% endif %}
+
+            
 
           </div>
           <div class="col-12 col-md-3 offset-md-1 pl-0 pt-50 pt-md-0">

@@ -301,15 +301,6 @@
 } // .fifty-fifty
 
 
-.fifty-fifty__inverted {
-  @include media-breakpoint-up(lg){
-    flex-direction: row-reverse;
-  }
-
-  flex-direction: column;
-
-}
-
 .fifty-fifty-wrapper {
   .row {
     @include media-breakpoint-down(lg){
@@ -322,3 +313,42 @@
     }
   }
 }
+
+.fifty-fifty_content {
+  width: 100%;
+
+  @include media-breakpoint-up(sm){
+    max-width: 540px;
+  }
+  @include media-breakpoint-up(md){
+    max-width: 600px;
+  }
+  @include media-breakpoint-up(lg){
+    max-width: 500px;
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: 575px;
+  }
+  
+  
+ 
+  &.right {
+    margin-left: unset;
+    margin-right: auto;
+
+    @include media-breakpoint-down(lg){
+      margin-left: auto;
+    }
+
+    
+    
+  }
+  &.left {
+    margin-left: auto;
+    margin-right: unset;
+    @include media-breakpoint-down(lg){
+      margin-right: auto;
+    }
+  }
+}
+

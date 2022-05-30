@@ -18,6 +18,8 @@ body {
   background: rgba(var(--theme-colour-white), 1);
   color: rgba(var(--theme-colour-black), 1);
   position: relative;
+  letter-spacing: 0 !important;
+  line-height: 24px !important;
 
   [role="main"] {
     padding-top: var(--theme-header-height--total);
