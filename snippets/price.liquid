@@ -16,12 +16,9 @@
 
   <div class="price">
     {% if price_compare %}
-      <span class="price__value discount">{{ price | money }}</span>
-      <span class="price__value {% if price_compare %}sale-price{% endif %}"> {{ price_compare | money }}</span>
-    {% else %}
-    <span class="price__value {% if price_compare %}sale-price{% endif %}">{{ price | money }}</span>
+      <span class="price__value">{{ price_compare | money }}</span>
     {% endif %}
-    <!-- <span class="price__currency">{{ shop.currency }}</span> -->
+    <span class="price__value{% if price_compare %} discount{% endif %}">{{ price | money }}</span>
   </div>
 
 {%- endif -%}
