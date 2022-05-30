@@ -13,7 +13,7 @@
       "type": "product-recommendations",
       "settings": {
         "heading": "You may also like",
-        "product_limit": 3
+        "product_limit": 4
       }
     }
   }
