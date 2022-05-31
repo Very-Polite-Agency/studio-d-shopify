@@ -47,7 +47,7 @@
             {% assign message = block.settings.message | default: '' %}
 
             {% if message != blank %}
-              <div class="{{ section_name }}__text body-copy--1 rte">{{ message }}</div>
+              <div class="{{ section_name }}__message body-copy--1 rte">{{ message }}</div>
             {% endif %}
 
         {%- endcase -%}

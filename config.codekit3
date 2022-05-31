@@ -1669,6 +1669,12 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/node_modules" : {
+      "ft" : 65536,
+      "oA" : 2,
+      "oAP" : "\/node_modules",
+      "oF" : 0
+    },
     "\/package-lock.json" : {
       "ft" : 524288,
       "oA" : 1,
