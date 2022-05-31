@@ -18748,7 +18748,7 @@ body.sticky-footer footer {
     transition: all 0.3s ease;
   }
   .header .navigation__item + .navigation__cta, .header .navigation__item + .navigation__item {
-    padding-left: 30px;
+    padding: 0 15px;
   }
 }
 @media (min-width: 1200px) {
@@ -18756,7 +18756,7 @@ body.sticky-footer footer {
     font-size: 13px;
   }
   .header .navigation__item + .navigation__cta, .header .navigation__item + .navigation__item {
-    padding-left: 30px;
+    padding: 0 15px;
   }
 }
 @media (min-width: 1400px) {
@@ -18764,7 +18764,7 @@ body.sticky-footer footer {
     font-size: 14px;
   }
   .header .navigation__item + .navigation__cta, .header .navigation__item + .navigation__item {
-    padding-left: 45px;
+    padding: 0 22px;
   }
 }
 

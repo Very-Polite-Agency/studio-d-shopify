@@ -151,7 +151,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
       &__item {
         & + .navigation__cta,
         & + .navigation__item {
-          padding-left: 30px;
+          padding: 0 15px;
         }
       }
     }
@@ -167,7 +167,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
       &__item {
         & + .navigation__cta,
         & + .navigation__item {
-          padding-left: 30px;
+          padding: 0 15px;
         }
       }
     }
@@ -183,7 +183,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
       &__item {
         & + .navigation__cta,
         & + .navigation__item {
-          padding-left: 45px;
+          padding: 0 22px;
         }
       }
     }
