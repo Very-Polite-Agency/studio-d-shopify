@@ -12,14 +12,23 @@
 
   [data-text-alignment-left] {
     text-align: left;
+    .cta {
+      justify-content: flex-start;
+    }
   }
 
   [data-text-alignment-center] {
     text-align: center;
+    .cta {
+      justify-content: center;
+    }
   }
 
   [data-text-alignment-right] {
     text-align: right;
+    .cta {
+      justify-content: flex-end;
+    }
   }
 
   &__content {
@@ -48,8 +57,9 @@
     }
   }
 
-  &__heading {
-    &--1 {
+  .heading {
+    &--2,
+    &--3 {
       & + .text-feature__message {
         margin-top: 30px;
       }
@@ -79,6 +89,15 @@
   } // min width md
 
   @include media-breakpoint-up(lg) {
+
+    .heading {
+      &--2,
+      &--3 {
+        & + .text-feature__message {
+          margin-top: 35px;
+        }
+      }
+    }
 
     &__content {
       font-size: 38px;
