@@ -39,10 +39,12 @@
     line-height: 1.2;
     letter-spacing: -0.03em;
     .body-copy--1 {
+      font-family: var(--theme-font-family--serif--gt-alpina);
       font-size: var(--theme-body-copy);
       letter-spacing: 0;
       line-height: 1.35;
-      font-weight: 400;
+      font-weight: 100;
+      font-style: normal;
       p + p {
         margin-top: 16px;
       }
@@ -61,7 +63,7 @@
     &--2,
     &--3 {
       & + .text-feature__message {
-        margin-top: 30px;
+        margin-top: 22px;
       }
     }
   }
@@ -94,7 +96,7 @@
       &--2,
       &--3 {
         & + .text-feature__message {
-          margin-top: 35px;
+          margin-top: 26px;
         }
       }
     }

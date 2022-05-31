@@ -14,18 +14,6 @@
     padding-bottom: 20px;
   }
 
-  &--large {
-
-  }
-
-  &--md {
-
-  }
-
-  &--small {
-
-  }
-
   &--primary {
     font-family: var(--theme-font-family--serif--gt-alpina-fine);
     font-style: normal;
@@ -49,21 +37,21 @@
   }
 
   &--2 {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   &--3 {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   @include media-breakpoint-up(sm) {
 
     &--2 {
-      font-size: 24px;
+      font-size: 34px;
     }
 
     &--3 {
-      font-size: 20px;
+      font-size: 27px;
     }
 
   } // min width sm
@@ -71,11 +59,11 @@
   @include media-breakpoint-up(md) {
 
     &--2 {
-      font-size: 26px;
+      font-size: 38px;
     }
 
     &--3 {
-      font-size: 22px;
+      font-size: 29px;
     }
 
   } // min width md
@@ -91,11 +79,11 @@
     }
 
     &--2 {
-      font-size: 28px;
+      font-size: 34px;
     }
 
     &--3 {
-      font-size: 20px;
+      font-size: 27px;
     }
 
   } // min width lg
@@ -103,11 +91,11 @@
   @include media-breakpoint-up(xl) {
 
     &--2 {
-      font-size: 34px;
+      font-size: 38px;
     }
 
     &--3 {
-      font-size: 26px;
+      font-size: 29px;
     }
 
   } // min width xl
@@ -115,11 +103,11 @@
   @include media-breakpoint-up(xxl) {
 
     &--2 {
-      font-size: 40px;
+      font-size: 42px;
     }
 
     &--3 {
-      font-size: 32px;
+      font-size: 31px;
     }
 
   } // min width xxl
