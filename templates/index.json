@@ -112,8 +112,21 @@
     },
     "16540381984bd95017": {
       "type": "text-feature",
+      "blocks": {
+        "5e295311-7164-40c4-9693-75b80b12f6fb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sample heading here",
+            "heading_size": "1"
+          }
+        }
+      },
+      "block_order": [
+        "5e295311-7164-40c4-9693-75b80b12f6fb"
+      ],
       "settings": {
         "anchor_id": "",
+        "alignment": "left",
         "width": "full"
       }
     }
