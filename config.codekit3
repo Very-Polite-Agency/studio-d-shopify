@@ -3333,14 +3333,6 @@
       "oAP" : "\/sections\/cart-main.liquid",
       "oF" : 0
     },
-    "\/sections\/custom-liquid.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/custom-liquid.liquid",
-      "oF" : 0
-    },
     "\/sections\/fifty-fifty.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3363,14 +3355,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/header.liquid",
-      "oF" : 0
-    },
-    "\/sections\/hero.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/hero.liquid",
       "oF" : 0
     },
     "\/sections\/image-with-text.liquid" : {
