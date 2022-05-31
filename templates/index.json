@@ -21,8 +21,8 @@
             "heading": "Eat.",
             "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections\/eat"
+            "cta_title": "",
+            "cta_link": ""
           }
         }
       },
