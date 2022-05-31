@@ -44,9 +44,9 @@
 
           {%- when 'message' -%}
 
-            {% assign text = block.settings.message | default: '' %}
+            {% assign message = block.settings.message | default: '' %}
 
-            {% if text != blank %}
+            {% if message != blank %}
               <div class="{{ section_name }}__text body-copy--1">{{ message }}</div>
             {% endif %}
 
