@@ -1,0 +1,40 @@
+main {
+
+  .shopify-section {
+    & + .shopify-section {
+      margin-top: 90px;
+    }
+    &.section-title {
+      & + .shopify-section {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    .shopify-section {
+      & + .shopify-section {
+        margin-top: 110px;
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {
+
+    .shopify-section {
+      & + .shopify-section {
+        margin-top: 150px;
+      }
+    }
+
+  } // min width xxl
+
+}

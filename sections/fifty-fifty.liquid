@@ -51,7 +51,7 @@
 {% endcapture %}
 
 
-<div class="container-fluid px-0 {{ section_name }}-wrapper mb-lg-150" id="{{ section.id }}">
+<div class="container-fluid px-0 {{ section_name }}-wrapper" id="{{ section.id }}">
   <div class="row justify-content-center">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
