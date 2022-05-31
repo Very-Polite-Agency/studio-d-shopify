@@ -120,8 +120,8 @@
           "0f976f96-43ef-4a9b-a02a-03c3c9e3daf1"
         ],
         "settings": {
-          "menu_menu": "",
-          "show_network_links": false
+          "menu_menu": "main-menu",
+          "show_network_links": true
         }
       },
       "footer": {
