@@ -1,11 +1,11 @@
 {%- assign section_name = 'fifty-fifty' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-{% assign colour_theme = section.settings.colour_theme | default: 'light' %}
-{% assign text_alignment = section.settings.text_alignment | default: 'bottom' %}
+{% assign cta_title = section.settings.cta_title | default: '' %}
+{% assign cta_link = section.settings.cta_link | default: '' %}
 
 {% if section.settings.anchor_id != blank %}
-{% assign section_id = section.settings.anchor_id %}
+  {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
 {% capture aos_attrs_img %}
@@ -21,7 +21,6 @@
       transition: 'fade-left',
     %}
 {% endcapture %}
-
 
 {% capture aos_attrs_text %}
     {%
@@ -56,47 +55,47 @@
   <div class="row justify-content-center">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
-      {%- when 'media' -%}
 
-      <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
-        {%
-          render 'lazyload-image',
-          alt_text: 'Fifty-Fifty Image',
-          image:  block.settings.image,
-        %}
-      </div>
+        {%- when 'media' -%}
 
-      {%- when 'content' -%}
-
-
-
-      <div class="fifty-fifty_content  {% if forloop.first == true %} left {% else %} right {% endif%}  col-10 col-md-8 col-lg-5 d-flex px-30 px-lg-50  pt-50 pb-75 pb-lg-50 py-lg-0   ">
-        <div class="fifty-fifty_content-wrapper  d-flex flex-column justify-content-center">
-
-          <h2 class="fifty-fifty__heading heading " {{aos_attrs_text}}>{{ block.settings.heading }}</h2>
-          <div class="fifty-fifty__message message" {{aos_attrs_text}}>
-            <p>{{ block.settings.description }}</p>
+          <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}}>
+            {% if cta_link != blank %}<a class="fifty-fifty__media-link link" href="{{ cta_link }}" title="{{ cta_title }}" target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}">{% endif %}
+              {%
+                render 'lazyload-image',
+                alt_text: 'Fifty-Fifty Image',
+                image:  block.settings.image,
+              %}
+            {% if cta_link != blank %}</a>{% endif %}
           </div>
 
-          {% if block.settings.cta_link != blank %}
+        {%- when 'content' -%}
 
-          <div class="fifty-fifty__ctas">
-            <div class="fifty-fifty__cta " {{aos_attrs_btn}}>
-              <div class="cta" data-justify="not-set"><a class="link outlined"
-                  href="{{ block.settings.cta_link }}" target="_self">
-                  <span class="link__title">{{ block.settings.cta_title }}</span>
-                </a></div>
+          <div class="fifty-fifty_content {% if forloop.first == true %} left {% else %} right {% endif%}  col-10 col-md-8 col-lg-5 d-flex px-30 px-lg-50  pt-50 pb-75 pb-lg-50 py-lg-0">
+            <div class="fifty-fifty_content-wrapper d-flex flex-column justify-content-center">
+
+              <h2 class="fifty-fifty__heading heading " {{aos_attrs_text}}>{{ block.settings.heading }}</h2>
+              <div class="fifty-fifty__message message" {{aos_attrs_text}}>
+                <p>{{ block.settings.description }}</p>
+              </div>
+
+              {% if cta_link != blank and cta_title != blank %}
+                <div class="fifty-fifty__ctas">
+                  <div class="fifty-fifty__cta" {{aos_attrs_btn}}>
+                    <div class="cta" data-justify="not-set">
+                      <a class="link outlined" href="{{ cta_link }}" title="{{ cta_title }}"  target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}">
+                        <span class="link__title">{{ cta_title }}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
             </div>
           </div>
-          {%endif%}
 
-        </div>
-      </div>
+      {% endcase %}
 
-
-
-      {%endcase%}
-      {%- endfor -%}
+    {%- endfor -%}
   </div>
 </div>
 
@@ -110,7 +109,23 @@
 	"tag": "section",
 	"class": "section section--fifty-fifty",
 	"max_blocks": 2,
-	"settings": [],
+	"settings": [
+    {
+ 		 "content": "Call to Action",
+ 		 "type": "header"
+ 		},
+    {
+			"label": "Title",
+			"type": "text",
+      "default": "Shop now",
+			"id": "cta_title"
+		},
+		{
+		  "label": "Link",
+			"type": "url",
+			"id": "cta_link"
+		}
+  ],
 	"blocks": [
 	  {
 			"name": "Content",
@@ -121,6 +136,11 @@
 					"label": "Heading",
 					"type": "text",
 					"id": "heading"
+				},
+        {
+					"label": "Message",
+					"type": "richtext",
+					"id": "message"
 				},
 				{
 					"label": "Description",

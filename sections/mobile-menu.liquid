@@ -1,12 +1,14 @@
 {% assign section_name = 'mobile-menu' %}
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
+{% assign menu_main = section.settings.menu_main | default: false %}
+
 <div class="{{ section_name }}__layout">
 
   <div class="{{ section_name }}__main">
     <nav class="{{ section_name }}__navigation navigation">
 
-      {% for link in linklists.main-menu.links %}
+      {% for link in linklists[menu_main].links %}
 
           {% if link.levels > 1 %}
 
@@ -215,10 +217,10 @@
 "type": "header"
 },
 {
-"label": "Main Menu",
-"type": "link_list",
-"id": "menu_menu"
-}
+ 			"label": "Main Menu",
+ 			"type": "link_list",
+ 			"id": "menu_main"
+ 		}
 ],
 "blocks": [
   {
