@@ -100,8 +100,8 @@
           "type": "content",
           "settings": {
             "heading": "Work.",
-            "message": "",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "",
             "cta_title": "",
             "cta_link": ""
           }
