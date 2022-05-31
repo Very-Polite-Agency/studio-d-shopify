@@ -176,10 +176,10 @@
 {% schema %}
  {
  	"name": "Header",
-  "class": "header fixed",
+ 	"class": "header fixed",
  	"tag": "header",
  	"settings": [
-    {
+	  {
  			"content": "Navigation",
  			"type": "header"
  		},
@@ -187,7 +187,35 @@
  			"label": "Main Menu",
  			"type": "link_list",
  			"id": "menu_menu"
- 		}
- 	]
+ 		},
+    {
+ 			"content": "Settings",
+ 			"type": "header"
+ 		},
+    {
+      "label": "Show Network Links",
+      "type": "checkbox",
+      "default": false,
+      "id": "show_network_links"
+    }
+ 	],
+  "blocks": [
+	  {
+			"name": "Network Link",
+			"type": "network_link",
+			"settings": [
+        {
+          "label": "Title",
+        	"type": "text",
+          "id": "title"
+        },
+        {
+          "label": "Link",
+        	"type": "url",
+          "id": "link"
+        }
+      ]
+    }
+  ]
  }
 {% endschema %}
