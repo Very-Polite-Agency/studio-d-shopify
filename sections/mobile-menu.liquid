@@ -17,12 +17,12 @@
                   <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0V11" stroke="black"/>
                     <path d="M11 5.5L0 5.5" stroke="black"/>
-                  </svg>                    
+                  </svg>
                 </button>
               </div>
 
               <div id="collapseOne-{{ link.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingOne-{{ link.title | replace: ' ', '-' }} " data-parent="#accordion-{{ link.title | replace: ' ', '-' }}">
-               
+
                 {% for sub_link in link.links %}
                 <div class="navigation__item">
                   <a class="navigation__link link" href="{{ sub_link.url }}"
@@ -30,7 +30,7 @@
                 </a></div>
 
                 {% endfor %}
-                
+
               </div>
 
             </div>
@@ -42,7 +42,7 @@
 
       {% endfor %}
 
-    
+
     </nav>
   </div>
 
@@ -55,11 +55,11 @@
             <rect x="0.5" y="10.6165" width="22.9467" height="16.4157" stroke="#121212"/>
             <path d="M19.5933 9.0279C19.5933 4.81983 16.182 1.40851 11.9739 1.40851C7.76581 1.40851 4.35449 4.81983 4.35449 9.0279" stroke="#121212"/>
             </svg>
-                                    
+
           <div class="link-text ">({{ cart.item_count }})</div>
         </a>
       </div>
-      
+
       {% if customer %}
       <div class="navigation__item account-link">
         <a href="/account" class=" d-flex align-items-center">
@@ -67,7 +67,7 @@
             <circle cx="11.6798" cy="6.76218" r="5.69248" stroke="#247200"/>
             <path d="M22 25.3396C22 19.6396 17.3792 15.0188 11.6792 15.0188C5.97918 15.0188 1.3584 19.6396 1.3584 25.3396" stroke="#247200"/>
             </svg>
-                                              
+
           <div class="link-text">Account</div>
         </a>
       </div>
@@ -78,7 +78,7 @@
             <circle cx="11.6798" cy="6.76218" r="5.69248" stroke="#247200"/>
             <path d="M22 25.3396C22 19.6396 17.3792 15.0188 11.6792 15.0188C5.97918 15.0188 1.3584 19.6396 1.3584 25.3396" stroke="#247200"/>
             </svg>
-                                               
+
           <div class="link-text">Login</div>
         </a>
       </div>
@@ -94,7 +94,7 @@
 
 						{% if block.settings.instagram_link != blank %}
 
-						<div class="social__item"><a class="social__link link" href="{{block.settings.instagram_link}}"
+						<div class="social__item"><a class="social__link link" href="{{ block.settings.instagram_link }}"
 								target="_blank" title="instagram"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
 									style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -117,7 +117,7 @@
 
 						{% if block.settings.facebook_link != blank %}
 
-						<div class="social__item"><a class="social__link link" href="{{block.settings.facebook_link}}"
+						<div class="social__item"><a class="social__link link" href="{{ block.settings.facebook_link }}"
 								target="_blank" title="facebook"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8.6 16"
 									style="enable-background:new 0 0 8.6 16;" xml:space="preserve">
@@ -131,7 +131,7 @@
 						{% if block.settings.linkedin_link != blank %}
 
 						<div class="social__item"><a class="social__link link"
-								href="{{block.settings.linkedin_link}}" target="_blank"
+								href="{{ block.settings.linkedin_link }}" target="_blank"
 								title="linkedin"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20"
 									style="enable-background:new 0 0 20 20;" xml:space="preserve">
@@ -146,9 +146,9 @@
 						{% endif %}
 
 						{% if block.settings.pinterest_link != blank %}
-								
+
 						<div class="social__item"><a class="social__link link"
-								href="{block.settings.pinterest_link{}}" target="_blank" title="pinterest"><svg
+								href="{{ block.settings.pinterest_link }}" target="_blank" title="pinterest"><svg
 									version="1.1" xmlns="http://www.w3.org/2000/svg"
 									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
 									style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -164,11 +164,11 @@
 								</svg></a></div>
 
 								{% endif %}
-						
+
 						{% if block.settings.houzz_link != blank %}
 
 						<div class="social__item"><a class="social__link link"
-								href="{{block.settings.houzz_link}}" target="_blank" title="houzz"><svg
+								href="{{ block.settings.houzz_link }}" target="_blank" title="houzz"><svg
 									width="95" height="94" viewBox="0 0 95 94" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M85.2111 0H10.0137C7.52074 0 5.12989 0.990347 3.36711 2.75319C1.60433 4.51603 0.614014 6.90697 0.614014 9.4V84.6C0.614014 87.093 1.60433 89.484 3.36711 91.2468C5.12989 93.0096 7.52074 94 10.0137 94H85.2111C87.7041 94 90.0949 93.0096 91.8577 91.2468C93.6205 89.484 94.6108 87.093 94.6108 84.6V9.4C94.6108 6.90697 93.6205 4.51603 91.8577 2.75319C90.0949 0.990347 87.7041 0 85.2111 0ZM74.9185 77.3385H54.7091V57.105H40.6096V77.3385H20.3768V16.6615H34.4764V30.7615L74.9185 42.4175V77.3385Z">
