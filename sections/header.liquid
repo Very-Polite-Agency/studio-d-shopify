@@ -3,6 +3,7 @@
 
 {% assign network_links = section.blocks | where: 'type', 'network_link' | default: false %}
 {% assign show_network_links = section.settings.show_network_links | default: false %}
+{% assign main_menu = section.settings.menu_menu | default: false %}
 
 {% if show_network_links and network_links.size > 0 %}
   <div class="container-fluid header-tabs position-relative z-index-2">
@@ -74,54 +75,49 @@
         </div>
 
         <nav class="header__navigation navigation d-none d-lg-inline-flex">
-          {% for link in linklists.main-menu.links %}
 
-          {% if link.levels > 1 %}
+          {% if menu_main %}
+            {% for link in linklists[menu_main].links %}
 
-          <div class="navigation__item nav-submenu px-15 ">
-            <a href="{{ link.url }}" class="  navigation__link link">
-              <div class="link__title">{{ link.title }}</div>
-            </a>
-            <div class="megamenu-drop">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-12 d-flex">
-
-                    {% for sub_link in link.links %}
-
-                        <ul class="megamenu-drop-list">
-                          <div class="navigation__item">
-                            <a href="{{ sub_link.url }}" class="navigation__link link ">
-                              <div class="link__title menu-title">{{ sub_link.title }}</div>
-                            </a>
-                          </div>
-                          {% for sub_sub_link in sub_link.links %}
-
-                            <li class="navigation__item">
-                              <a href="{{sub_sub_link.url}}" class="navigation__link">
-                              {{sub_sub_link.title}}
-                            </a>
-                            </li>
+              {% if link.levels > 1 %}
+                <div class="navigation__item nav-submenu px-15 ">
+                  <a href="{{ link.url }}" class="  navigation__link link">
+                    <div class="link__title">{{ link.title }}</div>
+                  </a>
+                  <div class="megamenu-drop">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 d-flex">
+                          {% for sub_link in link.links %}
+                            <ul class="megamenu-drop-list">
+                              <div class="navigation__item">
+                                <a href="{{ sub_link.url }}" class="navigation__link link ">
+                                  <div class="link__title menu-title">{{ sub_link.title }}</div>
+                                </a>
+                              </div>
+                              {% for sub_sub_link in sub_link.links %}
+                                <li class="navigation__item">
+                                  <a href="{{sub_sub_link.url}}" class="navigation__link">{{sub_sub_link.title}}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
                           {% endfor %}
-                        </ul>
-
-                    {% endfor %}
-
-                  </div>
-
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-          </div>
-          {% else %}
-            <div class="navigation__item">
-              <a href="{{ link.url }}" class="navigation__link link">
-                <div class="link__title">{{ link.title }}</div>
-              </a>
-            </div>
+              {% else %}
+                <div class="navigation__item">
+                  <a href="{{ link.url }}" class="navigation__link link">
+                    <div class="link__title">{{ link.title }}</div>
+                  </a>
+                </div>
+              {% endif %}
+
+            {% endfor %}
           {% endif %}
 
-          {% endfor %}
 
           <div class="navigation__item">
             {% if template.name == 'cart' %}
