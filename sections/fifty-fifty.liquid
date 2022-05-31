@@ -66,13 +66,13 @@
         %}
       </div>
 
-      {%- when 'content' -%} 
+      {%- when 'content' -%}
 
 
 
       <div class="fifty-fifty_content  {% if forloop.first == true %} left {% else %} right {% endif%}  col-10 col-md-8 col-lg-5 d-flex px-30 px-lg-50  pt-50 pb-75 pb-lg-50 py-lg-0   ">
         <div class="fifty-fifty_content-wrapper  d-flex flex-column justify-content-center">
-          
+
           <h2 class="fifty-fifty__heading heading " {{aos_attrs_text}}>{{ block.settings.heading }}</h2>
           <div class="fifty-fifty__message message" {{aos_attrs_text}}>
             <p>{{ block.settings.description }}</p>
@@ -93,82 +93,74 @@
         </div>
       </div>
 
-      
+
 
       {%endcase%}
       {%- endfor -%}
   </div>
 </div>
-  
+
 
 
 </div>
 
 {% schema %}
 {
-"name": "Fifty-Fifty",
-"tag": "section",
-"class": "section section--fifty-fifty",
-"max_blocks": 2,
-"settings": [
-
-],
-"blocks": [
-{
-"name": "Content",
-"type": "content",
-"limit": 1,
-"settings": [
-{
-"label": "Heading",
-"type": "text",
-"id": "heading"
-},
-{
-"label": "Description",
-"type": "richtext",
-"id": "description"
-},
-{
-  "label": "CTA Title",
-  "type": "text",
-  "id": "cta_title",
-  "default": "Shop now"
-  },
-{
-"label": "CTA Link",
-"type": "url",
-"id": "cta_link"
-}
-]
-},
-{
-"name": "Media",
-"type": "media",
-"limit": 1,
-"settings": [
-{
-"label": "Image",
-"type": "image_picker",
-"id": "image"
-},
-{
-"label": "Caption",
-"type": "text",
-"id": "caption"
-},
-{
-"label": "Stamp",
-"type": "image_picker",
-"id": "stamp"
-}
-]
-}
-],
-"presets": [
-{
-"name": "Fifty-Fifty"
-}
-]
+	"name": "Fifty-Fifty",
+	"tag": "section",
+	"class": "section section--fifty-fifty",
+	"max_blocks": 2,
+	"settings": [],
+	"blocks": [
+	  {
+			"name": "Content",
+			"type": "content",
+			"limit": 1,
+			"settings": [
+			  {
+					"label": "Heading",
+					"type": "text",
+					"id": "heading"
+				},
+				{
+					"label": "Description",
+					"type": "richtext",
+					"id": "description"
+				},
+        {
+ 			    "content": "Call to Action",
+ 			    "type": "paragraph"
+ 		    },
+				{
+					"label": "Title",
+					"type": "text",
+					"id": "cta_title",
+					"default": "Shop now"
+				},
+				{
+					"label": "Link",
+					"type": "url",
+					"id": "cta_link"
+				}
+			]
+		},
+		{
+			"name": "Media",
+			"type": "media",
+			"limit": 1,
+			"settings": [
+			  	{
+					"label": "Image",
+					"type": "image_picker",
+					"id": "image"
+				}
+			]
+		}
+	],
+	"presets": [
+	  {
+		"name": "Fifty-Fifty"
+	  }
+	]
 }
 {% endschema %}
