@@ -18764,7 +18764,7 @@ body.sticky-footer footer {
     font-size: 14px;
   }
   .header .navigation__item + .navigation__cta, .header .navigation__item + .navigation__item {
-    margin-left: 45px;
+    padding-left: 45px;
   }
 }
 
