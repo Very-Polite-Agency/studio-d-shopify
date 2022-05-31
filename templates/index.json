@@ -125,11 +125,19 @@
           "settings": {
             "message": "<p>Aliquam id porttitor nulla. Maecenas augue enim, varius quis mi at, euismod lobortis purus. Vivamus molestie libero laoreet turpis cursus, ut faucibus ipsum auctor. Curabitur molestie commodo sem, vel faucibus justo lobortis ac. Donec varius ligula nisi, id consequat augue tincidunt nec. Sed iaculis turpis enim, eu lobortis risus elementum nec. Donec condimentum vehicula placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non tristique augue. In vitae erat felis. In ut pulvinar felis. Sed sed ex odio. Cras sagittis semper lorem.<\/p><p>Integer sed dignissim magna, ut gravida ipsum. Sed luctus pulvinar magna, non dapibus justo fermentum luctus. In facilisis arcu nec odio molestie, quis hendrerit tellus hendrerit. Vestibulum interdum ipsum nulla, ut sollicitudin nibh ullamcorper quis. Mauris id rhoncus risus. Praesent lobortis facilisis enim, vitae ornare dui mattis ut. Integer auctor tellus ac lorem scelerisque feugiat. Maecenas tristique tempus tellus, ut varius metus semper a. Donec sem nunc, ultrices a nunc quis, lobortis pellentesque neque. Vestibulum in sollicitudin turpis.<\/p>"
           }
+        },
+        "f3f5f72f-c7c6-4549-a6df-bc8f5e6d1789": {
+          "type": "cta",
+          "settings": {
+            "title": "Learn More",
+            "link": "shopify:\/\/collections\/lighting"
+          }
         }
       },
       "block_order": [
         "5e295311-7164-40c4-9693-75b80b12f6fb",
-        "25783351-6d51-456a-8a49-8a0bd9b4a027"
+        "25783351-6d51-456a-8a49-8a0bd9b4a027",
+        "f3f5f72f-c7c6-4549-a6df-bc8f5e6d1789"
       ],
       "settings": {
         "anchor_id": "",
