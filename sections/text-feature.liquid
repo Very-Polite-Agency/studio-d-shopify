@@ -1,6 +1,7 @@
 {%- assign section_name = 'text-feature' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{%- assign alignment = section.settings.alignment | default: 'left' -%}
 {%- assign columns = section.settings.width | default: 'col-12' -%}
 {%- assign width = section.settings.width | default: 'full' -%}
 
@@ -17,9 +18,21 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: columns %}
-    <div class="{{ section_name }}__content">
+    <div class="{{ section_name }}__content" data-text-alignment-{{ alignment }}>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
+
+          {%- when 'cta' -%}
+
+            {% assign link = block.settings.link | default: '' %}
+            {% assign title = block.settings.title | default: '' %}
+
+            {% if link != blank and title != blank %}
+              <div class="{{ section_name }}__cta">
+                <a class="{{ section_name }}__cta-button button--primary" href="{{ link }}" title="{{ title }}">{{ title }}</a>
+              </div>
+            {% endif %}
+
           {%- when 'heading' -%}
 
             {% assign heading = block.settings.heading | default: '' %}
@@ -29,27 +42,12 @@
               <h{{ heading_size }} class="{{ section_name }}__heading heading--{{ heading_size }}">{{ heading | escape }}</h{{ heading_size }}>
             {% endif %}
 
-          {%- when 'text' -%}
+          {%- when 'message' -%}
 
-            {% assign text = block.settings.text | default: '' %}
+            {% assign text = block.settings.message | default: '' %}
 
             {% if text != blank %}
-              <div class="{{ section_name }}__text body-copy--1">{{ text }}</div>
-            {% endif %}
-
-          {%- when 'button' -%}
-
-            {% assign alignment = block.settings.alignment | default: 'left' %}
-            {% assign link = block.settings.link | default: '' %}
-            {% assign style = block.settings.style | default: 'primary' %}
-            {% assign title = block.settings.title | default: '' %}
-
-            {% if link != blank and title != blank %}
-              <div class="{{ section_name }}__cta" data-alignment="{{ alignment }}">
-                <a class="{{ section_name }}__button button--{{ style }}" href="{{ link }}" title="{{ title }}">
-                  <span class="button__title">{{ title }}</span>
-                </a>
-              </div>
+              <div class="{{ section_name }}__text body-copy--1">{{ message }}</div>
             {% endif %}
 
         {%- endcase -%}
@@ -65,13 +63,7 @@
   "class": "section section--text-feature",
   "settings": [
     {
-      "label": "Anchor ID",
-      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
-      "type": "text",
-      "id": "anchor_id"
-    },
-    {
-      "label": "Alignment",
+      "label": "Text Alignment",
       "type": "select",
       "options": [
         { "value": "left", "label": "Left" },
@@ -82,7 +74,7 @@
       "id": "alignment"
     },
     {
-      "label": "Width",
+      "label": "Container Width",
       "type": "select",
       "options": [
         { "value": "full", "label": "Full" },
@@ -90,6 +82,12 @@
       ],
       "default": "full",
       "id": "width"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
     }
   ],
   "blocks": [
