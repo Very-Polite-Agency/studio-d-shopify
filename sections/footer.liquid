@@ -2,11 +2,11 @@
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
 {% assign locations = section.blocks | where: 'type', 'location' %}
-{% assign main_menu = section.settings.menu_menu | default: false %}
-{% assign social_accounts = section.blocks | where: 'type', 'social' %}
+{% assign menu_main = section.settings.menu_main | default: false %}
 {% assign newsletter_button_title = section.settings.newsletter_button_title | default: "Let's get started!" %}
 {% assign newsletter_heading = section.settings.newsletter_heading | default: "A (design) rut we can get you out of!" %}
 {% assign newsletter_show = section.settings.newsletter_show | default: false %}
+{% assign social_accounts = section.blocks | where: 'type', 'social' %}
 
 {% if newsletter_show %}
 	<div class="container-fluid pb-5">
@@ -92,14 +92,27 @@
 				<div class="footer__links">
 					<nav class="footer__navigation navigation navigation--grid">
 
-						{% for link in linklists.footer.links %}
+						{% if menu_main %}
+            	{% for link in linklists[menu_main].links %}
 
-						<div class="navigation__item"><a class="navigation__link link" href="{{link.url}}"
-								target="_self" title="{{link.title}}"><span
-									class="link__title">{{link.title}}</span></a></div>
+								{% assign title = link.title %}
+								{% assign url = link.url %}
+								{% assign target = '_self' %}
 
-						{% endfor %}
+								{% if url contains 'http' %}
+									{% assign target = '_blank' %}
+								{% endif %}
+
+								<div class="navigation__item">
+									<a class="navigation__link link" href="{{ url }}" target="{{ target }}" title="{{ title }}">
+										<span class="link__title">{{ title }}</span>
+									</a>
+								</div>
+
+							{% endfor %}
+						{% endif %}
 					</nav>
+
 					<div class="footer__social social">
 
 						{% for block in section.blocks %}
@@ -259,10 +272,10 @@
 			"type": "header"
 		},
 		{
-			"label": "Main Menu",
-			"type": "link_list",
-			"id": "menu_menu"
-		}
+ 			"label": "Main Menu",
+ 			"type": "link_list",
+ 			"id": "menu_main"
+ 		}
 	],
 	"blocks": [
 	  {
