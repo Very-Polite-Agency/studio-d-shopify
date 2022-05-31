@@ -79,8 +79,8 @@
             "heading": "Sleep.",
             "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections\/sleep"
+            "cta_title": "",
+            "cta_link": ""
           }
         }
       },
@@ -102,8 +102,8 @@
             "heading": "Work.",
             "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections\/work"
+            "cta_title": "",
+            "cta_link": ""
           }
         },
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7": {
