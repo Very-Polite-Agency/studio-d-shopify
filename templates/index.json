@@ -19,10 +19,7 @@
           "type": "content",
           "settings": {
             "heading": "Eat.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "description": "",
-            "cta_title": "",
-            "cta_link": ""
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         }
       },
@@ -42,10 +39,7 @@
           "type": "content",
           "settings": {
             "heading": "Live.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "description": "",
-            "cta_title": "",
-            "cta_link": ""
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
         "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc": {
@@ -77,10 +71,7 @@
           "type": "content",
           "settings": {
             "heading": "Sleep.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "description": "",
-            "cta_title": "",
-            "cta_link": ""
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         }
       },
@@ -100,10 +91,7 @@
           "type": "content",
           "settings": {
             "heading": "Work.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
-            "description": "",
-            "cta_title": "",
-            "cta_link": ""
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
         },
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7": {
@@ -121,6 +109,13 @@
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/work"
       }
+    },
+    "16540381984bd95017": {
+      "type": "text-feature",
+      "settings": {
+        "anchor_id": "",
+        "width": "full"
+      }
     }
   },
   "order": [
@@ -128,6 +123,7 @@
     "fifty-fifty",
     "165241309540ef8647",
     "16524131360b807cfb",
-    "165241319043b17bb0"
+    "165241319043b17bb0",
+    "16540381984bd95017"
   ]
 }
