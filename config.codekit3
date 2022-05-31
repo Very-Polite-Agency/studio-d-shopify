@@ -3333,14 +3333,6 @@
       "oAP" : "\/sections\/cart-main.liquid",
       "oF" : 0
     },
-    "\/sections\/contact-form.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/contact-form.liquid",
-      "oF" : 0
-    },
     "\/sections\/custom-liquid.liquid" : {
       "cB" : 0,
       "ft" : 8192,
