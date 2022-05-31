@@ -19,6 +19,7 @@
           "type": "content",
           "settings": {
             "heading": "Eat.",
+            "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
             "cta_link": "shopify:\/\/collections\/eat"
@@ -30,6 +31,8 @@
         "e0707195-153a-4b8d-a51d-6b07f9a0aaba"
       ],
       "settings": {
+        "cta_title": "Shop Now",
+        "cta_link": "shopify:\/\/collections\/eat"
       }
     },
     "165241309540ef8647": {
@@ -39,6 +42,7 @@
           "type": "content",
           "settings": {
             "heading": "Live.",
+            "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
             "cta_link": "shopify:\/\/collections\/live"
@@ -56,6 +60,8 @@
         "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc"
       ],
       "settings": {
+        "cta_title": "Shop now",
+        "cta_link": ""
       }
     },
     "16524131360b807cfb": {
@@ -71,6 +77,7 @@
           "type": "content",
           "settings": {
             "heading": "Sleep.",
+            "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
             "cta_link": "shopify:\/\/collections\/sleep"
@@ -82,6 +89,8 @@
         "c3f5eaf2-475b-44cb-bd99-5b56478ded89"
       ],
       "settings": {
+        "cta_title": "Shop now",
+        "cta_link": ""
       }
     },
     "165241319043b17bb0": {
@@ -91,6 +100,7 @@
           "type": "content",
           "settings": {
             "heading": "Work.",
+            "message": "",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
             "cta_link": "shopify:\/\/collections\/work"
@@ -108,6 +118,8 @@
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7"
       ],
       "settings": {
+        "cta_title": "Shop now",
+        "cta_link": ""
       }
     }
   },
