@@ -42,7 +42,7 @@
           "type": "content",
           "settings": {
             "heading": "Live.",
-            "message": "",
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "description": "",
             "cta_title": "",
             "cta_link": ""
@@ -77,8 +77,8 @@
           "type": "content",
           "settings": {
             "heading": "Sleep.",
-            "message": "",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+            "description": "",
             "cta_title": "",
             "cta_link": ""
           }
