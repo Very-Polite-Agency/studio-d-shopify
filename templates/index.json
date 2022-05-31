@@ -117,7 +117,7 @@
           "type": "heading",
           "settings": {
             "heading": "Sample heading here",
-            "heading_size": "1"
+            "heading_size": "2"
           }
         },
         "25783351-6d51-456a-8a49-8a0bd9b4a027": {
@@ -140,9 +140,9 @@
         "f3f5f72f-c7c6-4549-a6df-bc8f5e6d1789"
       ],
       "settings": {
-        "anchor_id": "",
-        "alignment": "left",
-        "width": "full"
+        "alignment": "center",
+        "width": "inset",
+        "anchor_id": ""
       }
     }
   },
