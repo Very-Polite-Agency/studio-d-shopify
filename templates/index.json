@@ -22,7 +22,7 @@
             "heading": "Eat.",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections"
+            "cta_link": "shopify:\/\/collections\/eat"
           }
         }
       },
@@ -76,7 +76,7 @@
             "heading": "Sleep.",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections"
+            "cta_link": "shopify:\/\/collections\/sleep"
           }
         }
       },
@@ -96,7 +96,7 @@
             "heading": "Work.",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
             "cta_title": "Shop now",
-            "cta_link": "shopify:\/\/collections"
+            "cta_link": "shopify:\/\/collections\/work"
           }
         },
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7": {

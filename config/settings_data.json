@@ -175,7 +175,7 @@
           "newsletter_show": true,
           "newsletter_heading": "A (design) rut we can get you out of.",
           "newsletter_button_title": "Let's Get Started",
-          "menu_menu": "footer"
+          "menu_main": "footer"
         }
       },
       "main-password-header": {
