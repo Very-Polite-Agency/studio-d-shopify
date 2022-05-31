@@ -3,7 +3,7 @@
 
 {% assign network_links = section.blocks | where: 'type', 'network_link' | default: false %}
 {% assign show_network_links = section.settings.show_network_links | default: false %}
-{% assign main_menu = section.settings.menu_menu | default: false %}
+{% assign menu_main = section.settings.menu_main | default: false %}
 
 {% if show_network_links and network_links.size > 0 %}
   <div class="container-fluid header-tabs position-relative z-index-2">
@@ -200,7 +200,7 @@
  		{
  			"label": "Main Menu",
  			"type": "link_list",
- 			"id": "menu_menu"
+ 			"id": "menu_main"
  		},
     {
  			"content": "Settings",
