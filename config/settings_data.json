@@ -99,8 +99,29 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "48813692-d2c6-46c7-add1-4730a179e825": {
+            "type": "network_link",
+            "settings": {
+              "title": "The Studio",
+              "link": "https:\/\/studiodhome.wpengine.com\/"
+            }
+          },
+          "0f976f96-43ef-4a9b-a02a-03c3c9e3daf1": {
+            "type": "network_link",
+            "settings": {
+              "title": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "48813692-d2c6-46c7-add1-4730a179e825",
+          "0f976f96-43ef-4a9b-a02a-03c3c9e3daf1"
+        ],
         "settings": {
-          "menu_menu": ""
+          "menu_menu": "",
+          "show_network_links": false
         }
       },
       "footer": {
