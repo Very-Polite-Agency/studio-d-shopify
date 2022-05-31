@@ -15,7 +15,6 @@
     {%- assign columns = 'col-12 col-lg-10 offset-lg-1' -%}
 {%- endcase -%}
 
-
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: columns %}
     <div class="{{ section_name }}__content">
@@ -27,7 +26,7 @@
             {% assign heading_size = block.settings.heading_size | default: '' %}
 
             {% if heading != blank %}
-              <h{{ heading_size }} class="{{ section_name }}__heading heading--{{ heading_size }}" {{ block.shopify_attributes }}>{{ heading | escape }}</h{{ heading_size }}>
+              <h{{ heading_size }} class="{{ section_name }}__heading heading--{{ heading_size }}">{{ heading | escape }}</h{{ heading_size }}>
             {% endif %}
 
           {%- when 'text' -%}
@@ -35,7 +34,7 @@
             {% assign text = block.settings.text | default: '' %}
 
             {% if text != blank %}
-              <div class="{{ section_name }}__text body-copy--1" {{ block.shopify_attributes }}>{{ text }}</div>
+              <div class="{{ section_name }}__text body-copy--1">{{ text }}</div>
             {% endif %}
 
           {%- when 'button' -%}
@@ -70,6 +69,17 @@
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
+    },
+    {
+      "label": "Alignment",
+      "type": "select",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "id": "alignment"
     },
     {
       "label": "Width",
@@ -107,20 +117,20 @@
       ]
     },
     {
-      "name": "Text",
-      "type": "text",
+      "name": "Message",
+      "type": "message",
       "limit": 1,
       "settings": [
         {
-          "label": "Text",
+          "label": "Message",
           "type": "richtext",
-          "id": "text"
+          "id": "message"
         }
       ]
     },
     {
-      "name": "Button",
-      "type": "button",
+      "name": "Call to Action",
+      "type": "cta",
       "limit": 1,
       "settings": [
         {
@@ -132,27 +142,6 @@
           "label": "Link",
           "type": "url",
           "id": "link"
-        },
-        {
-          "label": "Style",
-          "type": "select",
-          "options": [
-            { "value": "primary", "label": "Primary" },
-            { "value": "secondary", "label": "Secondary" }
-          ],
-          "default": "primary",
-          "id": "style"
-        },
-        {
-          "label": "Alignment",
-          "type": "select",
-          "options": [
-            { "value": "left", "label": "Left" },
-            { "value": "center", "label": "Center" },
-            { "value": "right", "label": "Right" }
-          ],
-          "default": "left",
-          "id": "alignment"
         }
       ]
     }
