@@ -22,7 +22,7 @@
               </div>
 
               <div id="collapseOne-{{ link.title | replace: ' ', '-' }}" class="collapse accordion-content" aria-labelledby="headingOne-{{ link.title | replace: ' ', '-' }} " data-parent="#accordion-{{ link.title | replace: ' ', '-' }}">
-                {% for link in linklists.main-menu.links %}
+               
                 {% for sub_link in link.links %}
                 <div class="navigation__item">
                   <a class="navigation__link link" href="{{ sub_link.url }}"
@@ -30,7 +30,7 @@
                 </a></div>
 
                 {% endfor %}
-                {% endfor %}
+                
               </div>
 
             </div>
