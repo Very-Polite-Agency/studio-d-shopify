@@ -151,7 +151,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
       &__item {
         & + .navigation__cta,
         & + .navigation__item {
-          margin-left: 30px;
+          padding-left: 30px;
         }
       }
     }
@@ -167,7 +167,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
       &__item {
         & + .navigation__cta,
         & + .navigation__item {
-          margin-left: 30px;
+          padding-left: 30px;
         }
       }
     }
@@ -243,7 +243,10 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
     }
   }
   &-list {
-    flex: 1;
+    margin-left: 110px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   .container-fluid {
@@ -253,7 +256,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   .navigation__item{
     & + .navigation__item {
-      margin-left: 0;
+      padding-left: 0;
     }
   }
 

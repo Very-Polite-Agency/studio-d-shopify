@@ -74,7 +74,7 @@
                   <div class="col-12 d-flex">
                     
                     {% for sub_link in link.links %}
-                      {% if sub_link.links != blank %}
+                      
                         <ul class="megamenu-drop-list">
                           <div class="navigation__item">
                             <a href="{{ sub_link.url }}" class="navigation__link link ">
@@ -87,10 +87,10 @@
                               <a href="{{sub_sub_link.url}}" class="navigation__link">
                               {{sub_sub_link.title}}
                             </a>
-                          </li>
+                            </li>
                           {% endfor %}
                         </ul>
-                      {% endif %}
+                      
                     {% endfor %}
                   
                   </div>
