@@ -59,42 +59,42 @@
           {% for link in linklists.main-menu.links %}
 
           {% if link.levels > 1 %}
-            <div class="navigation__item nav-submenu ">
-              <a href="{{ link.url }}" class="  navigation__link link">
-                <div class="link__title">{{ link.title }}</div>
-              </a>
 
-              <div class="megamenu-drop">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12 d-flex">
-                      {% for link in linklists.main-menu.links %}
-                      {% for sub_link in link.links %}
-                        {% if sub_link.links != blank %}
-                          <ul class="megamenu-drop-list">
-                            <div class="navigation__item">
-                              <a href="{{ sub_link.url }}" class="navigation__link link ">
-                                <div class="link__title menu-title">{{ sub_link.title }}</div>
-                              </a>
-                            </div>
-                            {% for sub_sub_link in sub_link.links %}
+          <div class="navigation__item nav-submenu px-15 ">
+            <a href="{{ link.url }}" class="  navigation__link link">
+              <div class="link__title">{{ link.title }}</div>
+            </a>
+            <div class="megamenu-drop">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 d-flex">
 
-                              <li class="navigation__item">
-                                <a href="{{sub_sub_link.url}}" class="navigation__link">
-                                {{sub_sub_link.title}}
-                              </a>
+                    {% for sub_link in link.links %}
+
+                        <ul class="megamenu-drop-list">
+                          <div class="navigation__item">
+                            <a href="{{ sub_link.url }}" class="navigation__link link ">
+                              <div class="link__title menu-title">{{ sub_link.title }}</div>
+                            </a>
+                          </div>
+                          {% for sub_sub_link in sub_link.links %}
+
+                            <li class="navigation__item">
+                              <a href="{{sub_sub_link.url}}" class="navigation__link">
+                              {{sub_sub_link.title}}
+                            </a>
                             </li>
-                            {% endfor %}
-                          </ul>
-                        {% endif %}
-                      {% endfor %}
+                          {% endfor %}
+                        </ul>
+
                     {% endfor %}
-                    </div>
+
+                  </div>
 
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
           {% else %}
             <div class="navigation__item">
               <a href="{{ link.url }}" class="navigation__link link">
