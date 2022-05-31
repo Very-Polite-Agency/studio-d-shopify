@@ -140,9 +140,9 @@
         "f3f5f72f-c7c6-4549-a6df-bc8f5e6d1789"
       ],
       "settings": {
-        "anchor_id": "",
-        "alignment": "left",
-        "width": "full"
+        "alignment": "center",
+        "width": "inset",
+        "anchor_id": ""
       }
     }
   },
