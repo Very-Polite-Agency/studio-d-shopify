@@ -28,8 +28,8 @@
             {% assign title = block.settings.title | default: '' %}
 
             {% if link != blank and title != blank %}
-              <div class="{{ section_name }}__cta">
-                <a class="{{ section_name }}__cta-button button--primary" href="{{ link }}" title="{{ title }}">{{ title }}</a>
+              <div class="{{ section_name }}__cta cta">
+                <a class="{{ section_name }}__cta-link link outlined" href="{{ link }}" title="{{ title }}"><span class="link__title">{{ title }}</span></a>
               </div>
             {% endif %}
 
@@ -47,7 +47,7 @@
             {% assign message = block.settings.message | default: '' %}
 
             {% if message != blank %}
-              <div class="{{ section_name }}__text body-copy--1">{{ message }}</div>
+              <div class="{{ section_name }}__text body-copy--1 rte">{{ message }}</div>
             {% endif %}
 
         {%- endcase -%}
