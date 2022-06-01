@@ -23,7 +23,7 @@ body {
 
   [role="main"] {
     padding-top: var(--theme-header-height--total);
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
 
   &.sticky-footer {
@@ -44,7 +44,7 @@ body {
   @include media-breakpoint-up(lg) {
 
     [role="main"] {
-      padding-bottom: 80px;
+      padding-bottom: 100px;
     }
 
   } // min width lg
@@ -54,7 +54,7 @@ body {
   @include media-breakpoint-up(xxl) {
 
     [role="main"] {
-      padding-bottom: 80px;
+      padding-bottom: 120px;
     }
 
   } // min width xxl
