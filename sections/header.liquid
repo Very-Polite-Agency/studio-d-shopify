@@ -79,7 +79,7 @@
           {% if menu_main %}
             {% for link in linklists[menu_main].links %}
 
-              {% if link.levels > 1 %}
+              {% if link.levels > 0 %}
                 <div class="navigation__item nav-submenu px-15 ">
                   <a href="{{ link.url }}" class="  navigation__link link">
                     <div class="link__title">{{ link.title }}</div>
