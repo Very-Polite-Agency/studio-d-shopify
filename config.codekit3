@@ -33,6 +33,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/.shopifyignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/.shopifyignore",
+      "oF" : 0
+    },
     "\/assets\/add-to-cart.min.js" : {
       "bF" : 0,
       "ft" : 64,
