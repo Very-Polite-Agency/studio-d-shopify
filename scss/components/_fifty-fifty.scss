@@ -41,6 +41,16 @@
 
   &__image {
     width: 100%;
+    a, img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &-link {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
     & + .fifty-fifty__content {
       margin-top: 42px;
     }
@@ -109,19 +119,8 @@
       &__cta {
         margin-top: 12px;
       }
-      &__media {
+      &__image {
         order: 1;
-        width: 100%;
-        a, img, svg {
-          display: block;
-          width: 100%;
-          height: auto;
-        }
-        &-link {
-          &:hover {
-            opacity: 0.6666;
-          }
-        }
       }
     }
   }
@@ -223,13 +222,6 @@
           padding: calc( 2.25 * var(--bs-gutter-width) ) calc( 1.5 * var(--bs-gutter-width) );
         }
       }
-      .shopify-section & {
-        .fifty-fifty {
-          &__media {
-            width: 60%;
-          }
-        }
-      }
     }
 
     &[data-style="wide"] {
@@ -254,9 +246,6 @@
               margin-left: unset;
             }
           }
-          &__media {
-            width: 55%;
-          }
         }
       }
     }
@@ -264,7 +253,7 @@
     .shopify-section & {
       .fifty-fifty {
         &__content,
-        &__media {
+        &__image {
           order: initial
         }
         &__content {
@@ -278,9 +267,6 @@
         }
         &__cta {
           margin-top: 20px;
-        }
-        &__image {
-          width: 100%;
         }
       }
     }

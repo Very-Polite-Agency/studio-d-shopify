@@ -1,0 +1,16 @@
+.card-product {
+
+  color: color: rgba(var(--theme-colour-black), 1);
+
+  &__info {
+    margin-top: var(--bs-gutter-x);
+  }
+
+  &__product {
+    &-title {}
+    &-type {
+      color: rgba(var(--theme-colour-black), 0.5);
+    }
+  }
+
+}
