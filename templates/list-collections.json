@@ -3,7 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "heading": "<em>Our<\/em> Collections",
+        "heading": "<em>our<\/em> collections",
         "message": "<p>We transform spaces to elevate their value and inspire understated luxury with a simplistic beauty. To change this message, login to the dashboard, select customize theme -&gt; collection list.<\/p>",
         "style": "wide",
         "sort": "alphabetical"
