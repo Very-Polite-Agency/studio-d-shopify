@@ -3,9 +3,10 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square"
+        "heading": "Our Collections",
+        "message": "",
+        "style": "wide",
+        "sort": "alphabetical"
       }
     }
   },
