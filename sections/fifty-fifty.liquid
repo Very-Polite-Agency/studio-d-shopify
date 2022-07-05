@@ -13,48 +13,6 @@
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-{% capture aos_attrs_img %}
-  {%
-    render 'aos-attributes',
-    anchor: section.id,
-    anchor_placement: 'top-bottom',
-    delay: 0,
-    duration: 550,
-    easing: 'ease-in-out',
-    offset: 175,
-    once: 'true',
-    transition: 'fade-left',
-  %}
-{% endcapture %}
-
-{% capture aos_attrs_text %}
-  {%
-    render 'aos-attributes',
-    anchor: section.id,
-    anchor_placement: 'top-bottom',
-    delay: 500,
-    duration: 550,
-    easing: 'ease-in-out',
-    offset: 175,
-    once: 'true',
-    transition: 'fade-right',
-  %}
-{% endcapture %}
-
-{% capture aos_attrs_btn %}
-  {%
-    render 'aos-attributes',
-    anchor: section.id,
-    anchor_placement: 'top-bottom',
-    delay: 1000,
-    duration: 550,
-    easing: 'ease-in-out',
-    offset: 175,
-    once: 'true',
-    transition: 'fade-up',
-  %}
-{% endcapture %}
-
 <div class="{{ section_name }}" id="{{ section_id }}" data-style="{{ style }}">
   {% if 'standard' == style %}{% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}{% endif %}
     <div class="{{ section_name }}__layout" id="{{ aos_id }}">
@@ -100,16 +58,18 @@
             {% if heading != blank or message != blank %}
               <div class="{{ section_name }}__content" data-index="{{ forloop.index }}" data-index0="{{ forloop.index0 }}">
 
-                {% capture aos %}
-                  {%
-                    render 'aos-attributes',
-                    anchor: aos_id,
-                    delay: aos_delay,
-                    transition: 'slide-down',
-                  %}
-                {% endcapture %}
-                {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
-                <div class="{{ section_name }}__vr vr" {{ aos }}></div>
+                {% if 'standard' == style %}
+                  {% capture aos %}
+                    {%
+                      render 'aos-attributes',
+                      anchor: aos_id,
+                      delay: aos_delay,
+                      transition: 'slide-down',
+                    %}
+                  {% endcapture %}
+                  {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+                  <div class="{{ section_name }}__vr vr" {{ aos }}></div>
+                {% endif %}
 
                 {% if heading != blank %}
                   {% capture aos %}
@@ -120,7 +80,7 @@
                       transition: 'fade-right',
                     %}
                   {% endcapture %}
-                  {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                  {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
                   <h2 class="{{ section_name }}__heading heading" {{ aos }}>{{ heading }}</h2>
                 {% endif %}
 
@@ -133,7 +93,7 @@
                       transition: 'fade-right',
                     %}
                   {% endcapture %}
-                  {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                  {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
                   <div class="{{ section_name }}__message message rte" {{ aos }}>{{ message }}</div>
                 {% endif %}
 

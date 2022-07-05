@@ -1,11 +1,13 @@
 {% comment %}
 
     Accepts:
-    - collection: {Object} collection Liquid object
-    - style: {String} Conditionally load different card types by passing style option
+    - classes: {String} Optionally include custom CSS classes
+    - collection: {Object} Collection Liquid object
+    - index: {Integer} Optionally include an index value
+    - style: {String} Optionally render different styles by passing a style option
 
     Usage:
-    {% render 'card-collection', collection: collection, style: 'some-section-or-template-name-here' %}
+    {% render 'card-collection', classes: 'list-collections__item', collection: collection, index: forloop.index, style: 'something-custom' %}
 
 {% endcomment %}
 
@@ -14,84 +16,120 @@
   {% assign snippet_name = 'card-collection' %}
   {% assign snippet_classes = snippet_name %}
   {% assign snippet_id = snippet_name | append: '--' | append: collection.id -%}
-  {% assign caption = caption | default: '' %}
   {% assign style = style | default: 'default' %}
+  {% assign index = index | default: 1 %}
+  {% assign remainder = index | modulo: 2 %}
 
   {% if classes and classes != empty %}
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
   {% endif %}
 
+  {% if remainder == 0 %}
+    {% assign snippet_classes = snippet_classes | append: ' even' %}
+  {% else %}
+    {% assign snippet_classes = snippet_classes | append: ' odd' %}
+  {% endif %}
+
+  {% assign aos_id = snippet_id | append: '--aos' %}
+  {% assign aos_delay = 250 %}
+  {% assign aos_delay_increment = 250 %}
+
+  {% assign description = collection.description | default: '' %}
   {% assign featured_image = collection.featured_image | default: false %}
   {% assign title = collection.title | default: '' %}
   {% assign type = collection.type | default: '' %}
   {% assign url = collection.url | default: '' %}
 
-  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} collection" id="{{ snippet_id }}" data-published-at="{{ collection.published_at | date: "%Y-%m-%d %H:%M:%S" }}">
+  <article
+    class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} collection"
+    id="{{ snippet_id }}"
+    data-published-at="{{ collection.published_at | date: "%Y-%m-%d %H:%M:%S" }}"
+    data-style="{{ style }}"
+  >
+    {% if 'standard' == style %}{% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}{% endif %}
+      <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
 
-    {% case style %}
-
-      {% when 'collection-collection-grid' %}
-
-        <div class="{{ snippet_name }}__featured-image collection__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+        {% if featured_image %}
+          {% capture aos %}
             {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
+              render 'aos-attributes',
+              anchor: aos_id,
+              delay: 250,
+              transition: 'fade-left',
             %}
-          </a>
-        </div>
-        <div class="{{ snippet_name }}__info">
-          <div class="row">
-            <div class="col-6">
-              <p>{{ title }}</p>
-              <p class="muted-text">{{ type }}</p>
-              <span>{% render 'price', collection: collection %} </span>
-            </div>
+          {% endcapture %}
+          <div class="{{ snippet_name }}__image" {{ aos }}>
+            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+              {%
+                render 'lazyload-image',
+                alt_text: title,
+                image: featured_image,
+              %}
+            </a>
           </div>
-          
-
-          
-        </div>
-
-      {% when 'contact-form' %}
-
-        {% if caption != blank %}
-          {% assign title = caption %}
         {% endif %}
 
-        <div class="{{ snippet_name }}__featured-image collection__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
-            {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
-            %}
-          </a>
+        <div class="{{ snippet_name }}__content">
+
+          {% if 'standard' == style %}
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'slide-down',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+            <div class="{{ snippet_name }}__vr vr" {{ aos }}></div>
+          {% endif %}
+
           {% if title != blank %}
-            <div class="{{ snippet_name }}__caption caption--2">
-              <strong>{{ title }}</strong>
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-right',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+            <h2 class="{{ snippet_name }}__heading heading" {{ aos }}>{{ title }}</h2>
+          {% endif %}
+
+          {% if description != blank %}
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-right',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+            <div class="{{ snippet_name }}__message message rte" {{ aos }}>{{ description }}</div>
+          {% endif %}
+
+          {% if title != blank and url != blank %}
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-up',
+              %}
+            {% endcapture %}
+            <div class="{{ snippet_name }}__cta" {{ aos }}>
+              <a class="{{ snippet_name }}__cta-link link outlined" href="{{ url }}" title="{{ title }}"  target="{% if url contains 'http' %}_blank{% else %}_self{% endif %}">
+                <span class="link__title">{{ title }}</span>
+              </a>
             </div>
           {% endif %}
+
         </div>
 
-      {% when 'fifty-fifty' %}
-
-        <div class="{{ snippet_name }}__featured-image collection__featured-image">
-          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
-            {%
-              render 'lazyload-image',
-              alt_text: title,
-              image: featured_image,
-            %}
-          </a>
-          {% if type != blank %}
-            <strong class="{{ snippet_name }}__type caption--2">{{ type }}</strong>
-          {% endif %}
-        </div>
-
-    {% endcase %}
-
+      </div>
+    {% if 'standard' == style %}{% render 'bs-container', state: 'closed' %}{% endif %}
   </article>
 
 {%- endif -%}

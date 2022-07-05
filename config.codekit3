@@ -1846,6 +1846,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_card-collection.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_card-collection.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_card-product.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -3106,6 +3121,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/theme\/_collection.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_collection.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/theme\/_error-404.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -3375,14 +3405,6 @@
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/scss\/theme\/untitled file" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/scss\/theme\/untitled file",
-      "oF" : 0
     },
     "\/sections\/apps.liquid" : {
       "cB" : 0,

@@ -1,79 +1,105 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{%- assign section_name = 'list-collections' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-<div id="collection-list" class="container-fluid px-0 mb-lg-150">
-  <div class="row pb-120">
-    <div class="col-10 offset-1 offset-lg-2 ">
-      <h1>{{ section.settings.title | escape }}</h1>
-    </div>
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
+{% assign heading = section.settings.heading | default: '' %}
+{% assign message = section.settings.message | default: false %}
+{% assign style = section.settings.style | default: 'standard' %}
+
+{%- liquid
+  case section.settings.sort
+    when 'products_high' or 'products_low'
+      assign collections = collections | sort: 'all_products_count'
+    when 'date' or 'date_reversed'
+      assign collections = collections | sort: 'published_at'
+  endcase
+
+  if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+    assign collections = collections | reverse
+  endif
+-%}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+
+  <div class="{{ section_name }}__intro" id="{{ aos_id }}">
+    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+
+      {% if heading != blank %}
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: aos_id,
+            delay: aos_delay,
+            transition: 'fade-left',
+          %}
+        {% endcapture %}
+        {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
+        <h1 class="{{ section_name }}__heading heading" {{ aos }}>{{ heading }}</h1>
+      {% endif %}
+
+      {% if message != blank %}
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: aos_id,
+            delay: aos_delay,
+            transition: 'fade-left',
+          %}
+        {% endcapture %}
+        <div class="{{ section_name }}__message message rte" {{ aos }}>{{ message }}</div>
+      {% endif %}
+
+    {% render 'bs-container', state: 'closed' %}
   </div>
 
-  
-    
-      {%- for collection in collections -%}
-      <div class="row justify-content-center fifty-fifty--row pb-120">
-    {% if collection.image != blank %}
-    <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
-      {%
-        render 'lazyload-image',
-        alt_text: 'Fifty-Fifty Image',
-        image:  collection.image,
-      %}
-    </div>
-    {% else %}
-    <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}} >
-      {{ 'lifestyle-1' | placeholder_svg_tag }}
-    </div>
-
-    {% endif %}
-
-     
-      <div class="fifty-fifty_content  col-10 col-md-8 col-lg-5 d-flex px-lg-65 py-50 py-lg-0 ">
-        <div class="d-flex flex-column justify-content-center">
-          
-          <h2 class="fifty-fifty__heading heading aos-init aos-animate" {{aos_attrs_text}}>{{ collection.title }}</h2>
-          <div class="fifty-fifty__message message rte aos-init aos-animate" {{aos_attrs_text}}>
-            <p>{{ collection.description }}</p>
-          </div>
-
-         
-
-          <div class="fifty-fifty__ctas">
-            <div class="fifty-fifty__cta aos-init aos-animate" {{aos_attrs_btn}}>
-              <div class="cta" data-justify="not-set"><a class="link outlined"
-                  href="{{ collection.url }}" target="_self">
-                  <span class="link__title">Shop now</span>
-                </a></div>
-            </div>
-          </div>
-          
-
-        </div>
-      </div>
-
-      </div>
-      {% endfor %}
-    
+  <div class="{{ section_name }}__listing listing listing--{{ section_name }}">
+    {%- for collection in collections -%}
+      {% render 'card-collection', classes: 'list-collections__item', collection: collection, index: forloop.index, style: style  %}
+    {%- endfor -%}
   </div>
-
 
 </div>
 
-
 {% schema %}
 {
-  "name": "t:sections.main-list-collections.name",
-  "class": "section",
+  "name": "List Collections",
+  "class": "section section--list-collections",
+  "tag": "section",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "t:sections.main-list-collections.settings.title.label",
-      "default": "Collections"
+      "content": "Content",
+      "type": "header"
     },
     {
+      "label": "Heading",
+      "type": "text",
+      "id": "heading"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Style",
       "type": "select",
-      "id": "sort",
+      "options": [
+        { "value": "standard", "label": "Standard" },
+        { "value": "wide", "label": "Wide" }
+      ],
+      "default": "standard",
+      "id": "style"
+    },
+    {
+      "label": "t:sections.main-list-collections.settings.sort.label",
+      "type": "select",
       "options": [
         {
           "value": "alphabetical",
@@ -101,28 +127,7 @@
         }
       ],
       "default": "alphabetical",
-      "label": "t:sections.main-list-collections.settings.sort.label"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.main-list-collections.settings.image_ratio.label",
-      "info": "t:sections.main-list-collections.settings.image_ratio.info"
+      "id": "sort"
     }
   ]
 }
