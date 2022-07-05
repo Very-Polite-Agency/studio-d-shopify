@@ -66,8 +66,7 @@ p {
 // Pages & Components
 
 .section-title {
-    padding: 20px 0 110px;
-
+  padding: 20px 0 65px;
 }
 
 .product-main {
@@ -140,7 +139,7 @@ p {
         position: absolute;
         right: 0;
         top: 20px;
-        
+
     }
 }
 
@@ -209,7 +208,7 @@ input {
     &__main {
         padding-top: 15px;
         border-top: 1px solid $black;
-        
+
 
         @include media-breakpoint-down(sm){
             padding-bottom: 15px;

@@ -1,112 +1,172 @@
 {%- assign section_name = 'fifty-fifty' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
 {% assign cta_title = section.settings.cta_title | default: '' %}
 {% assign cta_link = section.settings.cta_link | default: '' %}
+{% assign style = section.settings.style | default: 'standard' %}
 
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
 {% capture aos_attrs_img %}
-    {%
-      render 'aos-attributes',
-      anchor: section.id,
-      anchor_placement: 'top-bottom',
-      delay: 0,
-      duration: 550,
-      easing: 'ease-in-out',
-      offset: 175,
-      once: 'true',
-      transition: 'fade-left',
-    %}
+  {%
+    render 'aos-attributes',
+    anchor: section.id,
+    anchor_placement: 'top-bottom',
+    delay: 0,
+    duration: 550,
+    easing: 'ease-in-out',
+    offset: 175,
+    once: 'true',
+    transition: 'fade-left',
+  %}
 {% endcapture %}
 
 {% capture aos_attrs_text %}
-    {%
-      render 'aos-attributes',
-      anchor: section.id,
-      anchor_placement: 'top-bottom',
-      delay: 500,
-      duration: 550,
-      easing: 'ease-in-out',
-      offset: 175,
-      once: 'true',
-      transition: 'fade-right',
-    %}
+  {%
+    render 'aos-attributes',
+    anchor: section.id,
+    anchor_placement: 'top-bottom',
+    delay: 500,
+    duration: 550,
+    easing: 'ease-in-out',
+    offset: 175,
+    once: 'true',
+    transition: 'fade-right',
+  %}
 {% endcapture %}
 
 {% capture aos_attrs_btn %}
-    {%
-      render 'aos-attributes',
-      anchor: section.id,
-      anchor_placement: 'top-bottom',
-      delay: 1000,
-      duration: 550,
-      easing: 'ease-in-out',
-      offset: 175,
-      once: 'true',
-      transition: 'fade-up',
-    %}
+  {%
+    render 'aos-attributes',
+    anchor: section.id,
+    anchor_placement: 'top-bottom',
+    delay: 1000,
+    duration: 550,
+    easing: 'ease-in-out',
+    offset: 175,
+    once: 'true',
+    transition: 'fade-up',
+  %}
 {% endcapture %}
 
+<div class="{{ section_name }}" id="{{ section_id }}" data-style="{{ style }}">
+  {% if 'standard' == style %}{% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}{% endif %}
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
-<div class="container-fluid px-0 {{ section_name }}-wrapper" id="{{ section.id }}">
-  <div class="row justify-content-center">
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
+      {%- for block in section.blocks -%}
 
-        {%- when 'media' -%}
+        <div class="{{ section_name }}__{{ block.type }}" data-index="{{ forloop.index }}" data-index0="{{ forloop.index0 }}">
 
-          <div class="fifty-fifty_media col-12 col-lg-7 px-0" {{aos_attrs_img}}>
-            {% if cta_link != blank %}<a class="fifty-fifty__media-link link" href="{{ cta_link }}" title="{{ cta_title }}" target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}">{% endif %}
-              {%
-                render 'lazyload-image',
-                alt_text: 'Fifty-Fifty Image',
-                image:  block.settings.image,
-              %}
-            {% if cta_link != blank %}</a>{% endif %}
-          </div>
+          {%- case block.type -%}
 
-        {%- when 'content' -%}
+            {%- when 'media' -%}
 
-          {% assign heading = block.settings.heading | default: '' %}
-          {% assign message = block.settings.message | default: '' %}
+              {% assign image = block.settings.image | default: false %}
 
-          <div class="fifty-fifty_content {% if forloop.first == true %} left {% else %} right {% endif%}  col-10 col-md-8 col-lg-5 d-flex px-30 px-lg-50  pt-50 pb-75 pb-lg-50 py-lg-0">
-            <div class="fifty-fifty_content-wrapper d-flex flex-column justify-content-center">
+              {% if image %}
 
-              {% if heading != blank %}
-                <h2 class="fifty-fifty__heading heading" {{ aos_attrs_text }}>{{ heading }}</h2>
-              {% endif %}
+                {% capture aos %}
+                  {%
+                    render 'aos-attributes',
+                    anchor: aos_id,
+                    delay: 250,
+                    transition: 'fade-left',
+                  %}
+                {% endcapture %}
 
-              {% if message != blank %}
-                <div class="fifty-fifty__message message" {{ aos_attrs_text }}>{{ message }}</div>
-              {% endif %}
-
-              {% if cta_link != blank and cta_title != blank %}
-                <div class="fifty-fifty__ctas">
-                  <div class="fifty-fifty__cta" {{aos_attrs_btn}}>
-                    <div class="cta" data-justify="not-set">
-                      <a class="link outlined" href="{{ cta_link }}" title="{{ cta_title }}"  target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}">
-                        <span class="link__title">{{ cta_title }}</span>
-                      </a>
-                    </div>
-                  </div>
+                <div class="{{ section_name }}__image" {{ aos }}>
+                  {% if cta_link != blank %}
+                    <a
+                      class="{{ section_name }}__media-link link"
+                      href="{{ cta_link }}"
+                      title="{{ cta_title }}"
+                      target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}"
+                    >
+                  {% endif %}
+                    {%
+                      render 'lazyload-image',
+                      image: image,
+                    %}
+                  {% if cta_link != blank %}</a>{% endif %}
                 </div>
               {% endif %}
 
-            </div>
-          </div>
+            {%- when 'content' -%}
 
-      {% endcase %}
+              {% assign heading = block.settings.heading | default: '' %}
+              {% assign message = block.settings.message | default: '' %}
 
-    {%- endfor -%}
-  </div>
-</div>
+              {% if heading != blank or message != blank %}
 
+                  {% capture aos %}
+                    {%
+                      render 'aos-attributes',
+                      anchor: aos_id,
+                      delay: aos_delay,
+                      transition: 'slide-down',
+                    %}
+                  {% endcapture %}
+                  {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                  <div class="{{ section_name }}__vr vr" {{ aos }}></div>
 
+                  {% if heading != blank %}
+                    {% capture aos %}
+                      {%
+                        render 'aos-attributes',
+                        anchor: aos_id,
+                        delay: aos_delay,
+                        transition: 'fade-right',
+                      %}
+                    {% endcapture %}
+                    {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                    <h2 class="{{ section_name }}__heading heading" {{ aos }}>{{ heading }}</h2>
+                  {% endif %}
 
+                  {% if message != blank %}
+                    {% capture aos %}
+                      {%
+                        render 'aos-attributes',
+                        anchor: aos_id,
+                        delay: aos_delay,
+                        transition: 'fade-right',
+                      %}
+                    {% endcapture %}
+                    {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                    <div class="{{ section_name }}__message message rte" {{ aos }}>{{ message }}</div>
+                  {% endif %}
+
+                  {% if cta_link != blank and cta_title != blank %}
+                    {% capture aos %}
+                      {%
+                        render 'aos-attributes',
+                        anchor: aos_id,
+                        delay: aos_delay,
+                        transition: 'fade-up',
+                      %}
+                    {% endcapture %}
+                    <div class="{{ section_name }}__cta" {{ aos }}>
+                      <a class="{{ section_name }}__cta-link link outlined" href="{{ cta_link }}" title="{{ cta_title }}"  target="{% if cta_link contains 'http' %}_blank{% else %}_self{% endif %}">
+                        <span class="link__title">{{ cta_title }}</span>
+                      </a>
+                    </div>
+                  {% endif %}
+
+              {% endif %}
+
+          {% endcase %}
+
+        </div>
+
+      {%- endfor -%}
+
+    </div>
+  {% if 'standard' == style %}{% render 'bs-container', state: 'closed' %}{% endif %}
 </div>
 
 {% schema %}
@@ -116,6 +176,26 @@
 	"class": "section section--fifty-fifty",
 	"max_blocks": 2,
 	"settings": [
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        { "value": "standard", "label": "Standard" },
+        { "value": "wide", "label": "Wide" }
+      ],
+      "default": "standard",
+      "id": "style"
+    },
     {
  		 "content": "Call to Action",
  		 "type": "header"
