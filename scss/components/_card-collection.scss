@@ -89,6 +89,8 @@
     .card-collection {
       &__content {
         padding: 0 var(--bs-gutter-width);
+        margin-left: auto;
+        margin-right: auto;
       }
       &__image {
         & + .card-collection__content {
@@ -98,9 +100,29 @@
     }
   }
 
-  @include breakpoint(sm) {} // min width sm
+  @include breakpoint(sm) {
 
-  @include breakpoint(md) {} // min width md
+    &[data-style="wide"] {
+      .card-collection {
+        &__content {
+          max-width: 540px;
+        }
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &[data-style="wide"] {
+      .card-collection {
+        &__content {
+          max-width: 600px;
+        }
+      }
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 
@@ -139,7 +161,7 @@
     }
 
     &[data-style="standard"],
-    &[data-style="standard"] {
+    &[data-style="wide"] {
       .card-collection {
         &__image {
           & + .card-collection__content {
@@ -164,6 +186,7 @@
     &[data-style="wide"] {
       .card-collection {
         &__content {
+          max-width: 425px;
           width: auto;
           flex: 1;
         }
@@ -186,14 +209,14 @@
         &__content {
           padding: calc(2.25*var(--bs-gutter-width)) calc(1.5*var(--bs-gutter-width));
         }
-        &__image {}
       }
     }
 
     &[data-style="wide"] {
       .card-collection {
-        &__content {}
-        &__image {}
+        &__content {
+          max-width: 500px;
+        }
       }
     }
 
@@ -210,14 +233,14 @@
         &__content {
           padding: calc(2.25*var(--bs-gutter-width)) calc(1.5*var(--bs-gutter-width));
         }
-        &__image {}
       }
     }
 
     &[data-style="wide"] {
       .card-collection {
-        &__content {}
-        &__image {}
+        &__content {
+          max-width: 575px;
+        }
       }
     }
 
