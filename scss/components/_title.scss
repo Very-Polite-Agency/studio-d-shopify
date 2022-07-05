@@ -8,6 +8,11 @@
 
 .title {
 
+  em, i {
+    font-family: var(--theme-font-family--sans-serif--neue-montreal);
+    font-weight: 100;
+  }
+
   &--project {
     font-style: normal;
     font-weight: 100;

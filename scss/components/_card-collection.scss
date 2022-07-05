@@ -186,12 +186,27 @@
     &[data-style="wide"] {
       .card-collection {
         &__content {
+          padding: 0 calc(2*var(--bs-gutter-width));
           max-width: 425px;
           width: auto;
           flex: 1;
         }
         &__image {
           width: 55%;
+        }
+      }
+      &.even {
+        .card-collection {
+          &__content {
+            margin-right: unset;
+          }
+        }
+      }
+      &.odd {
+        .card-collection {
+          &__content {
+            margin-left: unset;
+          }
         }
       }
     }
@@ -215,6 +230,7 @@
     &[data-style="wide"] {
       .card-collection {
         &__content {
+          padding: 0 calc(2.5*var(--bs-gutter-width));
           max-width: 500px;
         }
       }
@@ -239,6 +255,7 @@
     &[data-style="wide"] {
       .card-collection {
         &__content {
+          padding: 0 calc(3*var(--bs-gutter-width));
           max-width: 575px;
         }
       }

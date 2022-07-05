@@ -24,7 +24,7 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
 
-  <div class="{{ section_name }}__intro" id="{{ aos_id }}">
+  <div class="{{ section_name }}__intro intro" id="{{ aos_id }}">
     {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
 
       {% if heading != blank %}
@@ -37,7 +37,7 @@
           %}
         {% endcapture %}
         {% assign aos_delay = aos_delay | plus: aos_delay_increment %}
-        <h1 class="{{ section_name }}__heading heading" {{ aos }}>{{ heading }}</h1>
+        <h1 class="{{ section_name }}__heading heading title" {{ aos }}>{{ heading }}</h1>
       {% endif %}
 
       {% if message != blank %}
