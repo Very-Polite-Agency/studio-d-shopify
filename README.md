@@ -3,7 +3,7 @@
 ## Shopify Site URL
 https://studio-d-home-staging.myshopify.com
 
-## Todo
+## Complete
 ## Phase 1.0
 ### Templates
 - [x] 404
@@ -13,6 +13,16 @@ https://studio-d-home-staging.myshopify.com
 - [x] Home page
 - [x] Policy Pages
 - [x] Product (PDP)
+
+### Sections
+- [x] Fifty-Fifty
+- [x] Footer
+- [x] Header
+
+## Todo
+## Phase 1.0
+### Templates
+- [ ] Product detail update to include variant selector
 
 ### Sections
 

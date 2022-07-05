@@ -3565,14 +3565,6 @@
       "oAP" : "\/sections\/main-password-header.liquid",
       "oF" : 0
     },
-    "\/sections\/main-product--LEGACY.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/main-product--LEGACY.liquid",
-      "oF" : 0
-    },
     "\/sections\/main-product.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3595,14 +3587,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/mobile-menu.liquid",
-      "oF" : 0
-    },
-    "\/sections\/multicolumn.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/multicolumn.liquid",
       "oF" : 0
     },
     "\/sections\/page.liquid" : {
