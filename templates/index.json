@@ -28,6 +28,8 @@
         "e0707195-153a-4b8d-a51d-6b07f9a0aaba"
       ],
       "settings": {
+        "anchor_id": "",
+        "style": "wide",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/eat"
       }
@@ -54,6 +56,8 @@
         "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc"
       ],
       "settings": {
+        "anchor_id": "",
+        "style": "standard",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/live"
       }
@@ -80,6 +84,8 @@
         "c3f5eaf2-475b-44cb-bd99-5b56478ded89"
       ],
       "settings": {
+        "anchor_id": "",
+        "style": "standard",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/sleep"
       }
@@ -106,6 +112,8 @@
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7"
       ],
       "settings": {
+        "anchor_id": "",
+        "style": "standard",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/work"
       }
