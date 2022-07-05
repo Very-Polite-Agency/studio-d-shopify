@@ -3,7 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "heading": "Our Collections",
+        "heading": "<em>Our<\/em> Collections",
         "message": "",
         "style": "wide",
         "sort": "alphabetical"
