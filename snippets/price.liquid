@@ -1,6 +1,7 @@
 {% comment %}
 
     Accepts:
+    - classes: {String} Optionally include custom CSS classes
     - product: {Object} Product Liquid object
 
     Usage:
@@ -10,15 +11,22 @@
 
 {%- if product and product != blank -%}
 
+  {% assign snippet_name = 'price' %}
+  {% assign snippet_classes = snippet_name %}
+
+  {% if classes and classes != blank %}
+    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+  {% endif %}
+
   {% assign available = product.available %}
   {% assign price = product.price %}
   {% assign price_compare = product.compare_at_price %}
 
-  <div class="price">
+  <div class="{{ snippet_classes }}">
     {% if price_compare %}
-      <span class="price__value">{{ price_compare | money }}</span>
+      <span class="{{ snippet_name }}__value">{{ price_compare | money }}</span>
     {% endif %}
-    <span class="price__value{% if price_compare %} discount{% endif %}">{{ price | money }}</span>
+    <span class="{{ snippet_name }}__value{% if price_compare %} discount{% endif %}">{{ price | money }}</span>
   </div>
 
 {%- endif -%}

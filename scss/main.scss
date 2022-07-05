@@ -160,7 +160,13 @@
 ////  Component | From WordPress
 //////////////////////////////////////////////////////////
 
+@import './components/link.scss';
 @import './components/button.scss';
+
+//////////////////////////////////////////////////////////
+////  Layouts | From WordPress
+//////////////////////////////////////////////////////////
+
 @import './components/card-product.scss';
 @import './components/card.scss';
 @import './components/collapsible.scss';
@@ -196,7 +202,7 @@
 @import './components/images.scss';
 @import './components/job-listing.scss';
 @import './components/lazyload.scss';
-@import './components/link.scss';
+
 @import './components/masonry.scss';
 @import './components/navigation.scss';
 @import './components/newspaper.scss';
@@ -233,6 +239,7 @@
 @import './theme/main.scss';
 @import './theme/mobile-menu.scss';
 @import './theme/page.scss';
+@import './theme/product.scss';
 @import './theme/typography.scss';
 @import './theme/spacing.scss';
 @import './theme/root.scss';

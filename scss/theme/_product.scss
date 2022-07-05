@@ -1,0 +1,12 @@
+.product {
+
+  .swiper {
+    &-slide {
+      img {
+        margin: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+}

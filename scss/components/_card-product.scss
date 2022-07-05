@@ -1,15 +1,35 @@
 .card-product {
 
-  color: color: rgba(var(--theme-colour-black), 1);
+  color: rgba(var(--theme-colour-black), 1);
+
+  &__featured-image {
+    &-link {
+      display: block;
+      width: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 
   &__info {
-    margin-top: var(--bs-gutter-x);
+    margin-top: 12px;
   }
 
   &__product {
-    &-title {}
+    &-price,
+    &-title,
     &-type {
-      color: rgba(var(--theme-colour-black), 0.5);
+      @include body-copy( 1, 1.35, 100 );
+      display: block;
+    }
+    &-type {
+      color: rgba(var(--theme-colour-black), 0.3333);
     }
   }
 
