@@ -1,33 +1,52 @@
 {% form 'product', product %}
 
-<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
 
+  <div class="row mt-40 justify-content-between">
 
-<div class="row pt-30 pt-lg-70 justify-content-between">
-  <div class="col-6">
+    <div class="col-6">
+      <div class="product-form__quantity quantity">
+        <span class="input-number-decrement quantity__button">
+          -
+        </span>
+        <input type="number" id="Quantity-{{ product.id }}" name="quantity" value="1" min="1" pattern="[0-9]*"
+          class="quantity__input product-form__input product-form__input--quantity"
+          aria-label="{{ 'general.accessibility.quantity' | t }}">
 
-    <div class="product-form__quantity quantity">
-      <span class="input-number-decrement quantity__button">
-        -
-      </span>
-      <input type="number" id="Quantity-{{ product.id }}" name="quantity" value="1" min="1" pattern="[0-9]*"
-        class="quantity__input product-form__input product-form__input--quantity"
-        aria-label="{{ 'general.accessibility.quantity' | t }}">
-        
-      <span class="input-number-increment quantity__button">
-        +
-      </span>
+        <span class="input-number-increment quantity__button">
+          +
+        </span>
+      </div>
     </div>
 
+    <div class="col-6">
+      <button class="button outlined" type="submit" name="add" id="add-to-cart" {% unless product.available %}disabled{% endunless %}>
+        <span class="button__title">
+          {% if product.available %}Add to Cart{% else %}Out of Stock{% endif %}
+        </span>
+      </button>
+    </div>
+
+    <div class="col-12 mt-20">
+      {% if product.has_only_default_variant %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      {% else %}
+        <select class="product-options__variants select select--variant-options" name="id">
+          {% for variant in product.variants %}
+            <option
+              class="product-options__variant"
+              value="{{ variant.id }}"
+              data-available="{{ variant.available }}"
+              data-compare-at-price="{{ variant.compare_at_price }}"
+              data-inventory-management="{{ variant.inventory_management }}"
+              data-price="{{ variant.price }}"
+              {% unless variant.available %}disabled{% endunless %}
+            >{{ variant.title }}</option>
+          {% endfor %}
+        </select>
+      {% endif %}
+    </div>
 
   </div>
-  <div class="col-6">
-
-    <button  class="cta justify-content-end" type="submit" name="add" id="add-to-cart">
-      <span class="link outlined">Add to cart</span>
-    </button>
-  </div>
-</div>
 
 {% endform %}

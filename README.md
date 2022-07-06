@@ -18,6 +18,8 @@ https://studio-d-home-staging.myshopify.com
 - [x] Fifty-Fifty
 - [x] Footer
 - [x] Header
+- [x] Main 404
+
 
 ## Todo
 ## Phase 1.0
