@@ -14,14 +14,13 @@
           <div class="swiper swiper-product mb-10">
             <div class="swiper-wrapper">
               {% for media in product.media %}
-              <div class="swiper-slide">
-                {%
-                render 'lazyload-image',
-                alt_text: 'Product',
-                image: media,
-                %}
-                </a>
-              </div>
+                <div class="swiper-slide">
+                  {%
+                    render 'lazyload-image',
+                    alt_text: 'Product',
+                    image: media,
+                  %}
+                </div>
               {% endfor %}
             </div>
 
@@ -29,14 +28,13 @@
           <div thumbsSlider="" class="swiper swiper-thumbnail">
             <div class="swiper-wrapper">
               {% for media in product.media %}
-              <div class="swiper-slide">
-                {%
-                render 'lazyload-image',
-                alt_text: 'Product',
-                image: media,
-                %}
-                </a>
-              </div>
+                <div class="swiper-slide">
+                  {%
+                    render 'lazyload-image',
+                    alt_text: 'Product',
+                    image: media,
+                  %}
+                </div>
               {% endfor %}
             </div>
 
@@ -181,12 +179,6 @@
 
 
 </section>
-
-<script>
-
-
-
-</script>
 
 <script>
 
