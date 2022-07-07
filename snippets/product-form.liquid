@@ -6,16 +6,12 @@
 
     <div class="col-6">
       <div class="product-form__quantity quantity">
-        <span class="input-number-decrement quantity__button">
-          -
-        </span>
+        <span class="input-number-decrement quantity__button">-</span>
         <input type="number" id="Quantity-{{ product.id }}" name="quantity" value="1" min="1" pattern="[0-9]*"
           class="quantity__input product-form__input product-form__input--quantity"
           aria-label="{{ 'general.accessibility.quantity' | t }}">
 
-        <span class="input-number-increment quantity__button">
-          +
-        </span>
+        <span class="input-number-increment quantity__button">+</span>
       </div>
     </div>
 

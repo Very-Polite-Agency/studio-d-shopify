@@ -2,6 +2,7 @@
 
   .swiper {
     &-slide {
+      background: rgba(var(--theme-colour-white), 1);
       img {
         margin: auto;
         object-fit: contain;
