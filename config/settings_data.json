@@ -1,5 +1,15 @@
 {
   "current": {
+    "social_link_facebook": "https:\/\/www.facebook.com\/studioDstaging\/",
+    "social_link_instagram": "https:\/\/www.instagram.com\/studiodhome\/",
+    "social_link_linkedin": "https:\/\/www.linkedin.com\/company\/studiodstaging\/",
+    "social_link_pinterest": "https:\/\/www.pinterest.com\/studiodstaging\/",
+    "checkout_header_image": "shopify:\/\/shop_images\/hero_1.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/studioD_Wordmark_White_1.jpg",
+    "checkout_logo_position": "center",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_accent_color": "#515151",
+    "checkout_button_color": "#7c7c7c",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
