@@ -1,0 +1,16 @@
+.policies {
+
+  h2, h3, h4, h5, h6 {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-size: 28px;
+  }
+
+  &__page-title {
+    margin-bottom: 30px;
+  }
+
+}

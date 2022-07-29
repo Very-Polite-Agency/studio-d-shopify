@@ -8,19 +8,26 @@
 
 .heading {
 
+  &--policies,
+  &--primary {
+    font-family: var(--theme-font-family--serif--gt-alpina-fine);
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
 
   &--border-bottom {
     border-bottom: 1px solid rgba(var(--theme-colour-black),1);
     padding-bottom: 20px;
   }
 
+  &--policies {
+    font-size: 42px;
+  }
+
   &--primary {
-    font-family: var(--theme-font-family--serif--gt-alpina-fine);
-    font-style: normal;
-    font-weight: 100;
     font-size: 26px;
-    line-height: 1;
-    letter-spacing: -0.03em;
   }
 
   &--secondary {

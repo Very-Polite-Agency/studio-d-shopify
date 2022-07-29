@@ -1,0 +1,41 @@
+{% assign section_name = 'policies' %}
+{% assign section_id = section_name | append: '--' | append: section.id %}
+
+{% assign policy = shop.privacy_policy %}
+
+{% case request.path %}
+  {% when '/policies/refund-policy' %}
+    {% assign policy = shop.refund_policy %}
+  {% when '/policies/shipping-policy' %}
+    {% assign policy = shop.shipping_policy %}
+  {% when '/policies/subscription-policy' %}
+    {% assign policy = shop.subscription_policy %}
+  {% when '/policies/terms-of-service' %}
+    {% assign policy = shop.terms_of_service %}
+{% endcase %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+  <div class="{{ section_name }}__main">
+    {% render 'bs-container', col: 'col-12 col-lg-10 offset-lg-1' %}
+      <div class="{{ section_name }}__content">
+        <h1 class="{{ section_name }}__page-title heading heading--policies">{{ policy.title }}</h1>
+        <div class="{{ section_name }}__body body-copy--1 rte">{{ policy.body }}</div>
+      </div>
+    {% render 'bs-container', state: 'closed' %}
+  </div>
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Policies",
+    "tag": "section",
+    "class": "section section--policies",
+    "settings": []
+  }
+{% endschema %}
