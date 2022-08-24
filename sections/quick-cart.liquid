@@ -39,7 +39,7 @@
 
 
 
-            <form action="{{ routes.cart_url }}" method="post">
+            <form action="{{ routes.cart_url }}" method="post" id="form__quick-cart">
                 <div class="quick-cart-content" data-ajax-cart-section >
                     <div class="row">
                         <div class="col-6 d-flex align-items-center">
@@ -132,17 +132,25 @@
                 </div>
                 <div class="col-6 ">
                     <div class="cta w-100">
-                        <a class="link outlined w-100" href="/checkout" target="_self">
-                            <span class="link__title">Checkout</span>
-                        </a>
+
+                        <button
+                          class="link outlined w-100"
+                          type="submit"
+                          name="checkout"
+                          form="form__quick-cart"
+                        >
+                          <span class="link__title">Checkout</span>
+                        </button>
+
                     </div>
+
                 </div>
             </div>
         </div>
 
     </section>
 
-    
+
 
     </div>
 
@@ -152,9 +160,9 @@
 </section>
 
 
-<!-- 
+<!--
 <script type="text/javascript">
-     
+
 
     $('.cart-item__remove').click(function (e) {
         e.preventDefault();
