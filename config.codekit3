@@ -63,6 +63,19 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 1068,
+      "oA" : 0,
+      "oAP" : "\/assets\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/base.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -175,6 +188,40 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/favicon.ico",
+      "oF" : 0
+    },
+    "\/assets\/featured-image-tall.png" : {
+      "ft" : 32768,
+      "iS" : 19953,
+      "oA" : 0,
+      "oAP" : "\/assets\/featured-image-tall.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/featured-image-wide.png" : {
+      "ft" : 32768,
+      "iS" : 15836,
+      "oA" : 0,
+      "oAP" : "\/assets\/featured-image-wide.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/assets\/global.js" : {
       "bF" : 0,
@@ -973,6 +1020,32 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/tile-wide.png" : {
+      "ft" : 32768,
+      "iS" : 3747,
+      "oA" : 0,
+      "oAP" : "\/assets\/tile-wide.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/tile.png" : {
+      "ft" : 32768,
+      "iS" : 3183,
+      "oA" : 0,
+      "oAP" : "\/assets\/tile.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/assets\/vendors.min.js" : {
       "bF" : 0,
@@ -4041,7 +4114,7 @@
     "creationDate" : 670290097.60794997,
     "displayValue" : "studio D | Shopify",
     "displayValueWasSetByUser" : 1,
-    "iconImageName" : "brackets_gray",
+    "iconImageName" : "\/assets\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
