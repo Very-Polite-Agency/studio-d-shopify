@@ -1,15 +1,12 @@
 
-<section class="pt-50" data-updated-via-git>
+<section class="pt-50">
 
     <div class="container-fluid">
 
         {% if cart.item_count < 1 %}
 
         <div class="row pb-150">
-            <div class="col-12 d-flex flex-column justify-content-center">
-                <h2 class="text-center">Your cart is empty</h2>
-                <a href="/collections/all" class="underline link mt-70"> <h4> Start shopping</h4> </a>
-            </div>
+
         </div>
 
         {% else %}
@@ -105,15 +102,13 @@
                                         </div>
                                         <div class="col-6 ">
                                             <div class="cta w-100">
-
-                                                <button
-                                                    class="link outlined w-100"
-                                                    type="submit"
-                                                    name="checkout"
-                                                >
-                                                    <span class="link__title">Checkout</span>
-                                                </button>
-
+                                              <button
+                                                class="link outlined w-100"
+                                                type="submit"
+                                                name="checkout"
+                                              >
+                                                <span class="link__title">Checkout</span>
+                                              </button>
                                             </div>
                                         </div>
                                     </div>
@@ -140,3 +135,4 @@
 
 
 </section>
+
