@@ -20,11 +20,10 @@ https://studio-d-home-staging.myshopify.com
 - [x] Header
 - [x] Main 404
 
-
 ## Todo
 ## Phase 1.0
 ### Templates
-- [ ] Product detail update to include variant selector
+- [x] Product detail update to include variant selector
 
 ### Sections
 
