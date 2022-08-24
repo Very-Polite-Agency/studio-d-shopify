@@ -3454,14 +3454,6 @@
       "oAP" : "\/sections\/apps.liquid",
       "oF" : 0
     },
-    "\/sections\/cart-main.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-main.liquid",
-      "oF" : 0
-    },
     "\/sections\/fifty-fifty.liquid" : {
       "cB" : 0,
       "ft" : 8192,
