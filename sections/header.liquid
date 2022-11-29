@@ -14,15 +14,17 @@
 
           {% assign link = item.settings.link | default: '' %}
           {% assign title = item.settings.title | default: '' %}
+          {% assign target = '_self' %}
           {% assign active = true %}
 
           {% if link contains 'http' %}
             {% assign active = false %}
+            {% assign target = '_blank' %}
           {% endif %}
 
           {% if link != blank and title != blank %}
             <div class="{{ section_name }}__networks-navigation-item">
-              <a class="{{ section_name }}__networks-navigation-link link{% if active %} active{% endif %}" href="{{ link }}">{{ title }}</a>
+              <a class="{{ section_name }}__networks-navigation-link link{% if active %} active{% endif %}" href="{{ link }}" target="{{ target }}" title="{{ title }}">{{ title }}</a>
             </div>
           {% endif %}
 
