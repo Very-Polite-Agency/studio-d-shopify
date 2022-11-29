@@ -13,6 +13,13 @@
     "275a88a1-4982-422d-864f-b52253a65b85": {
       "type": "text-feature",
       "blocks": {
+        "d752e827-373d-4d7e-aa70-8d8f5c7ce2c9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hello, hello. Testing.",
+            "heading_size": "2"
+          }
+        },
         "68265863-4cc7-412a-a4ed-d357d278bf56": {
           "type": "message",
           "settings": {
@@ -21,6 +28,7 @@
         }
       },
       "block_order": [
+        "d752e827-373d-4d7e-aa70-8d8f5c7ce2c9",
         "68265863-4cc7-412a-a4ed-d357d278bf56"
       ],
       "settings": {
