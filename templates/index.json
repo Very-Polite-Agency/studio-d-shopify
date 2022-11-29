@@ -19,7 +19,7 @@
           "type": "content",
           "settings": {
             "heading": "Eat.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "message": "<p>If the kitchen is the heart of the home, its design must be its soul.<\/p>"
           }
         }
       },
@@ -41,7 +41,7 @@
           "type": "content",
           "settings": {
             "heading": "Live.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "message": "<p>From couches to consoles, bring warmth and sophistication to where you live. <\/p>"
           }
         },
         "df6a5781-ac40-4e0c-a1d6-9ab85a70fffc": {
@@ -75,7 +75,7 @@
           "type": "content",
           "settings": {
             "heading": "Sleep.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "message": "<p>Where we all crave tranquility… Find your perfect mix of captivating and calm. <\/p>"
           }
         }
       },
@@ -97,7 +97,7 @@
           "type": "content",
           "settings": {
             "heading": "Work.",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "message": "<p>We don’t f*** around when it comes to a hustle. Explore workplace essentials made to inspire. <\/p>"
           }
         },
         "286b4be7-ab83-4ef7-abe8-49e41bb305b7": {
@@ -124,21 +124,21 @@
         "5e295311-7164-40c4-9693-75b80b12f6fb": {
           "type": "heading",
           "settings": {
-            "heading": "Sample heading here",
+            "heading": "studio D.",
             "heading_size": "2"
           }
         },
         "25783351-6d51-456a-8a49-8a0bd9b4a027": {
           "type": "message",
           "settings": {
-            "message": "<p>Aliquam id porttitor nulla. Maecenas augue enim, varius quis mi at, euismod lobortis purus. Vivamus molestie libero laoreet turpis cursus, ut faucibus ipsum auctor. Curabitur molestie commodo sem, vel faucibus justo lobortis ac. Donec varius ligula nisi, id consequat augue tincidunt nec. Sed iaculis turpis enim, eu lobortis risus elementum nec. Donec condimentum vehicula placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non tristique augue. In vitae erat felis. In ut pulvinar felis. Sed sed ex odio. Cras sagittis semper lorem.<\/p>"
+            "message": "<p>studio D transforms spaces with understated luxury and simplistic beauty. <\/p><p>Explore our curated collection of  furnishings and accents to elevate  and inspire.<\/p>"
           }
         },
         "f3f5f72f-c7c6-4549-a6df-bc8f5e6d1789": {
           "type": "cta",
           "settings": {
-            "title": "Learn More",
-            "link": "shopify:\/\/collections\/lighting"
+            "title": "SHOP ALL",
+            "link": "shopify:\/\/collections\/all"
           }
         }
       },
