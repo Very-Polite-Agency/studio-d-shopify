@@ -6,28 +6,30 @@
 {% assign menu_main = section.settings.menu_main | default: false %}
 
 {% if show_network_links and network_links.size > 0 %}
-  <div class="container-fluid header-tabs position-relative z-index-2">
-    <div class="row">
-      <div class="col-12 px-0">
-        <div class="d-flex ">
-          {% for item in network_links %}
+  <div class="{{ section_name }}__networks">
+    {% render 'bs-container', state: 'open', col: 'col-12', container: 'container-fluid' %}
 
-            {% assign link = item.settings.link | default: '' %}
-            {% assign title = item.settings.title | default: '' %}
-            {% assign active = true %}
+      <nav class="{{ section_name }}__networks-navigation">
+        {% for item in network_links %}
 
-            {% if link contains 'http' %}
-              {% assign active = false %}
-            {% endif %}
+          {% assign link = item.settings.link | default: '' %}
+          {% assign title = item.settings.title | default: '' %}
+          {% assign active = true %}
 
-            {% if link != blank and title != blank %}
-              <a href="{{ link }}" class="header-tabs-tab{% if active %} active{% endif %}">{{ title }}</a>
-            {% endif %}
+          {% if link contains 'http' %}
+            {% assign active = false %}
+          {% endif %}
 
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+          {% if link != blank and title != blank %}
+            <div class="{{ section_name }}__networks-navigation-item">
+              <a class="{{ section_name }}__networks-navigation-link link{% if active %} active{% endif %}" href="{{ link }}">{{ title }}</a>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      </nav>
+
+    {% render 'bs-container', state: 'closed' %}
   </div>
 {% endif %}
 

@@ -69,10 +69,42 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
 
   &__layout {
     padding: 0;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+    &__networks {
+    background: #f2f2f2;
+    &-navigation {
+      display: flex;
+      &-item {
+        &:first-child {
+          .link {
+            padding: 8px 40px;
+          }
+        }
+      }
+      &-link {
+        font-family: var(--theme-font-family--sans-serif--neue-montreal);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 116%;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 17px;
+        text-decoration: none !important;
+        &.active,
+        &:hover {
+          background: #fff;
+          opacity: 1 !important;
+          text-decoration: none !important;
+        }
+      }
+    }
   }
 
   &.fixed {
@@ -202,7 +234,7 @@ $header-logo-characters: ( 's', 't', 'u', 'd', 'i', 'o', 'vr', 'big-d', 'period'
         opacity: 0.3;
     }
 
-    
+
   }
 
 }
