@@ -7,7 +7,7 @@
       "uuidString" : "A5A2B793-C58E-4B3C-B2BE-B14716B63B56"
     }
   ],
-  "creatorBuild" : "34418",
+  "creatorBuild" : "34434",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -4822,7 +4822,8 @@
         "active" : 1
       },
       "no-fallthrough" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEmptyCase': false}"
       },
       "no-floating-decimal" : {
         "active" : 0
