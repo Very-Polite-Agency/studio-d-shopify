@@ -1,5 +1,24 @@
 {
   "sections": {
+    "a56f28e1-0723-4113-93dc-f8f20a0650e0": {
+      "type": "text-feature",
+      "blocks": {
+        "c54b8325-894e-4dc1-b8be-50b3d4a31eb1": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Hello, hello. Testing.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c54b8325-894e-4dc1-b8be-50b3d4a31eb1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "width": "full",
+        "anchor_id": ""
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
@@ -11,6 +30,7 @@
     }
   },
   "order": [
+    "a56f28e1-0723-4113-93dc-f8f20a0650e0",
     "main"
   ]
 }
