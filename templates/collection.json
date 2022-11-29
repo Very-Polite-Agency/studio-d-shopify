@@ -1,12 +1,32 @@
 {
   "order": [
-    "product-grid"
+    "product-grid",
+    "275a88a1-4982-422d-864f-b52253a65b85"
   ],
   "sections": {
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": "24"
+      }
+    },
+    "275a88a1-4982-422d-864f-b52253a65b85": {
+      "type": "text-feature",
+      "blocks": {
+        "68265863-4cc7-412a-a4ed-d357d278bf56": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Hello, hello. Testing.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "68265863-4cc7-412a-a4ed-d357d278bf56"
+      ],
+      "settings": {
+        "alignment": "left",
+        "width": "full",
+        "anchor_id": ""
       }
     }
   }
