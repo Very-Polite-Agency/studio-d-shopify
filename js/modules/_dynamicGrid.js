@@ -142,8 +142,6 @@ const DynamicGrid = (() => {
       resetDynamicGridItemsWithTimeout( 1000 );
     });
 
-    console.log( dynamicGrids );
-
     if ( debug ) console.log( `${info.name}.init() Finished` );
 
   };

@@ -52,3 +52,7 @@ AOS.init({
   duration: 550,              // values from 0 to 3000, with step 50ms
   easing: 'ease-in-out',      // default easing for AOS animations
 });
+
+window.addEventListener( 'load', function (e) {
+  AOS.refresh();
+});
