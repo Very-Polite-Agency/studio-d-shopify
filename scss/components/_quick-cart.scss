@@ -7,31 +7,30 @@
     transition: all .3s ease;
     z-index: 101;
     height: 100%;
-    width: 35vw;
-
+    width: 100%;
 
     &.show {
-        visibility: visible;
-        opacity: 1;
-        right: 0;
+      visibility: visible;
+      opacity: 1;
+      right: 0;
     }
 
     .background-modal {
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        right: 0;
-        top: 0;
-        background-color: rgba(0,0,0,.2);
-        z-index: 1;
-      }
-    
-      .quick-cart {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      top: 0;
+      background-color: rgba(0,0,0,.2);
+      z-index: 1;
+  }
+
+  .quick-cart {
           background-color: white;
           padding: 60px 40px;
           height: 100%;
           width: 100%;
-          
+
           position: relative;
           z-index: 2;
 
@@ -51,22 +50,24 @@
               margin-top: auto;
           }
       }
-      
-      .quantity {
+
+  .quantity {
         input[type=number] {
             width: 26px;
             height: 26px;
         }
-    
+
         &__button {
             height:26px;
             width: 26px;
         }
     }
 
+  @include breakpoint(sm) {
+    width: 400px;
+  }
+
 }
-
-
 
 body {
     &.js-ajax-cart-not-empty {

@@ -986,6 +986,18 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/temp.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/temp.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/template-collection.css" : {
       "aP" : 1,
       "bl" : 0,
