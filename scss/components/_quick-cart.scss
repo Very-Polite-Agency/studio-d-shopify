@@ -67,6 +67,14 @@
     width: 400px;
   }
 
+  @include breakpoint(md) {
+    width: 450px;
+  }
+
+  @include breakpoint(xl) {
+    width: 500px;
+  }
+
 }
 
 body {
