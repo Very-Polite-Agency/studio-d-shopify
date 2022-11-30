@@ -3,5 +3,12 @@
 }
 
 #quick-cart {
-  min-width: 320px; 
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  #quick-cart {
+    width: 35vw;
+    min-width: 380px;
+  }
 }
