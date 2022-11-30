@@ -16,20 +16,13 @@
         "d752e827-373d-4d7e-aa70-8d8f5c7ce2c9": {
           "type": "heading",
           "settings": {
-            "heading": "Hello, hello. Testing.",
-            "heading_size": "2"
-          }
-        },
-        "68265863-4cc7-412a-a4ed-d357d278bf56": {
-          "type": "message",
-          "settings": {
-            "message": "<p>Hello, hello. Testing.<\/p>"
+            "heading": "The Outlet is a space for our current inventory to find its forever home! Discover gorgeous pieces that we've used in our home stagings at a discount to you as we cycle items out of our loving care and into yours.",
+            "heading_size": "3"
           }
         }
       },
       "block_order": [
-        "d752e827-373d-4d7e-aa70-8d8f5c7ce2c9",
-        "68265863-4cc7-412a-a4ed-d357d278bf56"
+        "d752e827-373d-4d7e-aa70-8d8f5c7ce2c9"
       ],
       "settings": {
         "alignment": "left",
