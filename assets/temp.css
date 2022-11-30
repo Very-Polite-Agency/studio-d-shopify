@@ -1,3 +1,7 @@
 .megamenu-drop {
   top: 80px;
 }
+
+#quick-cart {
+  min-width: 320px; 
+}
