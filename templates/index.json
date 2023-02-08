@@ -85,7 +85,7 @@
       ],
       "settings": {
         "anchor_id": "",
-        "style": "standard",
+        "style": "wide",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/sleep"
       }
@@ -113,7 +113,7 @@
       ],
       "settings": {
         "anchor_id": "",
-        "style": "standard",
+        "style": "wide",
         "cta_title": "Shop Now",
         "cta_link": "shopify:\/\/collections\/work"
       }
