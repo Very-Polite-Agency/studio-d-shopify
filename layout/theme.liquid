@@ -1,21 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-<script>
-  const dfLayerOptions = {
-    installationId: 'c32aba90-cec4-493a-87cb-3975cc9c8846',
-    zone: 'us1'
-  };
 
-  
-
-  (function (l, a, y, e, r, s) {
-    r = l.createElement(a); r.onload = e; r.async = 1; r.src = y;
-    s = l.getElementsByTagName(a)[0]; s.parentNode.insertBefore(r, s);
-  })(document, 'script', 'https://cdn.doofinder.com/livelayer/1/js/loader.min.js', function () {
-    doofinderLoader.load(dfLayerOptions);
-  });
-</script>
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
